@@ -1,0 +1,15 @@
+{
+  "pageList": {
+    "data": [{
+        "title": "Style Guides",
+        "url": "styleguides"
+      }, {
+        "title": "Home",
+        "url": "home"
+      }, {
+        "title": "Login",
+        "url": "login"
+      }
+    ]
+  }
+}
