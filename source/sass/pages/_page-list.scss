@@ -1,0 +1,51 @@
+// ======================================================
+// Pages :: Page List
+// ======================================================
+
+.page-list {
+  &__title {
+    font-weight: $font-weight-bold - 100;
+    font-size: 35px;
+    line-height: 1.2;
+    color: inherit;
+  }
+
+  &__link {
+    color: $cl-white;
+
+    &:hover {
+      color: $cl-white;
+      text-decoration: none;
+    }
+  }
+
+  .table {
+    color: $cl-white;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid $cl-gray;
+  }
+
+  th,
+  td {
+    vertical-align: top;
+    border-top: 1px solid $cl-gray;
+    padding: .75rem;
+  }
+
+  th {
+    font-weight: $font-weight-bold;
+  }
+
+  td {
+    font-weight: $font-weight-base;
+
+    a {
+      &:hover {
+        color: $cl-gray;
+      }
+    }
+  }
+}

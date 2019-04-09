@@ -1,0 +1,250 @@
+//-------------------------------------------------------
+//- Styleguides :: Buttons
+//-------------------------------------------------------
+
+- 
+  var listType = [
+    {type: 'secondary', text: 'Secondary'},
+    {type: 'primary', text: 'Primary'},
+    {type: 'danger', text: 'Danger'},
+    {type: 'warning', text: 'Warning'},
+    {type: 'success', text: 'Success'},
+  ]
+
+h2.demo__title Normal Button
+.row
+  each item, index in listType
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}'
+            |})
+
+h2.demo__title Hover Button
+.row
+  each item in listType
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            hover: true
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}',
+            |  hover: true
+            |})
+
+h2.demo__title Active Button
+.row
+  each item in listType
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            active: true
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}',
+            |  active: true
+            |})
+
+- 
+  var listButtonsIcons = [
+    {text: 'Secondary', type: 'secondary', icon: 'zmdi-globe'}, 
+    {text: 'Primary', type: 'primary', icon: 'zmdi-cloud-done'},
+    {text: 'Danger', type: 'danger', icon: 'zmdi-alert-circle'},
+    {text: 'Warning', type: 'warning', icon: 'zmdi-alert-triangle'},
+    {text: 'Success', type: 'success', icon: 'zmdi-check'}
+  ]
+
+h2.demo__title Normal Button Icon
+.row
+  each item in listButtonsIcons
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            iconBefore: item.icon
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}',
+            |  iconBefore: '#{item.icon}'
+            |})
+
+h2.demo__title Hover Button Icon
+.row
+  each item in listButtonsIcons
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            iconBefore: item.icon,
+            hover: true
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}',
+            |  iconBefore: '#{item.icon}',
+            |  hover: true
+            |})
+
+h2.demo__title Active Button Icon
+.row
+  each item in listButtonsIcons
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            iconBefore: item.icon,
+            active: true
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}',
+            |  iconBefore: '#{item.icon}',
+            |  active: true
+            |})
+
+- 
+  var listButtonsSizes = [
+    {size: 'xs', text: 'Extra Small', type: 'secondary'},
+    {size: 'sm', text: 'Small', type: 'secondary'},
+    {text: 'Default', type: 'secondary'},
+    {size: 'lg', text: 'Large', type: 'secondary'},
+    {size: 'xl', text: 'Extra Large', type: 'secondary'},
+  ]
+
+h2.demo__title Button Size Standard
+.row
+  each item in listButtonsSizes
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            size: item.size ? item.size : null,
+          })
+        if item.size
+          pre
+            code
+              |+buttons({
+              |  type: '#{item.type}',
+              |  text: '#{item.text}',
+              |  size: '#{item.size}'
+              |})
+        else
+          pre
+            code
+              |+buttons({
+              |  type: '#{item.type}',
+              |  text: '#{item.text}'
+              |})
+
+- 
+  var listButtonsSizesIcons = [
+    {size: 'xs', text: 'Extra Small', type: 'primary'},
+    {size: 'sm', text: 'Small', type: 'primary'},
+    {text: 'Default', type: 'primary'},
+    {size: 'lg', text: 'Large', type: 'primary'},
+  ]
+h2.demo__title Button Size with Icon
+.row
+  each item in listButtonsSizesIcons
+    .col-3
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            size: item.size ? item.size : null,
+            iconBefore: 'zmdi-cloud-done'
+          })
+        if item.size
+          pre
+            code
+              |+buttons({
+              |  type: '#{item.type}',
+              |  text: '#{item.text}',
+              |  size: '#{item.size}',
+              |  iconBefore: 'zmdi-cloud-done'
+              |})
+        else
+          pre
+            code
+              |+buttons({
+              |  type: '#{item.type}',
+              |  text: '#{item.text}',
+              |  iconBefore: 'zmdi-cloud-done'
+              |})
+
+h2.demo__title Buttons Rounded Standard
+.row
+  each item in listButtonsIcons
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            rounded: true
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}',
+            |  rounded: true
+            |})
+
+h2.demo__title Buttons Rounded with Icon
+.row
+  each item in listButtonsIcons
+    .col--5
+      .code-example
+        .demo.text-center
+          +buttons({
+            type: item.type,
+            text: item.text,
+            iconBefore: item.icon,
+            rounded: true
+          })
+        pre
+          code
+            |+buttons({
+            |  type: '#{item.type}',
+            |  text: '#{item.text}',
+            |  iconBefore: '#{item.icon}',
+            |  rounded: true
+            |})

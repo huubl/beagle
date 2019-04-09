@@ -4,15 +4,50 @@
 
 -
   var colors = [
-    { key: '$white', color: '#fff' },
-    { key: '$black', color: '#000' },
+    { key: '$cl-white', color: '#fff' },
+    { key: '$cl-dark', color: '#000' },
+    { key: '$cl-dark-medium', color: '#272727' },
+    { key: '$cl-dark-light', color: '#404040' },
+    { key: '$cl-dark-light-1', color: '#646464' },
+    { key: '$cl-dark-light-2', color: '#999' },
+    { key: '$cl-blue-light-2', color: '#5E97F6' },
+    { key: '$cl-blue-light', color: '#4c8bf5' },
+    { key: '$cl-blue', color: '#4285f4' },
+    { key: '$cl-blue-medium', color: '#2572f2' },
+    { key: '$cl-blue-dark', color: '#1266f1' },
+    { key: '$cl-blue-dark-1', color: '#0c57d3' },
+    { key: '$cl-red-light-2', color: '#ed5f53' },
+    { key: '$cl-red-light-1', color: '#eb4c3e' },
+    { key: '$cl-red-light', color: '#ea4335' },
+    { key: '$cl-red', color: '#e12717' },
+    { key: '$cl-red-dark', color: '#e72919' },
+    { key: '$cl-red-dark-1', color: '#d62516' },
+    { key: '$cl-red-dark-2', color: '#b51f13' },
+    { key: '$cl-yellow-light-1', color: '#fbbf0f' },
+    { key: '$cl-yellow-light', color: '#fbbc05' },
+    { key: '$cl-yellow', color: '#d6a003' },
+    { key: '$cl-yellow-medium', color: '#daa50a' },
+    { key: '$cl-yellow-dark', color: '#ca9703' },
+    { key: '$cl-yellow-dark-1', color: '#dea604' },
+    { key: '$cl-yellow-dark-2', color: '#a77d03' },
+    { key: '$cl-green-light', color: '#34a853' },
+    { key: '$cl-green-light-1', color: '#2d9147' },
+    { key: '$cl-green-light-2', color: '#36b057' },
+    { key: '$cl-green-light-3', color: '#52b56d' },
+    { key: '$cl-green', color: '#2b8b45' },
+    { key: '$cl-green-dark', color: '#288140' },
+    { key: '$cl-green-dark-1', color: '#206632' },
+    { key: '$cl-gray-light', color: '#dbdbdb' },
+    { key: '$cl-gray', color: '#eee' },
+    { key: '$cl-gray-medium', color: '#e3e3e3' },
+    { key: '$cl-gray-dark', color: '#bababa' },
   ];
 
 .row
   each val in colors
-    .col-2
+    .col-3
       .code-example
-        .demo(style=`background-color: ${val.color}; width: 100%; height: 100px`)
+        .demo(style=`background-color: ${val.color}; width: 100%; height: 150px`)
         pre
           code
             | #{val.key}: #{val.color}

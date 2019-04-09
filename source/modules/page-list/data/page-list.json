@@ -1,14 +1,15 @@
 {
   "pageList": {
-    "data": [{
+    "data": [
+      {
         "title": "Style Guides",
-        "url": "styleguides"
-      }, {
-        "title": "Home",
-        "url": "home"
-      }, {
-        "title": "Login",
-        "url": "login"
+        "url": "styleguides",
+        "bg": "gray"
+      },
+      {
+        "title": "Owner Top page",
+        "url": "SO-0-01-Toppage",
+        "bg": "#1984c6"
       }
     ]
   }
