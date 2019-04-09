@@ -2,10 +2,24 @@
 // Base :: Global like html, body, img, a, ul
 // ======================================================
 
+html {
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 13px;
+}
+
 body {
-  font-size: 14px;
   font-family: $font-family-base;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-base;
+  margin: 0;
+  font-size: $font-size-base - 1;
+  line-height: 1.428571;
+  color: $cl-dark-medium;
+  text-align: left;
+  padding: 0;
+  background-color: $cl-gray;
+  height: auto;
+  min-height: 100%;
 }
 
 img {

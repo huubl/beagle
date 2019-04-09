@@ -1,0 +1,17 @@
+//-------------------------------------------------------
+//- Modules :: Button
+//-------------------------------------------------------
+
+mixin buttons({type, text, hover, active, iconBefore, size, rounded})
+  button.btn.btn-space(
+    class= type ? `btn-${type}` : null
+    class= (hover === true) ? `hover` : null
+    class= (active === true) ? `active` : null
+    class= size ? `btn-${size}` : null
+    class= (rounded === true) ? `btn-rounded` : null
+  )
+    if iconBefore
+      i.icon.icon-left.zmdi(
+        class= iconBefore ? iconBefore : null
+      )
+    | #{text}

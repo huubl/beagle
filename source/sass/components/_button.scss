@@ -1,0 +1,363 @@
+.btn {
+  font-weight: $font-weight-bold;
+  color: $cl-dark-light;
+
+  .icon {
+    margin-right: 4px;
+    font-size: 1.231rem;
+    vertical-align: middle;
+  }
+
+  &-xs {
+    padding: 0 6px;
+    font-size: .8462rem;
+    line-height: 18px;
+    border-radius: $border-radius-small - 1;
+  }
+
+  &-xl {
+    padding: 0 12px;
+    font-size: 1.1538rem;
+    line-height: 43px;
+    border-radius: $border-radius-small + 1;
+    font-weight: $font-weight-base + 100;
+  }
+
+  &-rounded {
+    border-radius: 15px;
+  }
+}
+
+.btn-secondary {
+  color: $cl-dark-light;
+  background-color: $cl-white;
+  border-color: $cl-gray-light;
+
+  &:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-dark-light-2, .5);
+  }
+
+  &.hover,
+  &:hover {
+    color: $cl-dark-light;
+    box-shadow: 0 1px 0 rgba($cl-dark, .1);
+    background-color: $cl-white;
+    border-color: $cl-gray-dark;
+  }
+
+  &.active,
+  &:active {
+    box-shadow: inset 0 2px 0 rgba($cl-dark, .06);
+    color: $cl-dark-light;
+    background-color: $cl-gray-medium;
+    border-color: $cl-gray-dark;
+
+    &.focus,
+    &:focus,
+    &:hover {
+      color: $cl-dark-light;
+      background-color: $cl-gray-medium;
+      border-color: $cl-gray-dark;
+      box-shadow: inset 0 2px 0 rgba($cl-dark, .06);
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+
+    &.active,
+    &:active {
+      box-shadow: inset 0 2px 0 rgba($cl-dark, .06);
+      color: $cl-dark-light;
+      background-color: $cl-gray-medium;
+      border-color: $cl-gray-dark;
+
+      &.focus,
+      &:focus,
+      &:hover {
+        color: $cl-dark-light;
+        background-color: $cl-gray-medium;
+        border-color: $cl-gray-dark;
+        box-shadow: inset 0 2px 0 rgba($cl-dark, .06);
+      }
+    }
+  }
+
+  &.icon {
+    color: $cl-dark-light-1;
+  }
+}
+
+.btn-primary {
+  color: $cl-white;
+  background-color: $cl-blue;
+  border-color: $cl-blue;
+
+  &:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-blue-light-2, .5);
+    color: $cl-white;
+    background-color: $cl-blue;
+    border-color: $cl-blue;
+    outline: 0;
+  }
+
+  &.hover,
+  &:hover {
+    color: $cl-white;
+    box-shadow: inset 0 -1px 0 $cl-blue-medium;
+    background-color: $cl-blue-light;
+    border-color: $cl-blue-light;
+    border-bottom-color: $cl-blue-medium;
+  }
+
+  &.active:focus,
+  &:active:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-blue-light-2, .5);
+  }
+
+  &.active,
+  &:active {
+    color: $cl-white;
+    box-shadow: inset 0 2px 0 $cl-blue-medium;
+    background-color: $cl-blue-dark;
+    border-color: $cl-blue-dark;
+
+    &.focus,
+    &:focus,
+    &:hover {
+      color: $cl-white;
+      background-color: $cl-blue-dark;
+      border-color: $cl-blue-dark;
+      border-top-color: $cl-blue-medium;
+      box-shadow: inset 0 2px 0 $cl-blue-medium;
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+
+    &.active,
+    &:active {
+      color: $cl-white;
+      box-shadow: inset 0 2px 0 $cl-blue-medium;
+      background-color: $cl-blue-dark;
+      border-color: $cl-blue-dark;
+
+      &.focus,
+      &:focus,
+      &:hover {
+        color: $cl-white;
+        background-color: $cl-blue-dark;
+        border-color: $cl-blue-dark;
+        border-top-color: $cl-blue-medium;
+        box-shadow: inset 0 2px 0 $cl-blue-medium;
+      }
+    }
+  }
+}
+
+.btn-danger {
+  color: $cl-white;
+  background-color: $cl-red-light;
+  border-color: $cl-red-light;
+
+  &:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-red-light-2, .5);
+    color: $cl-white;
+    background-color: $cl-red-light;
+    border-color: $cl-red-light;
+    outline: 0;
+  }
+
+  &.hover,
+  &:hover {
+    color: $cl-white;
+    box-shadow: inset 0 -1px 0 $cl-red-dark-1;
+    background-color: $cl-red-light-1;
+    border-color: $cl-red-light-1;
+    border-bottom-color: $cl-red-dark-1;
+  }
+
+
+  &.active:focus,
+  &:active:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-red-light-2, .5);
+  }
+
+  &.active,
+  &:active {
+    color: $cl-white;
+    box-shadow: inset 0 2px 0 $cl-red-dark-1;
+    background-color: $cl-red-dark;
+    border-color: $cl-red-dark;
+    border-top-color: $cl-red-dark-2;
+
+    &.focus,
+    &:focus,
+    &:hover {
+      color: $cl-white;
+      background-color: $cl-red-dark;
+      border-color: $cl-red-dark;
+      border-top-color: $cl-red-dark-1;
+      box-shadow: inset 0 2px 0 $cl-red-dark-1;
+    }
+  }
+
+  &:not([disabled]):not(.disabled) {
+
+    &.active,
+    &:active {
+      color: $cl-white;
+      box-shadow: inset 0 2px 0 $cl-red-dark-1;
+      background-color: $cl-red-dark;
+      border-color: $cl-red-dark;
+      border-top-color: $cl-red-dark-2;
+
+      &.focus,
+      &:focus,
+      &:hover {
+        color: $cl-white;
+        background-color: $cl-red-dark;
+        border-color: $cl-red-dark;
+        border-top-color: $cl-red-dark-2;
+        box-shadow: inset 0 2px 0 $cl-red-dark-1;
+      }
+    }
+  }
+}
+
+.btn-warning {
+  color: $cl-white;
+  background-color: $cl-yellow-light;
+  border-color: $cl-yellow-light;
+
+  &:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-yellow-medium, .5);
+    color: $cl-white;
+    background-color: $cl-yellow-light;
+    border-color: $cl-yellow-light;
+    outline: 0;
+  }
+
+  &.hover,
+  &:hover {
+    color: $cl-white;
+    box-shadow: inset 0 -1px 0 $cl-yellow-dark;
+    background-color: $cl-yellow-light-1;
+    border-color: $cl-yellow-light-1;
+    border-bottom-color: $cl-yellow-dark;
+  }
+
+  &.active:focus,
+  &:active:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-yellow-medium, .5);
+  }
+
+  &.active,
+  &:active {
+    color: $cl-white;
+    box-shadow: inset 0 2px 0 $cl-yellow-dark;
+    background-color: $cl-yellow-dark-1;
+    border-color: $cl-yellow-dark-1;
+    border-top-color: $cl-yellow-dark-1;
+
+    &.focus,
+    &:focus,
+    &:hover {
+      color: $cl-white;
+      background-color: $cl-yellow-dark-1;
+      border-color: $cl-yellow-dark-1;
+      border-top-color: $cl-yellow-dark-1;
+      box-shadow: inset 0 2px 0 $cl-yellow-dark;
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+
+    &.active,
+    &:active {
+      color: $cl-white;
+      box-shadow: inset 0 2px 0 $cl-yellow-dark;
+      background-color: $cl-yellow-dark-1;
+      border-color: $cl-yellow-dark-1;
+      border-top-color: $cl-yellow-dark-1;
+
+      &.focus,
+      &:focus,
+      &:hover {
+        color: $cl-white;
+        background-color: $cl-yellow-dark-1;
+        border-color: $cl-yellow-dark-1;
+        border-top-color: $cl-yellow-dark-1;
+        box-shadow: inset 0 2px 0 $cl-yellow-dark;
+      }
+    }
+  }
+}
+
+.btn-success {
+  color: $cl-white;
+  background-color: $cl-green-light;
+  border-color: $cl-green-light;
+
+  &:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-green-light-3, .5);
+    color: $cl-white;
+    background-color: $cl-green-light;
+    border-color: $cl-green-light;
+    outline: 0;
+  }
+
+  &.hover,
+  &:hover {
+    color: $cl-white;
+    box-shadow: inset 0 -1px 0 $cl-green-dark;
+    background-color: $cl-green-light-2;
+    border-color: $cl-green-light-2;
+    border-bottom-color: $cl-green-dark;
+  }
+
+  &.active:focus,
+  &:active:focus {
+    box-shadow: 0 0 0 .15rem rgba($cl-green-light-3, .5);
+  }
+
+  &.active,
+  &:active {
+    color: $cl-white;
+    box-shadow: inset 0 2px 0 $cl-green-dark;
+    background-color: $cl-green-light-1;
+    border-color: $cl-green-light-1;
+    border-top-color: $cl-green-dark-1;
+
+    &.focus,
+    &:focus,
+    &:hover {
+      color: $cl-white;
+      background-color: $cl-green-light-1;
+      border-color: $cl-green-light-1;
+      border-top-color: $cl-green-dark-1;
+      box-shadow: inset 0 2px 0 $cl-green-dark;
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+
+    &.active,
+    &:active {
+      color: $cl-white;
+      box-shadow: inset 0 2px 0 $cl-green-dark;
+      background-color: $cl-green-light-1;
+      border-color: $cl-green-light-1;
+      border-top-color: $cl-green-dark-1;
+
+      &.focus,
+      &:focus,
+      &:hover {
+        color: $cl-white;
+        background-color: $cl-green-light-1;
+        border-color: $cl-green-light-1;
+        border-top-color: $cl-green-dark-1;
+        box-shadow: inset 0 2px 0 $cl-green-dark;
+      }
+    }
+  }
+}
