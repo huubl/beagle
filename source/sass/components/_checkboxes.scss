@@ -1,0 +1,155 @@
+// ======================================================
+// Components :: Checkbox
+// ======================================================
+
+.custom-control-checkbox {
+  margin-top: .1875rem;
+  margin-bottom: 1.1105rem;
+  position: relative;
+  display: block;
+  padding-left: 2.2rem;
+
+  &--inline {
+    display: inline-flex;
+    margin-right: 1.385rem;
+  }
+
+  &--color {
+    .custom-checkbox {
+      &:checked ~ .custom-checkbox-label:after {
+        background: $cl-blue;
+        color: $cl-white;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  &--valid {
+    .custom-checkbox.is--valid:checked ~ .custom-checkbox-label {
+      &:before {
+        background: $cl-green-light;
+      }
+
+      &:after {
+        color: $cl-white;
+      }
+    }
+  }
+
+  &--invalid {
+    .custom-checkbox.is--invalid:checked ~ .custom-checkbox-label {
+      &:before {
+        background: $cl-red-light-3;
+      }
+
+      &:after {
+        color: $cl-white;
+      }
+    }
+  }
+}
+
+.custom-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+  &:checked ~ .custom-checkbox-label:before {
+    border-color: $cl-blue;
+    color: $cl-blue;
+    background-color: $cl-white;
+  }
+
+  &:checked ~ .custom-checkbox-label:after {
+    content: '\f26b';
+    font-size: 1.5452rem;
+    font-family: $font-icon;
+    margin: 0;
+    font-weight: $font-weight-base;
+    text-align: center;
+    line-height: 1.1;
+    color: $cl-blue;
+  }
+
+  &:focus ~ .custom-checkbox-label:before {
+    transition: all .25s;
+    box-shadow: 0 0 0 2px rgba($cl-dark-light-4, .4), 0 0 0 .15rem transparent;
+  }
+
+  &.is--valid ~ .custom-checkbox-label {
+    color: $cl-green-light;
+
+    &:before {
+      border-color: $cl-green-light;
+    }
+
+    &:after {
+      color: $cl-green-light;
+    }
+  }
+
+  &.is--valid:focus ~ .custom-checkbox-label {
+    &:before {
+      box-shadow: 0 0 0 .15rem rgba($cl-green-light, .25);
+    }
+  }
+
+  &.is--invalid ~ .custom-checkbox-label {
+    color: $cl-red-light-3;
+
+    &:before {
+      border-color: $cl-red-light-3;
+    }
+
+    &:after {
+      color: $cl-red-light-3;
+    }
+  }
+
+  &.is--invalid:focus ~ .custom-checkbox-label {
+    &:before {
+      box-shadow: 0 0 0 .15rem rgba($cl-red-light, .25);
+    }
+  }
+}
+
+.custom-checkbox-label {
+  display: inline-block;
+  line-height: 1.7;
+  white-space: nowrap;
+  margin-bottom: 0;
+  vertical-align: top;
+  font-size: 1rem;
+  font-weight: $font-weight-base;
+  color: $cl-dark-light-3;
+
+  &:before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 3px;
+    margin: 0;
+    color: $cl-blue;
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    pointer-events: none;
+    content: '';
+    background-color: $cl-white;
+    border: $cl-gray-dark-1 solid 1px;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+}

@@ -2,46 +2,8 @@
 // Base :: Colors
 // ======================================================
 
-$cl-white:#fff;
-
-$cl-dark:#000;
-$cl-dark-medium: #272727;
-$cl-dark-light:#404040;
-$cl-dark-light-1: #646464;
-$cl-dark-light-2: #999;
-
-$cl-blue-light-2: #5e97f6;
-$cl-blue-light:#4c8bf5;
-$cl-blue: #4285f4;
-$cl-blue-medium:#2572f2;
-$cl-blue-dark:#1266f1;
-$cl-blue-dark-1:#0c57d3;
-
-$cl-red-light-2: #ed5f53;
-$cl-red-light-1: #eb4c3e;
-$cl-red-light:#ea4335;
-$cl-red:#e12717;
-$cl-red-dark: #e72919;
-$cl-red-dark-1: #d62516;
-$cl-red-dark-2: #b51f13;
-
-$cl-yellow-light-1: #fbbf0f;
-$cl-yellow-light: #fbbc05;
-$cl-yellow:#d6a003;
-$cl-yellow-medium: #daa50a;
-$cl-yellow-dark: #ca9703;
-$cl-yellow-dark-1: #dea604;
-$cl-yellow-dark-2: #a77d03;
-
-$cl-green-light: #34a853;
-$cl-green-light-1: #2d9147;
-$cl-green-light-2: #36b057;
-$cl-green-light-3: #52b56d;
-$cl-green:#2b8b45;
-$cl-green-dark: #288140;
-$cl-green-dark-1:#206632;
-
-$cl-gray-light:#dbdbdb;
-$cl-gray: #eee;
-$cl-gray-medium: #e3e3e3;
-$cl-gray-dark:#bababa;
+.cl {
+  &--white {
+    color: $cl-white;
+  }
+}

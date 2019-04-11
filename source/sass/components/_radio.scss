@@ -1,0 +1,186 @@
+// ======================================================
+// Components :: Radio
+// ======================================================
+
+.custom-control-radio {
+  white-space: nowrap;
+  margin-top: .1875rem;
+  margin-bottom: 1.1105rem;
+  position: relative;
+  display: block;
+  padding-left: 2.2rem;
+
+  &--icon {
+    position: relative;
+    padding: 7px 0;
+    width: 52px;
+    height: 52px;
+    margin-top: .1875rem;
+    margin-bottom: 1.1105rem;
+    white-space: nowrap;
+  }
+
+  &--inline {
+    display: inline-flex;
+    margin-right: 1.385rem;
+  }
+}
+
+.custom-radio-input {
+  position: absolute;
+  opacity: 0;
+
+  &:checked + .custom-radio-label--icon {
+    border-color: $cl-blue;
+    color: $cl-blue;
+    background-color: $cl-white;
+  }
+
+  &:focus + .custom-radio-label--icon {
+    box-shadow: 0 0 0 2px rgba($cl-dark-light-4, .4), 0 0 0 .15rem transparent;
+  }
+
+  &:focus + .custom-radio-label--text:before {
+    box-shadow: 0 0 0 2px rgba($cl-dark-light-4, .4), 0 0 0 .15rem transparent;
+  }
+
+  &:checked + .custom-radio-label--text:before {
+    border-color: $cl-blue;
+    color: $cl-blue;
+    background-color: $cl-white;
+  }
+
+  &:checked + .custom-radio-label--text:after {
+    color: $cl-blue;
+    content: '\f26d';
+    display: inline-block;
+    width: 1.77592rem;
+    height: 1.77592rem;
+    margin: 0;
+    font-size: 1rem;
+    font-family: $font-icon;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  &.is--invalid:focus + .custom-radio-label--text:before {
+    box-shadow: 0 0 0 .15rem rgba($cl-red-light, .25);
+  }
+
+  &.is--valid:focus + .custom-radio-label--text:before {
+    box-shadow: 0 0 0 .15rem rgba($cl-green-light, .25);
+  }
+
+  &.is--valid + .custom-radio-label--text:before {
+    border-color: $cl-green-light;
+    color: $cl-green-light;
+  }
+
+  &.is--invalid + .custom-radio-label--text:before {
+    border-color: $cl-red-light;
+    color: $cl-red-light;
+  }
+
+  &.is--valid + .custom-radio-label--text:after,
+  &.is--valid + .custom-radio-label--text {
+    color: $cl-green-light;
+  }
+
+  &.is--invalid + .custom-radio-label--text:after,
+  &.is--invalid + .custom-radio-label--text {
+    color: $cl-red-light;
+  }
+}
+
+.custom-control-radio--color {
+  .custom-radio-input {
+    &:checked + .custom-radio-label--text:before {
+      border-color: $cl-blue;
+      color: $cl-blue;
+      background-color: $cl-blue;
+    }
+
+    &:checked + .custom-radio-label--text:after {
+      color: $cl-white;
+    }
+
+    &.is--valid:checked + .custom-radio-label--text:after,
+    &.is--invalid:checked + .custom-radio-label--text:after {
+      color: $cl-white;
+    }
+
+    &.is--valid:checked + .custom-radio-label--text:before {
+      border-color: $cl-green-light;
+      background: $cl-green-light;
+    }
+
+    &.is--invalid:checked + .custom-radio-label--text:before {
+      border-color: $cl-red-light;
+      background: $cl-red-light;
+    }
+
+    &.is--valid + .custom-radio-label--text:after,
+    &.is--valid + .custom-radio-label--text {
+      color: $cl-green-light;
+    }
+
+    &.is--invalid + .custom-radio-label--text:after,
+    &.is--invalid + .custom-radio-label--text {
+      color: $cl-red-light;
+    }
+  }
+}
+
+.custom-radio-label {
+  &--icon {
+    transition: all .15s ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    border: 1px solid $cl-gray-light-1;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 36px;
+    vertical-align: middle;
+    color: $cl-dark-light-5;
+  }
+
+  &--text {
+    color: $cl-dark-light-3;
+    display: inline-block;
+    line-height: 1.7;
+    margin-bottom: 0;
+    vertical-align: top;
+
+    &:before {
+      transition: all .15s ease-in-out;
+      border-radius: 100%;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 1.7rem;
+      height: 1.7rem;
+      content: '';
+      background-color: $cl-white;
+      border: 1px solid $cl-gray-dark-1;
+    }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 1.7rem;
+      height: 1.7rem;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+  }
+}

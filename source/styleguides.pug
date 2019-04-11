@@ -1,8 +1,5 @@
-//-
-//- This page only for Frontend Developer
-            
 extends modules/layout/_page-other
-
+                
 block head
   +head('Styleguides')
   style.
@@ -26,18 +23,21 @@ block head
       border-radius: 0 0 0.25rem 0.25rem;
     }
 
-    .col--5 {
-      flex: 0 0 20%;
-      max-width: 20%;
-      position: relative;
-      width: 100%;
-      padding-right: 15px;
-      padding-left: 15px;
-    }
-
     .demo__title {
       margin-bottom: 20px;
       font-weight: 400;
+    }
+
+    .list-group{
+      position: sticky;
+      top: 0;
+    }
+
+    @media (max-width: 576px) {
+      .list-group{
+        position: relative;
+        margin-bottom: 24px;
+      }
     }
 
 
@@ -51,7 +51,19 @@ block main
       },{
         id: 'button',
         title: 'Buttons'
-      },
+      },{
+        id: 'input',
+        title: 'Inputs'
+      },{
+        id: 'checkbox',
+        title: 'Checkboxes'
+      },{
+        id: 'radio',
+        title: 'Radios'
+      },{
+        id: 'switch',
+        title: 'Switches'
+      }
     ];
 
   .container-fluid
@@ -60,13 +72,11 @@ block main
         h2 { Beagle } Style Guides
       .col-auto
         a.btn.btn-success(href="links.html") Back to list of page
-
     .row
-      .col-2
+      .col-12.col-sm-3.col-md-3.col-lg-2.col-xl-2
         #v-pills-tab.list-group(
           role="tablist"
           aria-orientation="vertical"
-          style="position: sticky; top: 0"
         )
           each val, index in components
             - var findFirstItem = index === 0
@@ -79,7 +89,7 @@ block main
               aria-controls=`v-pills-${val.id}`
               class=findFirstItem ? 'list-group-item active' : 'list-group-item'
             )= val.title
-      .col-10
+      .col-12.col-sm-9.col-md-9.col-lg-10.col-xl-10
         #v-pills-tabContent.tab-content
           each val, index in components
             - var findFirstItem = index === 0
@@ -94,5 +104,13 @@ block main
                   include styleguides/_colors
                 when 'button'
                   include styleguides/_button
+                when 'input'
+                  include styleguides/_input
+                when 'checkbox'
+                  include styleguides/_checkbox
+                when 'switch'
+                  include styleguides/_switch
+                when 'radio'
+                  include styleguides/_radio
                 default
                   - throw new Error('"val.id" must be in "components" variable')

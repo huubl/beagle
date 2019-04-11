@@ -1,0 +1,17 @@
+//-------------------------------------------------------
+//- Modules :: Checkbox
+//-------------------------------------------------------
+
+mixin checkboxes({ id, type, checked, label, valid })
+  .custom-control-checkbox&attributes(attributes)
+    input.custom-checkbox-input(
+      type= type ? type : "checkbox"
+      id= id ? id : null
+      class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
+      checked= (checked===true) ? true : false
+    )
+    if label
+      label.custom-checkbox-label(
+        for= id ? id : null
+      )
+        | #{label}

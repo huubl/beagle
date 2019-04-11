@@ -1,0 +1,382 @@
+//-------------------------------------------------------
+//- Styleguides :: Input
+//-------------------------------------------------------
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Input text
+      .demo
+        +input-field({
+          id: 'inputEmail',
+          type: 'email',
+          placeholder: 'Enter email'
+        })
+      pre
+        code
+          |+input-field({
+          |  id: 'inputEmail',
+          |  type: 'email',
+          |  placeholder: 'Enter email'
+          |})
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Input password
+      .demo
+        +input-field({
+          id: 'inputPassword',
+          type: 'password',
+          placeholder: 'Password'
+        })
+      pre
+        code
+          |+input-field({
+          |  id: 'inputPassword',
+          |  type: 'password',
+          |  placeholder: 'Password'
+          |})
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Placeholder Input
+      .demo
+        +input-field({
+          id: 'inputPlaceholder3',
+          placeholder: 'Placeholder text'
+        })
+      pre
+        code
+          |+input-field({
+          |  id: 'inputPlaceholder3',
+          |  placeholder: 'Placeholder text'
+          |})
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Disabled Input
+      .demo
+        +input-field({
+          id: 'inputDisabled3',
+          placeholder: 'Disabled input text',
+          disabled: true
+        })
+      pre
+        code
+          |+input-field({
+          |  id: 'inputDisabled3',
+          |  placeholder: 'Disabled input text',
+          |  disabled: true
+          |})
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Readonly Input
+      .demo
+        +input-field({
+          id: 'inputReadonly3',
+          placeholder: 'Readonly input text',
+          readonly: true
+        })
+      pre
+        code
+          |+input-field({
+          |  id: 'inputReadonly3',
+          |  placeholder: 'Readonly input text',
+          |  readonly: true
+          |})
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Input Choose File
+      .demo
+        .file-custom
+          +input-field({
+            id: 'inputGroupFile01',
+            type: 'file',
+            label: 'Choose file'
+          })
+      pre
+        code
+          | .file-custom
+          |   +input-field({
+          |     id: 'inputGroupFile01',
+          |     type: 'file',
+          |     label: 'Choose file'
+          |   })
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+      .code-example
+        h4.h4 Button multi file input
+        .demo
+          +input-field({
+            id: 'file-2',
+            type: 'file',
+            multiple: true,
+            text: "Browse files...",
+            labelType: 'secondary'
+          })
+        pre
+          code
+            |+input-field({
+            |  id: 'file-2',
+            |  type: 'file',
+            |  multiple: true,
+            |  text: "Browse files...",
+            |  labelType: 'secondary'
+            |})
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+      .code-example
+        h4.h4 Custom button multi file input
+        .demo
+          +input-field({
+            id: 'file-3',
+            type: 'file',
+            multiple: true,
+            text: "Browse files...",
+            labelType: 'primary'
+          })
+        pre
+          code
+            |+input-field({
+            |  id: 'file-3',
+            |  type: 'file',
+            |  multiple: true,
+            |  text: "Browse files...",
+            |  labelType: 'primary'
+            |})
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Large input
+      .demo
+        +input-field({
+          id: 'inputLarge',
+          value: 'Large input',
+          sizing: 'lg'
+        })
+      pre
+        code
+          | +input-field({
+          |    id: 'inputLarge',
+          |    value: 'Large input',
+          |    sizing: 'lg'
+          | })
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Default input
+      .demo
+        +input-field({
+          id: 'inputDefault',
+          value: 'Default input',
+          sizing: 'md'
+        })
+      pre
+        code
+          | +input-field({
+          |    id: 'inputDefault',
+          |    value: 'Default input',
+          |    sizing: 'md'
+          | })
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Small input
+      .demo
+        +input-field({
+          id: 'inputSmall',
+          value: 'Small input',
+          sizing: 'sm'
+        })
+      pre
+        code
+          | +input-field({
+          |    id: 'inputSmall',
+          |    value: 'Small input',
+          |    sizing: 'sm'
+          | })
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Extra Small input
+      .demo
+        +input-field({
+          id: 'inputExtraSmall',
+          value: 'Extra Small input',
+          sizing: 'xs'
+        })
+      pre
+        code
+          | +input-field({
+          |    id: 'inputExtraSmall',
+          |    value: 'Extra Small input',
+          |    sizing: 'xs'
+          | })
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Success
+      .demo
+        +input-field({
+          valid: true,
+          required: true
+        })
+      pre
+        code
+          | +input-field({
+          |    valid: true,
+          |    required: true
+          | })
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Error
+      .demo
+        +input-field({
+          valid: false,
+          required: true
+        })
+      pre
+        code
+          | +input-field({
+          |    valid: false,
+          |    required: true
+          | })
+
+.row
+  .col-12
+    .code-example
+      h4.h4 Textarea
+      .demo
+        +textarea('inputTextarea')
+      pre
+        code
+          |+textarea('inputTextarea')
+          
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Date Picker Default
+      .demo
+        +input-field({
+          datetimepicker: true
+        })
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Date Picker Readonly
+      .demo
+        +input-field({
+          datetimepicker: true,
+          size: "16",
+          readonly: true
+        })
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true,
+          |   size: "16",
+          |   readonly: true
+          | })
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Date Picker Only Date
+      .demo
+        +input-field({
+          datetimepicker: true
+        })(data-date-format="yyyy-mm-dd", data-min-view="2")
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })(data-date-format="yyyy-mm-dd" data-min-view="2")
+.row
+  .col-12
+    .code-example
+      h4.h4 Date Picker Decade View
+      .demo
+        +input-field({
+          datetimepicker: true
+        })(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-12
+    .code-example
+      h4.h4 Date Picker Year View
+      .demo
+        +input-field({
+          datetimepicker: true
+        })(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-12
+    .code-example
+      h4.h4 Date Picker Day View
+      .demo
+        +input-field({
+          datetimepicker: true
+        })(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-12
+    .code-example
+      h4.h4 Date Picker Hour View
+      .demo
+        +input-field({
+          datetimepicker: true
+        })(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-12
+    .code-example
+      h4.h4 Date Picker Day View Meridian
+      .demo
+        +input-field({
+          datetimepicker: true
+        })(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-12
+    .code-example
+      h4.h4 Date Picker Hour View Meridian
+      .demo
+        +input-field({
+          datetimepicker: true
+        })(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +input-field({
+          |   datetimepicker: true
+          | })(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")

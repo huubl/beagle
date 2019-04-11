@@ -1,0 +1,19 @@
+//-------------------------------------------------------
+//- Modules :: Switch
+//-------------------------------------------------------
+
+mixin switch({ id, type, name, size, checked })
+  .switch-button(
+    class= size ? `switch-button--${size}` : null
+    class= type ? `switch-button--${type}` : null
+  )
+    input.switch-button-input(
+      type= "checkbox"
+      checked= (checked===true) ? true : false
+      name= name ? name : null
+      id= id ? id : null
+    )
+    span
+      label(
+        for= id ? id : null
+      )
