@@ -5,7 +5,7 @@
 html {
   height: 100%;
   overflow-x: hidden;
-  font-size: 13px;
+  font-size: $font-size-small + 1;
 }
 
 body {
@@ -24,10 +24,13 @@ body {
 
 img {
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
 
 a {
-  color: $blue;
+  color: $cl-blue;
 
   &:hover,
   &:focus,
@@ -42,4 +45,28 @@ ul,
 ol {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .12);
+  border-radius: 3px;
+  padding: 7px 0;
+  min-width: 185px;
+  line-height: 18px;
+}
+
+.glyphicon {
+  display: inline-block;
+  font: 14px/1 $font-icon;
+  font-size: 1.615rem;
+  text-rendering: auto;
+}
+
+.icon-arrow-left:before {
+  content: '\f2fa';
+}
+
+.icon-arrow-right:before {
+  content: '\f2fb';
 }

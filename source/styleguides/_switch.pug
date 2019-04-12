@@ -1,0 +1,31 @@
+//-------------------------------------------------------
+//- Styleguides :: Switch
+//-------------------------------------------------------
+
+- 
+  var listType = ['primary', 'success', 'warning', 'danger', 'yesno']
+  var listSize = ['xs', 'sm', 'md', 'lg']
+
+h2.h2 Switch button
+each item, index in listType
+  .row
+    each val, index1 in listSize
+      .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+        .code-example
+          .demo
+            +switch({
+              id: `swt${index}${index1}`,
+              name: `swt${index}${index1}`,
+              type: item,
+              size: val,
+              checked: true
+            })
+          pre
+            code
+              |+switch({
+              |  id: 'swt#{index}#{index1}',
+              |  name: 'swt#{index}#{index1}',
+              |  type: '#{item}',
+              |  size: '#{val}',
+              |  checked: true
+              |})

@@ -1,3 +1,39 @@
 //-------------------------------------------------------
 //- Modules :: Input
 //-------------------------------------------------------
+
+//- Input field
+mixin input-field({ id, type, placeholder, disabled, readonly, value, sizing, size, valid, datetimepicker, label, required, multiple, text, labelType })
+  input(
+      class= (type=="file") ? "file-input" : "form__control"
+      class= (type=="file" && typeof multiple !== "undefined") ? "multi-file" : null
+      class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
+      class= sizing ? `form__control--${sizing}` : null
+      class= (datetimepicker===true) ? `datetimepicker` : null
+      type= type ? type : 'text'
+      placeholder= placeholder ? placeholder : null
+      value= value ? value : null
+      readonly= (readonly===true) ? true : false
+      disabled= (disabled===true) ? true : false
+      required= (required===true) ? true : false
+      id= id ? id : null
+      size= size ? size : null
+      multiple= (multiple===true) ? true : false
+    )&attributes(attributes)
+  if (type==="file" && typeof multiple === "undefined")
+    label.file-label(
+      for= id ? id : null
+    )= label
+  if (type==="file" && typeof multiple !== "undefined")
+    label(
+      class= labelType ? `btn-${labelType}` : null
+      for= id ? id : null
+    )
+      i.zmdi.zmdi-upload
+      span=text ? text : null
+
+//- Input Textarea
+mixin textarea(id)
+  textarea.text-field(
+    id= id ? id : null
+  )

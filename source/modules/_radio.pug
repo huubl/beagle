@@ -1,0 +1,23 @@
+//-------------------------------------------------------
+//- Modules :: Radio
+//-------------------------------------------------------
+
+mixin radio({ id, name, type, label, icon, checked, valid })
+  label.custom-control-radio(
+    class= icon ? `custom-control-radio--icon` : null
+  )&attributes(attributes)
+    input.custom-radio-input(
+      type= type ? type : 'radio'
+      id= id ? id : null
+      checked= (checked===true) ? true : false
+      name= name ? name : null
+      class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
+    )
+    span(
+      class= icon ? `custom-radio-label--icon` : `custom-radio-label--text`
+    )
+      if (typeof icon === 'undefined')
+        | #{label}
+      else
+        i.zmdi(class=`${icon}`)
+

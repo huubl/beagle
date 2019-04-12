@@ -1,0 +1,263 @@
+//-------------------------------------------------------
+//- Styleguides :: Radio
+//-------------------------------------------------------
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Icon Radio
+      .demo
+        +radio({
+          id: 'radioIcon1',
+          name: 'radio-icon',
+          checked: true,
+          icon: 'zmdi-female'
+        })(class='custom-control-radio--inline')
+        +radio({
+          id: 'radioIcon2',
+          name: 'radio-icon',
+          checked: false,
+          icon: 'zmdi-male'
+        })(class='custom-control-radio--inline')
+      pre
+        code
+          |+radio({
+          |  id: 'radioIcon1',
+          |  name: 'radio-icon',
+          |  checked: true,
+          |  icon: 'zmdi-female'
+          |})(class='custom-control-radio--inline')
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Radio
+      .demo
+        +radio({
+          id: 'radioIcon3',
+          name: 'radio-icon1',
+          label: 'Option 1',
+          checked: true,
+        })
+        +radio({
+          id: 'radioIcon4',
+          name: 'radio-icon1',
+          label: 'Option 2',
+          checked: false,
+        })
+        +radio({
+          id: 'radioIco5',
+          name: 'radio-icon1',
+          label: 'Option 3',
+          checked: false,
+        })
+      pre
+        code
+          |+radio({
+          |  id: 'radioIcon3',
+          |  name: 'radio-icon1',
+          |  label: 'Option 1',
+          |  checked: true,
+          |})
+          |+radio({
+          |  id: 'radioIcon4',
+          |  name: 'radio-icon1',
+          |  label: 'Option 2',
+          |  checked: false,
+          |})
+          |+radio({
+          |  id: 'radioIco5',
+          |  name: 'radio-icon1',
+          |  label: 'Option 3',
+          |  checked: false,
+          |})
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Inline Radio
+      .demo
+        +radio({
+          id: 'radioIcon6',
+          name: 'radio-icon2',
+          label: 'Option 1',
+          checked: true,
+        })(class='custom-control-radio--inline')
+        +radio({
+          id: 'radioIcon7',
+          name: 'radio-icon2',
+          label: 'Option 2',
+          checked: false,
+        })(class='custom-control-radio--inline')
+        +radio({
+          id: 'radioIcon8',
+          name: 'radio-icon2',
+          label: 'Option 3',
+          checked: false,
+        })(class='custom-control-radio--inline')
+      pre
+        code
+          |+radio({
+          |  id: 'radioIcon6',
+          |  name: 'radio-icon2',
+          |  label: 'Option 1',
+          |  checked: true,
+          |})(class='custom-control-radio--inline')
+          |+radio({
+          |  id: 'radioIcon7',
+          |  name: 'radio-icon2',
+          |  label: 'Option 2',
+          |  checked: false,
+          |})(class='custom-control-radio--inline')
+          |+radio({
+          |  id: 'radioIcon8',
+          |  name: 'radio-icon2',
+          |  label: 'Option 3',
+          |  checked: false,
+          |})(class='custom-control-radio--inline')
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Inline Radio Full Color
+      .demo
+        +radio({
+          id: 'radioIcon9',
+          name: 'radio-icon3',
+          label: 'Option 1',
+          checked: true,
+        })(class='custom-control-radio--inline custom-control-radio--color')
+        +radio({
+          id: 'radioIcon10',
+          name: 'radio-icon3',
+          label: 'Option 2',
+          checked: false,
+        })(class='custom-control-radio--inline custom-control-radio--color')
+        +radio({
+          id: 'radioIcon11',
+          name: 'radio-icon3',
+          label: 'Option 3',
+          checked: false,
+        })(class='custom-control-radio--inline custom-control-radio--color')
+      pre
+        code
+          |+radio({
+          |  id: 'radioIcon9',
+          |  name: 'radio-icon3',
+          |  label: 'Option 1',
+          |  checked: true,
+          |})(class='custom-control-radio--inline custom-control-radio--color')
+          |+radio({
+          |  id: 'radioIcon10',
+          |  name: 'radio-icon3',
+          |  label: 'Option 2',
+          |  checked: false,
+          |})(class='custom-control-radio--inline custom-control-radio--color')
+          |+radio({
+          |  id: 'radioIcon11',
+          |  name: 'radio-icon3',
+          |  label: 'Option 3',
+          |  checked: false,
+          |})(class='custom-control-radio--inline custom-control-radio--color')
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Radio valid
+      .demo
+        +radio({
+          id: 'radioIcon12',
+          name: 'radio-icon4',
+          label: 'Success',
+          checked: true,
+          valid: true
+        })
+        +radio({
+          id: 'radioIcon13',
+          name: 'radio-icon4',
+          label: 'Error',
+          checked: false,
+          valid: false
+        })
+      pre
+        code
+          |+radio({
+          |  id: 'radioIcon12',
+          |  name: 'radio-icon4',
+          |  label: 'Success',
+          |  checked: true,
+          |  valid: true
+          |})
+          |+radio({
+          |  id: 'radioIcon13',
+          |  name: 'radio-icon4',
+          |  label: 'Error',
+          |  checked: false,
+          |  valid: false
+          |})
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Radio valid inline
+      .demo
+        +radio({
+          id: 'radioIcon14',
+          name: 'radio-icon5',
+          label: 'Success',
+          checked: true,
+          valid: true
+        })(class='custom-control-radio--inline')
+        +radio({
+          id: 'radioIcon14',
+          name: 'radio-icon5',
+          label: 'Error',
+          checked: false,
+          valid: false
+        })(class='custom-control-radio--inline')
+      pre
+        code
+          |+radio({
+          |  id: 'radioIcon14',
+          |  name: 'radio-icon5',
+          |  label: 'Success',
+          |  checked: true,
+          |  valid: true
+          |})(class='custom-control-radio--inline')
+          |+radio({
+          |  id: 'radioIcon14',
+          |  name: 'radio-icon5',
+          |  label: 'Error',
+          |  checked: false,
+          |  valid: false
+          |})(class='custom-control-radio--inline')
+
+.row
+  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+    .code-example
+      h4.h4 Radio valid inline full color
+      .demo
+        +radio({
+          id: 'radioIcon15',
+          name: 'radio-icon6',
+          label: 'Success',
+          checked: true,
+          valid: true
+        })(class='custom-control-radio--inline custom-control-radio--color')
+        +radio({
+          id: 'radioIcon15',
+          name: 'radio-icon6',
+          label: 'Error',
+          checked: false,
+          valid: false
+        })(class='custom-control-radio--inline custom-control-radio--color')
+      pre
+        code
+          |+radio({
+          |  id: 'radioIcon15',
+          |  name: 'radio-icon6',
+          |  label: 'Success',
+          |  checked: true,
+          |  valid: true
+          |})(class='custom-control-radio--inline custom-control-radio--color')
+          |+radio({
+          |  id: 'radioIcon15',
+          |  name: 'radio-icon6',
+          |  label: 'Error',
+          |  checked: false,
+          |  valid: false
+          |})(class='custom-control-radio--inline custom-control-radio--color')

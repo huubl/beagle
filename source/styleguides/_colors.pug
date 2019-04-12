@@ -10,12 +10,16 @@
     { key: '$cl-dark-light', color: '#404040' },
     { key: '$cl-dark-light-1', color: '#646464' },
     { key: '$cl-dark-light-2', color: '#999' },
+    { key: '$cl-dark-light-3', color: '#666' },
+    { key: '$cl-dark-light-4', color: '#878787' },
+    { key: '$cl-dark-light-5', color: '#808080' },
     { key: '$cl-blue-light-2', color: '#5E97F6' },
     { key: '$cl-blue-light', color: '#4c8bf5' },
     { key: '$cl-blue', color: '#4285f4' },
     { key: '$cl-blue-medium', color: '#2572f2' },
     { key: '$cl-blue-dark', color: '#1266f1' },
     { key: '$cl-blue-dark-1', color: '#0c57d3' },
+    { key: '$cl-red-light-3', color: '#ef6e63' },
     { key: '$cl-red-light-2', color: '#ed5f53' },
     { key: '$cl-red-light-1', color: '#eb4c3e' },
     { key: '$cl-red-light', color: '#ea4335' },
@@ -37,15 +41,18 @@
     { key: '$cl-green', color: '#2b8b45' },
     { key: '$cl-green-dark', color: '#288140' },
     { key: '$cl-green-dark-1', color: '#206632' },
+    { key: '$cl-gray-light-2', color: '#bdc0c7' },
+    { key: '$cl-gray-light-1', color: '#d5d8de' },
     { key: '$cl-gray-light', color: '#dbdbdb' },
     { key: '$cl-gray', color: '#eee' },
     { key: '$cl-gray-medium', color: '#e3e3e3' },
     { key: '$cl-gray-dark', color: '#bababa' },
+    { key: '$cl-gray-dark-1', color: '#a1a1a1' },
   ];
 
 .row
   each val in colors
-    .col-3
+    .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
       .code-example
         .demo(style=`background-color: ${val.color}; width: 100%; height: 150px`)
         pre

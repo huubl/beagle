@@ -32,18 +32,21 @@
         border-radius: 0 0 0.25rem 0.25rem;
       }
 
-      .col--5 {
-        flex: 0 0 20%;
-        max-width: 20%;
-        position: relative;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-      }
-
       .demo__title {
         margin-bottom: 20px;
         font-weight: 400;
+      }
+
+      .list-group {
+        position: sticky;
+        top: 0;
+      }
+
+      @media (max-width: 576px) {
+        .list-group {
+          position: relative;
+          margin-bottom: 24px;
+        }
       }
 
     </style>
@@ -57,840 +60,1334 @@
         <div class="col-auto"><a class="btn btn-success" href="links.html">Back to list of page</a></div>
       </div>
       <div class="row">
-        <div class="col-2">
-          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="position: sticky; top: 0"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-button-tab" href="#v-pills-button" aria-controls="v-pills-button">Buttons</a>
+        <div class="col-12 col-sm-3 col-md-3 col-lg-2 col-xl-2">
+          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-button-tab" href="#v-pills-button" aria-controls="v-pills-button">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-input-tab" href="#v-pills-input" aria-controls="v-pills-input">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radios</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switches</a>
           </div>
         </div>
-        <div class="col-10">
+        <div class="col-12 col-sm-9 col-md-9 col-lg-10 col-xl-10">
           <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" role="tabpanel" id="v-pills-colors" aria-labelledby="v-pills-colors-tab">
               <div class="row">
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #fff; width: 100%; height: 150px"></div>
                     <pre><code>$cl-white: #fff</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #000; width: 100%; height: 150px"></div>
                     <pre><code>$cl-dark: #000</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #272727; width: 100%; height: 150px"></div>
                     <pre><code>$cl-dark-medium: #272727</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #404040; width: 100%; height: 150px"></div>
                     <pre><code>$cl-dark-light: #404040</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #646464; width: 100%; height: 150px"></div>
                     <pre><code>$cl-dark-light-1: #646464</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #999; width: 100%; height: 150px"></div>
                     <pre><code>$cl-dark-light-2: #999</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #666; width: 100%; height: 150px"></div>
+                    <pre><code>$cl-dark-light-3: #666</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #878787; width: 100%; height: 150px"></div>
+                    <pre><code>$cl-dark-light-4: #878787</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #808080; width: 100%; height: 150px"></div>
+                    <pre><code>$cl-dark-light-5: #808080</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #5E97F6; width: 100%; height: 150px"></div>
                     <pre><code>$cl-blue-light-2: #5E97F6</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #4c8bf5; width: 100%; height: 150px"></div>
                     <pre><code>$cl-blue-light: #4c8bf5</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #4285f4; width: 100%; height: 150px"></div>
                     <pre><code>$cl-blue: #4285f4</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #2572f2; width: 100%; height: 150px"></div>
                     <pre><code>$cl-blue-medium: #2572f2</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #1266f1; width: 100%; height: 150px"></div>
                     <pre><code>$cl-blue-dark: #1266f1</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #0c57d3; width: 100%; height: 150px"></div>
                     <pre><code>$cl-blue-dark-1: #0c57d3</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #ef6e63; width: 100%; height: 150px"></div>
+                    <pre><code>$cl-red-light-3: #ef6e63</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #ed5f53; width: 100%; height: 150px"></div>
                     <pre><code>$cl-red-light-2: #ed5f53</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #eb4c3e; width: 100%; height: 150px"></div>
                     <pre><code>$cl-red-light-1: #eb4c3e</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #ea4335; width: 100%; height: 150px"></div>
                     <pre><code>$cl-red-light: #ea4335</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #e12717; width: 100%; height: 150px"></div>
                     <pre><code>$cl-red: #e12717</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #e72919; width: 100%; height: 150px"></div>
                     <pre><code>$cl-red-dark: #e72919</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #d62516; width: 100%; height: 150px"></div>
                     <pre><code>$cl-red-dark-1: #d62516</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #b51f13; width: 100%; height: 150px"></div>
                     <pre><code>$cl-red-dark-2: #b51f13</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #fbbf0f; width: 100%; height: 150px"></div>
                     <pre><code>$cl-yellow-light-1: #fbbf0f</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #fbbc05; width: 100%; height: 150px"></div>
                     <pre><code>$cl-yellow-light: #fbbc05</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #d6a003; width: 100%; height: 150px"></div>
                     <pre><code>$cl-yellow: #d6a003</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #daa50a; width: 100%; height: 150px"></div>
                     <pre><code>$cl-yellow-medium: #daa50a</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #ca9703; width: 100%; height: 150px"></div>
                     <pre><code>$cl-yellow-dark: #ca9703</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #dea604; width: 100%; height: 150px"></div>
                     <pre><code>$cl-yellow-dark-1: #dea604</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #a77d03; width: 100%; height: 150px"></div>
                     <pre><code>$cl-yellow-dark-2: #a77d03</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #34a853; width: 100%; height: 150px"></div>
                     <pre><code>$cl-green-light: #34a853</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #2d9147; width: 100%; height: 150px"></div>
                     <pre><code>$cl-green-light-1: #2d9147</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #36b057; width: 100%; height: 150px"></div>
                     <pre><code>$cl-green-light-2: #36b057</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #52b56d; width: 100%; height: 150px"></div>
                     <pre><code>$cl-green-light-3: #52b56d</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #2b8b45; width: 100%; height: 150px"></div>
                     <pre><code>$cl-green: #2b8b45</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #288140; width: 100%; height: 150px"></div>
                     <pre><code>$cl-green-dark: #288140</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #206632; width: 100%; height: 150px"></div>
                     <pre><code>$cl-green-dark-1: #206632</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #bdc0c7; width: 100%; height: 150px"></div>
+                    <pre><code>$cl-gray-light-2: #bdc0c7</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #d5d8de; width: 100%; height: 150px"></div>
+                    <pre><code>$cl-gray-light-1: #d5d8de</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #dbdbdb; width: 100%; height: 150px"></div>
                     <pre><code>$cl-gray-light: #dbdbdb</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #eee; width: 100%; height: 150px"></div>
                     <pre><code>$cl-gray: #eee</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #e3e3e3; width: 100%; height: 150px"></div>
                     <pre><code>$cl-gray-medium: #e3e3e3</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo" style="background-color: #bababa; width: 100%; height: 150px"></div>
                     <pre><code>$cl-gray-dark: #bababa</code></pre>
                   </div>
                 </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo" style="background-color: #a1a1a1; width: 100%; height: 150px"></div>
+                    <pre><code>$cl-gray-dark-1: #a1a1a1</code></pre>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-button" aria-labelledby="v-pills-button-tab">
-              <h2 class="demo__title">Normal Button</h2>
+              <h2 class="demo__title">Basic Button</h2>
               <div class="row">
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary">Secondary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'secondary',
- text: 'Secondary'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-primary">Primary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'primary',
- text: 'Primary'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-danger">Danger
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'danger',
- text: 'Danger'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-warning">Warning
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'warning',
- text: 'Warning'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-success">Success
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'success',
- text: 'Success'
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2 class="demo__title">Hover Button</h2>
-              <div class="row">
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary hover">Secondary
+                      <button class="btn btn-space btn-secondary btn-xs">Secondary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'secondary',
  text: 'Secondary',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-primary hover">Primary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'primary',
- text: 'Primary',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-danger hover">Danger
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'danger',
- text: 'Danger',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-warning hover">Warning
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'warning',
- text: 'Warning',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-success hover">Success
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'success',
- text: 'Success',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2 class="demo__title">Active Button</h2>
-              <div class="row">
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary active">Secondary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'secondary',
- text: 'Secondary',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-primary active">Primary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'primary',
- text: 'Primary',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-danger active">Danger
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'danger',
- text: 'Danger',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-warning active">Warning
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'warning',
- text: 'Warning',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-success active">Success
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'success',
- text: 'Success',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2 class="demo__title">Normal Button Icon</h2>
-              <div class="row">
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'secondary',
- text: 'Secondary',
- iconBefore: 'zmdi-globe'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-primary"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'primary',
- text: 'Primary',
- iconBefore: 'zmdi-cloud-done'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-danger"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'danger',
- text: 'Danger',
- iconBefore: 'zmdi-alert-circle'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-warning"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'warning',
- text: 'Warning',
- iconBefore: 'zmdi-alert-triangle'
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-success"><i class="icon icon-left zmdi zmdi-check"></i>Success
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'success',
- text: 'Success',
- iconBefore: 'zmdi-check'
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2 class="demo__title">Hover Button Icon</h2>
-              <div class="row">
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary hover"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'secondary',
- text: 'Secondary',
- iconBefore: 'zmdi-globe',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-primary hover"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'primary',
- text: 'Primary',
- iconBefore: 'zmdi-cloud-done',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-danger hover"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'danger',
- text: 'Danger',
- iconBefore: 'zmdi-alert-circle',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-warning hover"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'warning',
- text: 'Warning',
- iconBefore: 'zmdi-alert-triangle',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-success hover"><i class="icon icon-left zmdi zmdi-check"></i>Success
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'success',
- text: 'Success',
- iconBefore: 'zmdi-check',
- hover: true
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2 class="demo__title">Active Button Icon</h2>
-              <div class="row">
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary active"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'secondary',
- text: 'Secondary',
- iconBefore: 'zmdi-globe',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-primary active"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'primary',
- text: 'Primary',
- iconBefore: 'zmdi-cloud-done',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-danger active"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'danger',
- text: 'Danger',
- iconBefore: 'zmdi-alert-circle',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-warning active"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'warning',
- text: 'Warning',
- iconBefore: 'zmdi-alert-triangle',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-success active"><i class="icon icon-left zmdi zmdi-check"></i>Success
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'success',
- text: 'Success',
- iconBefore: 'zmdi-check',
- active: true
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <h2 class="demo__title">Button Size Standard</h2>
-              <div class="row">
-                <div class="col--5">
-                  <div class="code-example">
-                    <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary btn-xs">Extra Small
-                      </button>
-                    </div>
-                    <pre><code>+buttons({
- type: 'secondary',
- text: 'Extra Small',
  size: 'xs'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary btn-sm">Small
+                      <button class="btn btn-space btn-secondary btn-sm">Secondary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'secondary',
- text: 'Small',
+ text: 'Secondary',
  size: 'sm'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary">Default
+                      <button class="btn btn-space btn-secondary btn-md">Secondary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'secondary',
- text: 'Default'
+ text: 'Secondary',
+ size: 'md'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary btn-lg">Large
+                      <button class="btn btn-space btn-secondary btn-lg">Secondary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'secondary',
- text: 'Large',
+ text: 'Secondary',
  size: 'lg'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary btn-xl">Extra Large
+                      <button class="btn btn-space btn-secondary btn-xl">Secondary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'secondary',
- text: 'Extra Large',
+ text: 'Secondary',
  size: 'xl'
 })</code></pre>
                   </div>
                 </div>
               </div>
-              <h2 class="demo__title">Button Size with Icon</h2>
               <div class="row">
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-primary btn-xs"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Extra Small
+                      <button class="btn btn-space btn-primary btn-xs">Primary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'primary',
- text: 'Extra Small',
+ text: 'Primary',
+ size: 'xs'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-sm">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'sm'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-md">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'md'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-lg">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'lg'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-xl">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'xl'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xs">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'xs'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-sm">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'sm'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-md">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'md'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-lg">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'lg'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xl">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'xl'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xs">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'xs'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-sm">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'sm'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-md">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'md'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-lg">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'lg'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xl">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'xl'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xs">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'xs'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-sm">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'sm'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-md">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'md'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-lg">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'lg'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xl">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'xl'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <h2 class="demo__title">Button with Icon</h2>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-xs"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'xs',
+ iconBefore: 'zmdi-globe'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-sm"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'sm',
+ iconBefore: 'zmdi-globe'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-md"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'md',
+ iconBefore: 'zmdi-globe'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-lg"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'lg',
+ iconBefore: 'zmdi-globe'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-xl"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'xl',
+ iconBefore: 'zmdi-globe'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-xs"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
  size: 'xs',
  iconBefore: 'zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-primary btn-sm"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Small
+                      <button class="btn btn-space btn-primary btn-sm"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'primary',
- text: 'Small',
+ text: 'Primary',
  size: 'sm',
  iconBefore: 'zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-primary"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Default
+                      <button class="btn btn-space btn-primary btn-md"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'primary',
- text: 'Default',
+ text: 'Primary',
+ size: 'md',
  iconBefore: 'zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-primary btn-lg"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Large
+                      <button class="btn btn-space btn-primary btn-lg"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'primary',
- text: 'Large',
+ text: 'Primary',
  size: 'lg',
  iconBefore: 'zmdi-cloud-done'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-xl"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'xl',
+ iconBefore: 'zmdi-cloud-done'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xs"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'xs',
+ iconBefore: 'zmdi-alert-circle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-sm"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'sm',
+ iconBefore: 'zmdi-alert-circle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-md"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'md',
+ iconBefore: 'zmdi-alert-circle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-lg"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'lg',
+ iconBefore: 'zmdi-alert-circle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xl"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'xl',
+ iconBefore: 'zmdi-alert-circle'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xs"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'xs',
+ iconBefore: 'zmdi-alert-triangle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-sm"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'sm',
+ iconBefore: 'zmdi-alert-triangle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-md"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'md',
+ iconBefore: 'zmdi-alert-triangle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-lg"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'lg',
+ iconBefore: 'zmdi-alert-triangle'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xl"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'xl',
+ iconBefore: 'zmdi-alert-triangle'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xs"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'xs',
+ iconBefore: 'zmdi-check'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-sm"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'sm',
+ iconBefore: 'zmdi-check'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-md"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'md',
+ iconBefore: 'zmdi-check'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-lg"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'lg',
+ iconBefore: 'zmdi-check'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xl"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'xl',
+ iconBefore: 'zmdi-check'
 })</code></pre>
                   </div>
                 </div>
               </div>
               <h2 class="demo__title">Buttons Rounded Standard</h2>
               <div class="row">
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary btn-rounded">Secondary
+                      <button class="btn btn-space btn-secondary btn-xs btn-rounded">Secondary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'secondary',
  text: 'Secondary',
+ size: 'xs',
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-primary btn-rounded">Primary
+                      <button class="btn btn-space btn-secondary btn-sm btn-rounded">Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'sm',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-md btn-rounded">Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'md',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-lg btn-rounded">Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'lg',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-xl btn-rounded">Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'xl',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-xs btn-rounded">Primary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'primary',
  text: 'Primary',
+ size: 'xs',
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-danger btn-rounded">Danger
+                      <button class="btn btn-space btn-primary btn-sm btn-rounded">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'sm',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-md btn-rounded">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'md',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-lg btn-rounded">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'lg',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-xl btn-rounded">Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'xl',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xs btn-rounded">Danger
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'danger',
  text: 'Danger',
+ size: 'xs',
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-warning btn-rounded">Warning
+                      <button class="btn btn-space btn-danger btn-sm btn-rounded">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'sm',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-md btn-rounded">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'md',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-lg btn-rounded">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'lg',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xl btn-rounded">Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'xl',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xs btn-rounded">Warning
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'warning',
  text: 'Warning',
+ size: 'xs',
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-success btn-rounded">Success
+                      <button class="btn btn-space btn-warning btn-sm btn-rounded">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'sm',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-md btn-rounded">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'md',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-lg btn-rounded">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'lg',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xl btn-rounded">Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'xl',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xs btn-rounded">Success
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'success',
  text: 'Success',
+ size: 'xs',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-sm btn-rounded">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'sm',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-md btn-rounded">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'md',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-lg btn-rounded">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'lg',
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xl btn-rounded">Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'xl',
  rounded: true
 })</code></pre>
                   </div>
@@ -898,73 +1395,1448 @@
               </div>
               <h2 class="demo__title">Buttons Rounded with Icon</h2>
               <div class="row">
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-secondary btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      <button class="btn btn-space btn-secondary btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'secondary',
  text: 'Secondary',
- iconBefore: 'zmdi-globe',
+ size: 'xs',
+ iconBefore: 'zmdi-globe', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-primary btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
+                      <button class="btn btn-space btn-secondary btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'sm',
+ iconBefore: 'zmdi-globe', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'md',
+ iconBefore: 'zmdi-globe', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'lg',
+ iconBefore: 'zmdi-globe', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-secondary btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'secondary',
+ text: 'Secondary',
+ size: 'xl',
+ iconBefore: 'zmdi-globe', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'primary',
  text: 'Primary',
- iconBefore: 'zmdi-cloud-done',
+ size: 'xs',
+ iconBefore: 'zmdi-cloud-done', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-danger btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      <button class="btn btn-space btn-primary btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'sm',
+ iconBefore: 'zmdi-cloud-done', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'md',
+ iconBefore: 'zmdi-cloud-done', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'lg',
+ iconBefore: 'zmdi-cloud-done', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-primary btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'primary',
+ text: 'Primary',
+ size: 'xl',
+ iconBefore: 'zmdi-cloud-done', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'danger',
  text: 'Danger',
- iconBefore: 'zmdi-alert-circle',
+ size: 'xs',
+ iconBefore: 'zmdi-alert-circle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-warning btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      <button class="btn btn-space btn-danger btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'sm',
+ iconBefore: 'zmdi-alert-circle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'md',
+ iconBefore: 'zmdi-alert-circle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'lg',
+ iconBefore: 'zmdi-alert-circle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-danger btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'danger',
+ text: 'Danger',
+ size: 'xl',
+ iconBefore: 'zmdi-alert-circle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'warning',
  text: 'Warning',
- iconBefore: 'zmdi-alert-triangle',
+ size: 'xs',
+ iconBefore: 'zmdi-alert-triangle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col--5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                   <div class="code-example">
                     <div class="demo text-center">
-                      <button class="btn btn-space btn-success btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      <button class="btn btn-space btn-warning btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'sm',
+ iconBefore: 'zmdi-alert-triangle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'md',
+ iconBefore: 'zmdi-alert-triangle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'lg',
+ iconBefore: 'zmdi-alert-triangle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-warning btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'warning',
+ text: 'Warning',
+ size: 'xl',
+ iconBefore: 'zmdi-alert-triangle', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
                       </button>
                     </div>
                     <pre><code>+buttons({
  type: 'success',
  text: 'Success',
- iconBefore: 'zmdi-check',
+ size: 'xs',
+ iconBefore: 'zmdi-check', 
  rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'sm',
+ iconBefore: 'zmdi-check', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'md',
+ iconBefore: 'zmdi-check', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'lg',
+ iconBefore: 'zmdi-check', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                  <div class="code-example">
+                    <div class="demo text-center">
+                      <button class="btn btn-space btn-success btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
+                      </button>
+                    </div>
+                    <pre><code>+buttons({
+ type: 'success',
+ text: 'Success',
+ size: 'xl',
+ iconBefore: 'zmdi-check', 
+ rounded: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-input" aria-labelledby="v-pills-input-tab">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Input text</h4>
+                    <div class="demo">
+                      <input class="form__control" type="email" placeholder="Enter email" id="inputEmail" />
+                    </div>
+                    <pre><code>+input-field({
+ id: 'inputEmail',
+ type: 'email',
+ placeholder: 'Enter email'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Input password</h4>
+                    <div class="demo">
+                      <input class="form__control" type="password" placeholder="Password" id="inputPassword" />
+                    </div>
+                    <pre><code>+input-field({
+ id: 'inputPassword',
+ type: 'password',
+ placeholder: 'Password'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Placeholder Input</h4>
+                    <div class="demo">
+                      <input class="form__control" type="text" placeholder="Placeholder text" id="inputPlaceholder3" />
+                    </div>
+                    <pre><code>+input-field({
+ id: 'inputPlaceholder3',
+ placeholder: 'Placeholder text'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Disabled Input</h4>
+                    <div class="demo">
+                      <input class="form__control" type="text" placeholder="Disabled input text" disabled="disabled" id="inputDisabled3" />
+                    </div>
+                    <pre><code>+input-field({
+ id: 'inputDisabled3',
+ placeholder: 'Disabled input text',
+ disabled: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Readonly Input</h4>
+                    <div class="demo">
+                      <input class="form__control" type="text" placeholder="Readonly input text" readonly="readonly" id="inputReadonly3" />
+                    </div>
+                    <pre><code>+input-field({
+ id: 'inputReadonly3',
+ placeholder: 'Readonly input text',
+ readonly: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Input Choose File</h4>
+                    <div class="demo">
+                      <div class="file-custom">
+                        <input class="file-input" type="file" id="inputGroupFile01" />
+                        <label class="file-label" for="inputGroupFile01">Choose file</label>
+                      </div>
+                    </div>
+                    <pre><code>.file-custom
+  +input-field({
+    id: 'inputGroupFile01',
+    type: 'file',
+    label: 'Choose file'
+  })</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Button multi file input</h4>
+                    <div class="demo">
+                      <input class="file-input multi-file" type="file" id="file-2" multiple="multiple" />
+                      <label class="btn-secondary" for="file-2"><i class="zmdi zmdi-upload"></i><span>Browse files...</span></label>
+                    </div>
+                    <pre><code>+input-field({
+ id: 'file-2',
+ type: 'file',
+ multiple: true,
+ text: "Browse files...",
+ labelType: 'secondary'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Custom button multi file input</h4>
+                    <div class="demo">
+                      <input class="file-input multi-file" type="file" id="file-3" multiple="multiple" />
+                      <label class="btn-primary" for="file-3"><i class="zmdi zmdi-upload"></i><span>Browse files...</span></label>
+                    </div>
+                    <pre><code>+input-field({
+ id: 'file-3',
+ type: 'file',
+ multiple: true,
+ text: "Browse files...",
+ labelType: 'primary'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Large input</h4>
+                    <div class="demo">
+                      <input class="form__control form__control--lg" type="text" value="Large input" id="inputLarge" />
+                    </div>
+                    <pre><code>+input-field({
+   id: 'inputLarge',
+   value: 'Large input',
+   sizing: 'lg'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Default input</h4>
+                    <div class="demo">
+                      <input class="form__control form__control--md" type="text" value="Default input" id="inputDefault" />
+                    </div>
+                    <pre><code>+input-field({
+   id: 'inputDefault',
+   value: 'Default input',
+   sizing: 'md'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Small input</h4>
+                    <div class="demo">
+                      <input class="form__control form__control--sm" type="text" value="Small input" id="inputSmall" />
+                    </div>
+                    <pre><code>+input-field({
+   id: 'inputSmall',
+   value: 'Small input',
+   sizing: 'sm'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Extra Small input</h4>
+                    <div class="demo">
+                      <input class="form__control form__control--xs" type="text" value="Extra Small input" id="inputExtraSmall" />
+                    </div>
+                    <pre><code>+input-field({
+   id: 'inputExtraSmall',
+   value: 'Extra Small input',
+   sizing: 'xs'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Success</h4>
+                    <div class="demo">
+                      <input class="form__control is--valid" type="text" required="required" />
+                    </div>
+                    <pre><code>+input-field({
+   valid: true,
+   required: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Error</h4>
+                    <div class="demo">
+                      <input class="form__control is--invalid" type="text" required="required" />
+                    </div>
+                    <pre><code>+input-field({
+   valid: false,
+   required: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="code-example">
+                    <h4 class="h4">Textarea</h4>
+                    <div class="demo">
+                      <textarea class="text-field" id="inputTextarea"></textarea>
+                    </div>
+                    <pre><code>+textarea('inputTextarea')</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Default</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Readonly</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" readonly="readonly" size="16" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true,
+  size: "16",
+  readonly: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Only Date</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-date-format="yyyy-mm-dd" data-min-view="2" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})(data-date-format="yyyy-mm-dd" data-min-view="2")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Decade View</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Year View</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Day View</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Hour View</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Day View Meridian</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Hour View Meridian</h4>
+                    <div class="demo">
+                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                    </div>
+                    <pre><code>+input-field({
+  datetimepicker: true
+})(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-checkbox" aria-labelledby="v-pills-checkbox-tab">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Basic Checkbox</h4>
+                    <div class="demo">
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input" type="checkbox" id="check3" checked="checked" />
+                        <label class="custom-checkbox-label" for="check3">Option 1</label>
+                      </div>
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input" type="checkbox" id="check4" />
+                        <label class="custom-checkbox-label" for="check4">Option 2</label>
+                      </div>
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input" type="checkbox" id="check5" />
+                        <label class="custom-checkbox-label" for="check5">Option 3</label>
+                      </div>
+                    </div>
+                    <pre><code>+checkboxes({
+ id: 'check3',
+ checked: true,
+ label: 'Option 1'
+})
++checkboxes({
+ id: 'check4',
+ checked: false,
+ label: 'Option 2'
+})
++checkboxes({
+ id: 'check5',
+ checked: false,
+ label: 'Option 3'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Inline Checkbox</h4>
+                    <div class="demo">
+                      <div class="custom-control-checkbox custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check6" checked="checked" />
+                        <label class="custom-checkbox-label" for="check6">Option 1</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check7" />
+                        <label class="custom-checkbox-label" for="check7">Option 2</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check8" />
+                        <label class="custom-checkbox-label" for="check8">Option 3</label>
+                      </div>
+                    </div>
+                    <pre><code>+checkboxes({
+ id: 'check6',
+ checked: true,
+ label: 'Option 1'
+})(class="custom-control-checkbox--inline")
++checkboxes({
+ id: 'check7',
+ checked: false,
+ label: 'Option 2'
+})(class="custom-control-checkbox--inline")
++checkboxes({
+ id: 'check8',
+ checked: false,
+ label: 'Option 3'
+})(class="custom-control-checkbox--inline")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Checkbox full color</h4>
+                    <div class="demo">
+                      <div class="custom-control-checkbox custom-control-checkbox--color custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check9" checked="checked" />
+                        <label class="custom-checkbox-label" for="check9">Option 1</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--color custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check10" />
+                        <label class="custom-checkbox-label" for="check10">Option 2</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--color custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check11" />
+                        <label class="custom-checkbox-label" for="check11">Option 3</label>
+                      </div>
+                    </div>
+                    <pre><code>+checkboxes({
+ id: 'check9',
+ checked: true,
+ label: 'Option 1'
+})(class="custom-control-checkbox--color custom-control-checkbox--inline")
++checkboxes({
+ id: 'check10',
+ checked: false,
+ label: 'Option 2'
+})(class="custom-control-checkbox--color custom-control-checkbox--inline")
++checkboxes({
+ id: 'check11',
+ checked: false,
+ label: 'Option 3'
+})(class="custom-control-checkbox--color custom-control-checkbox--inline")</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Checkbox validation</h4>
+                    <div class="demo">
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check12" checked="checked" />
+                        <label class="custom-checkbox-label" for="check12">Success</label>
+                      </div>
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check13" />
+                        <label class="custom-checkbox-label" for="check13">Error</label>
+                      </div>
+                    </div>
+                    <pre><code>+checkboxes({
+ id: 'check12',
+ checked: true,
+ valid: true,
+ label: 'Success'
+})
++checkboxes({
+ id: 'check13',
+ checked: false,
+ valid: false,
+ label: 'Error'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Checkbox validation full color</h4>
+                    <div class="demo">
+                      <div class="custom-control-checkbox custom-control-checkbox--valid custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check14" checked="checked" />
+                        <label class="custom-checkbox-label" for="check14">Success</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--invalid custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check15" />
+                        <label class="custom-checkbox-label" for="check15">Error</label>
+                      </div>
+                    </div>
+                    <pre><code>+checkboxes({
+ id: 'check12',
+ checked: true,
+ valid: true,
+ label: 'Success'
+})
++checkboxes({
+ id: 'check13',
+ checked: false,
+ valid: false,
+ label: 'Error'
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-radio" aria-labelledby="v-pills-radio-tab">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Icon Radio</h4>
+                    <div class="demo">
+                      <label class="custom-control-radio custom-control-radio--icon custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radioIcon1" checked="checked" name="radio-icon" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-female"></i></span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--icon custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radioIcon2" name="radio-icon" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-male"></i></span>
+                      </label>
+                    </div>
+                    <pre><code>+radio({
+ id: 'radioIcon1',
+ name: 'radio-icon',
+ checked: true,
+ icon: 'zmdi-female'
+})(class='custom-control-radio--inline')</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Radio</h4>
+                    <div class="demo">
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input" type="radio" id="radioIcon3" checked="checked" name="radio-icon1" /><span class="custom-radio-label--text">Option 1</span>
+                      </label>
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input" type="radio" id="radioIcon4" name="radio-icon1" /><span class="custom-radio-label--text">Option 2</span>
+                      </label>
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input" type="radio" id="radioIco5" name="radio-icon1" /><span class="custom-radio-label--text">Option 3</span>
+                      </label>
+                    </div>
+                    <pre><code>+radio({
+ id: 'radioIcon3',
+ name: 'radio-icon1',
+ label: 'Option 1',
+ checked: true,
+})
++radio({
+ id: 'radioIcon4',
+ name: 'radio-icon1',
+ label: 'Option 2',
+ checked: false,
+})
++radio({
+ id: 'radioIco5',
+ name: 'radio-icon1',
+ label: 'Option 3',
+ checked: false,
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Inline Radio</h4>
+                    <div class="demo">
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radioIcon6" checked="checked" name="radio-icon2" /><span class="custom-radio-label--text">Option 1</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radioIcon7" name="radio-icon2" /><span class="custom-radio-label--text">Option 2</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radioIcon8" name="radio-icon2" /><span class="custom-radio-label--text">Option 3</span>
+                      </label>
+                    </div>
+                    <pre><code>+radio({
+ id: 'radioIcon6',
+ name: 'radio-icon2',
+ label: 'Option 1',
+ checked: true,
+})(class='custom-control-radio--inline')
++radio({
+ id: 'radioIcon7',
+ name: 'radio-icon2',
+ label: 'Option 2',
+ checked: false,
+})(class='custom-control-radio--inline')
++radio({
+ id: 'radioIcon8',
+ name: 'radio-icon2',
+ label: 'Option 3',
+ checked: false,
+})(class='custom-control-radio--inline')</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Inline Radio Full Color</h4>
+                    <div class="demo">
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input" type="radio" id="radioIcon9" checked="checked" name="radio-icon3" /><span class="custom-radio-label--text">Option 1</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input" type="radio" id="radioIcon10" name="radio-icon3" /><span class="custom-radio-label--text">Option 2</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input" type="radio" id="radioIcon11" name="radio-icon3" /><span class="custom-radio-label--text">Option 3</span>
+                      </label>
+                    </div>
+                    <pre><code>+radio({
+ id: 'radioIcon9',
+ name: 'radio-icon3',
+ label: 'Option 1',
+ checked: true,
+})(class='custom-control-radio--inline custom-control-radio--color')
++radio({
+ id: 'radioIcon10',
+ name: 'radio-icon3',
+ label: 'Option 2',
+ checked: false,
+})(class='custom-control-radio--inline custom-control-radio--color')
++radio({
+ id: 'radioIcon11',
+ name: 'radio-icon3',
+ label: 'Option 3',
+ checked: false,
+})(class='custom-control-radio--inline custom-control-radio--color')</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Radio valid</h4>
+                    <div class="demo">
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input is--valid" type="radio" id="radioIcon12" checked="checked" name="radio-icon4" /><span class="custom-radio-label--text">Success</span>
+                      </label>
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input is--invalid" type="radio" id="radioIcon13" name="radio-icon4" /><span class="custom-radio-label--text">Error</span>
+                      </label>
+                    </div>
+                    <pre><code>+radio({
+ id: 'radioIcon12',
+ name: 'radio-icon4',
+ label: 'Success',
+ checked: true,
+ valid: true
+})
++radio({
+ id: 'radioIcon13',
+ name: 'radio-icon4',
+ label: 'Error',
+ checked: false,
+ valid: false
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Radio valid inline</h4>
+                    <div class="demo">
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input is--valid" type="radio" id="radioIcon14" checked="checked" name="radio-icon5" /><span class="custom-radio-label--text">Success</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input is--invalid" type="radio" id="radioIcon14" name="radio-icon5" /><span class="custom-radio-label--text">Error</span>
+                      </label>
+                    </div>
+                    <pre><code>+radio({
+ id: 'radioIcon14',
+ name: 'radio-icon5',
+ label: 'Success',
+ checked: true,
+ valid: true
+})(class='custom-control-radio--inline')
++radio({
+ id: 'radioIcon14',
+ name: 'radio-icon5',
+ label: 'Error',
+ checked: false,
+ valid: false
+})(class='custom-control-radio--inline')</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <h4 class="h4">Radio valid inline full color</h4>
+                    <div class="demo">
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input is--valid" type="radio" id="radioIcon15" checked="checked" name="radio-icon6" /><span class="custom-radio-label--text">Success</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input is--invalid" type="radio" id="radioIcon15" name="radio-icon6" /><span class="custom-radio-label--text">Error</span>
+                      </label>
+                    </div>
+                    <pre><code>+radio({
+ id: 'radioIcon15',
+ name: 'radio-icon6',
+ label: 'Success',
+ checked: true,
+ valid: true
+})(class='custom-control-radio--inline custom-control-radio--color')
++radio({
+ id: 'radioIcon15',
+ name: 'radio-icon6',
+ label: 'Error',
+ checked: false,
+ valid: false
+})(class='custom-control-radio--inline custom-control-radio--color')</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-switch" aria-labelledby="v-pills-switch-tab">
+              <h2 class="h2">Switch button</h2>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--xs switch-button--primary">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt00" id="swt00" /><span>
+                          <label for="swt00"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt00',
+ name: 'swt00',
+ type: 'primary',
+ size: 'xs',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--sm switch-button--primary">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt01" id="swt01" /><span>
+                          <label for="swt01"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt01',
+ name: 'swt01',
+ type: 'primary',
+ size: 'sm',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--md switch-button--primary">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt02" id="swt02" /><span>
+                          <label for="swt02"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt02',
+ name: 'swt02',
+ type: 'primary',
+ size: 'md',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--lg switch-button--primary">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt03" id="swt03" /><span>
+                          <label for="swt03"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt03',
+ name: 'swt03',
+ type: 'primary',
+ size: 'lg',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--xs switch-button--success">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt10" id="swt10" /><span>
+                          <label for="swt10"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt10',
+ name: 'swt10',
+ type: 'success',
+ size: 'xs',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--sm switch-button--success">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt11" id="swt11" /><span>
+                          <label for="swt11"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt11',
+ name: 'swt11',
+ type: 'success',
+ size: 'sm',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--md switch-button--success">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt12" id="swt12" /><span>
+                          <label for="swt12"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt12',
+ name: 'swt12',
+ type: 'success',
+ size: 'md',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--lg switch-button--success">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt13" id="swt13" /><span>
+                          <label for="swt13"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt13',
+ name: 'swt13',
+ type: 'success',
+ size: 'lg',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--xs switch-button--warning">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt20" id="swt20" /><span>
+                          <label for="swt20"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt20',
+ name: 'swt20',
+ type: 'warning',
+ size: 'xs',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--sm switch-button--warning">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt21" id="swt21" /><span>
+                          <label for="swt21"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt21',
+ name: 'swt21',
+ type: 'warning',
+ size: 'sm',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--md switch-button--warning">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt22" id="swt22" /><span>
+                          <label for="swt22"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt22',
+ name: 'swt22',
+ type: 'warning',
+ size: 'md',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--lg switch-button--warning">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt23" id="swt23" /><span>
+                          <label for="swt23"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt23',
+ name: 'swt23',
+ type: 'warning',
+ size: 'lg',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--xs switch-button--danger">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt30" id="swt30" /><span>
+                          <label for="swt30"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt30',
+ name: 'swt30',
+ type: 'danger',
+ size: 'xs',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--sm switch-button--danger">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt31" id="swt31" /><span>
+                          <label for="swt31"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt31',
+ name: 'swt31',
+ type: 'danger',
+ size: 'sm',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--md switch-button--danger">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt32" id="swt32" /><span>
+                          <label for="swt32"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt32',
+ name: 'swt32',
+ type: 'danger',
+ size: 'md',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--lg switch-button--danger">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt33" id="swt33" /><span>
+                          <label for="swt33"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt33',
+ name: 'swt33',
+ type: 'danger',
+ size: 'lg',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--xs switch-button--yesno">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt40" id="swt40" /><span>
+                          <label for="swt40"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt40',
+ name: 'swt40',
+ type: 'yesno',
+ size: 'xs',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--sm switch-button--yesno">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt41" id="swt41" /><span>
+                          <label for="swt41"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt41',
+ name: 'swt41',
+ type: 'yesno',
+ size: 'sm',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--md switch-button--yesno">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt42" id="swt42" /><span>
+                          <label for="swt42"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt42',
+ name: 'swt42',
+ type: 'yesno',
+ size: 'md',
+ checked: true
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                  <div class="code-example">
+                    <div class="demo">
+                      <div class="switch-button switch-button--lg switch-button--yesno">
+                        <input class="switch-button-input" type="checkbox" checked="checked" name="swt43" id="swt43" /><span>
+                          <label for="swt43"></label></span>
+                      </div>
+                    </div>
+                    <pre><code>+switch({
+ id: 'swt43',
+ name: 'swt43',
+ type: 'yesno',
+ size: 'lg',
+ checked: true
 })</code></pre>
                   </div>
                 </div>

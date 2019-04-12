@@ -1,3 +1,7 @@
+// ======================================================
+// Components :: Button
+// ======================================================
+
 .btn {
   font-weight: $font-weight-bold;
   color: $cl-dark-light;
@@ -13,6 +17,11 @@
     font-size: .8462rem;
     line-height: 18px;
     border-radius: $border-radius-small - 1;
+
+    .icon {
+      font-size: 1rem;
+      padding-bottom: 1px;
+    }
   }
 
   &-xl {
@@ -20,11 +29,10 @@
     font-size: 1.1538rem;
     line-height: 43px;
     border-radius: $border-radius-small + 1;
-    font-weight: $font-weight-base + 100;
   }
 
   &-rounded {
-    border-radius: 15px;
+    border-radius: 100px;
   }
 }
 
