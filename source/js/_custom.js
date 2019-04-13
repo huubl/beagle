@@ -1,5 +1,11 @@
 $(function () {
   $(".datetimepicker").datetimepicker();
+  new PerfectScrollbar(document.querySelector(".js-list-scrollbar"), {
+    wheelPropagation: false
+  });
+
+  $(".ps__rail-y").css('height', $(".ps__rail-y").parents(".content").css("height"));
+  $(".ps__thumb-y").css('height', '165px')
 
   $(".multi-file").each(function () {
     var t = $(this).next("label"),
@@ -17,4 +23,5 @@ $(function () {
       }
     })
   });
+
 });

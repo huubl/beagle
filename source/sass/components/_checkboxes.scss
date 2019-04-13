@@ -15,7 +15,7 @@
   }
 
   &--color {
-    .custom-checkbox {
+    .custom-checkbox-input {
       &:checked ~ .custom-checkbox-label:after {
         background: $cl-blue;
         color: $cl-white;
@@ -25,7 +25,7 @@
   }
 
   &--valid {
-    .custom-checkbox.is--valid:checked ~ .custom-checkbox-label {
+    .custom-checkbox-input.is--valid:checked ~ .custom-checkbox-label {
       &:before {
         background: $cl-green-light;
       }
@@ -37,7 +37,7 @@
   }
 
   &--invalid {
-    .custom-checkbox.is--invalid:checked ~ .custom-checkbox-label {
+    .custom-checkbox-input.is--invalid:checked ~ .custom-checkbox-label {
       &:before {
         background: $cl-red-light-3;
       }
@@ -112,9 +112,19 @@
       box-shadow: 0 0 0 .15rem rgba($cl-red-light, .25);
     }
   }
+
+  &[disabled] + .custom-checkbox-label {
+    opacity: .75;
+  }
+
+  &--line-through:checked ~ .custom-checkbox-label {
+    text-decoration: line-through;
+    color: $cl-dark-light-2;
+  }
 }
 
 .custom-checkbox-label {
+  cursor: pointer;
   display: inline-block;
   line-height: 1.7;
   white-space: nowrap;

@@ -3,6 +3,7 @@
 // ======================================================
 
 .custom-control-radio {
+  cursor: pointer;
   white-space: nowrap;
   margin-top: .1875rem;
   margin-bottom: 1.1105rem;
@@ -54,8 +55,6 @@
     color: $cl-blue;
     content: '\f26d';
     display: inline-block;
-    width: 1.77592rem;
-    height: 1.77592rem;
     margin: 0;
     font-size: 1rem;
     font-family: $font-icon;
@@ -89,6 +88,10 @@
   &.is--invalid + .custom-radio-label--text:after,
   &.is--invalid + .custom-radio-label--text {
     color: $cl-red-light;
+  }
+
+  &[disabled] + [class*='custom-radio-label'] {
+    opacity: .75;
   }
 }
 

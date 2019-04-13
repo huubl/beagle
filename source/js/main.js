@@ -1,4 +1,5 @@
 //=require jquery/dist/jquery.min.js
+//=require perfect-scrollbar/dist/perfect-scrollbar.min.js
 //=require bootstrap/dist/js/bootstrap.min.js
 //=require bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js
 //=require jquery-sparkline/jquery.sparkline.min.js

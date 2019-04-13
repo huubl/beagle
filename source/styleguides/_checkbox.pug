@@ -3,81 +3,117 @@
 //-------------------------------------------------------
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-12.col-sm-12.col-md-6
     .code-example
       h4.h4 Basic Checkbox
       .demo
         +checkboxes({
-          id: 'check3',
+          id: 'check1',
           checked: true,
           label: 'Option 1'
+        })
+        +checkboxes({
+          id: 'check2',
+          checked: false,
+          label: 'Option 2'
+        })
+        +checkboxes({
+          id: 'check3',
+          checked: false,
+          label: 'Option 3'
         })
         +checkboxes({
           id: 'check4',
           checked: false,
-          label: 'Option 2'
+          label: 'Option 4',
+          disabled: true
         })
         +checkboxes({
-          id: 'check5',
+          id: 'check21',
           checked: false,
-          label: 'Option 3'
+          label: 'Option 5',
+          lineThrough: true
         })
       pre
         code
           |+checkboxes({
-          |  id: 'check3',
+          |  id: 'check1',
           |  checked: true,
           |  label: 'Option 1'
+          |})
+          |+checkboxes({
+          |  id: 'check2',
+          |  checked: false,
+          |  label: 'Option 2'
+          |})
+          |+checkboxes({
+          |  id: 'check3',
+          |  checked: false,
+          |  label: 'Option 3'
           |})
           |+checkboxes({
           |  id: 'check4',
           |  checked: false,
-          |  label: 'Option 2'
+          |  label: 'Option 4',
+          |  disabled: true
           |})
           |+checkboxes({
-          |  id: 'check5',
+          |  id: 'check21',
           |  checked: false,
-          |  label: 'Option 3'
+          |  label: 'Option 5',
+          |  lineThrough: true
           |})
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-12.col-sm-12.col-md-6
     .code-example
       h4.h4 Inline Checkbox
       .demo
         +checkboxes({
-          id: 'check6',
+          id: 'check5',
           checked: true,
           label: 'Option 1'
         })(class="custom-control-checkbox--inline")
         +checkboxes({
-          id: 'check7',
+          id: 'check6',
           checked: false,
           label: 'Option 2'
         })(class="custom-control-checkbox--inline")
         +checkboxes({
-          id: 'check8',
+          id: 'check7',
           checked: false,
           label: 'Option 3'
+        })(class="custom-control-checkbox--inline")
+        +checkboxes({
+          id: 'check8',
+          checked: false,
+          label: 'Option 4',
+          disabled: true
         })(class="custom-control-checkbox--inline")
       pre
         code
           |+checkboxes({
-          |  id: 'check6',
+          |  id: 'check5',
           |  checked: true,
           |  label: 'Option 1'
           |})(class="custom-control-checkbox--inline")
           |+checkboxes({
-          |  id: 'check7',
+          |  id: 'check6',
           |  checked: false,
           |  label: 'Option 2'
           |})(class="custom-control-checkbox--inline")
           |+checkboxes({
-          |  id: 'check8',
+          |  id: 'check7',
           |  checked: false,
           |  label: 'Option 3'
           |})(class="custom-control-checkbox--inline")
+          |+checkboxes({
+          |  id: 'check8',
+          |  checked: false,
+          |  label: 'Option 4',
+          |  disabled: true
+          |})(class="custom-control-checkbox--inline")
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-12.col-sm-12.col-md-6
       .code-example
         h4.h4 Checkbox full color
         .demo
@@ -94,7 +130,13 @@
           +checkboxes({
             id: 'check11',
             checked: false,
-            label: 'Option 3'
+            label: 'Option 3',
+          })(class="custom-control-checkbox--color custom-control-checkbox--inline")
+          +checkboxes({
+            id: 'check12',
+            checked: false,
+            label: 'Option 4',
+            disabled: true
           })(class="custom-control-checkbox--color custom-control-checkbox--inline")
         pre
           code
@@ -111,67 +153,131 @@
             |+checkboxes({
             |  id: 'check11',
             |  checked: false,
-            |  label: 'Option 3'
+            |  label: 'Option 3',
             |})(class="custom-control-checkbox--color custom-control-checkbox--inline")
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+            |+checkboxes({
+            |  id: 'check12',
+            |  checked: false,
+            |  label: 'Option 4',
+            |  disabled: true
+            |})(class="custom-control-checkbox--color custom-control-checkbox--inline")
+
+  .col-12.col-sm-12.col-md-6
       .code-example
         h4.h4 Checkbox validation
         .demo
           +checkboxes({
-            id: 'check12',
+            id: 'check13',
             checked: true,
             valid: true,
             label: 'Success'
           })
           +checkboxes({
-            id: 'check13',
+            id: 'check14',
             checked: false,
             valid: false,
             label: 'Error'
           })
+          +checkboxes({
+            id: 'check15',
+            checked: true,
+            valid: true,
+            label: 'Success',
+            disabled: true
+          })
+          +checkboxes({
+            id: 'check16',
+            checked: false,
+            valid: false,
+            label: 'Error',
+            disabled: true
+          })
         pre
           code
             |+checkboxes({
-            |  id: 'check12',
+            |  id: 'check13',
             |  checked: true,
             |  valid: true,
             |  label: 'Success'
             |})
             |+checkboxes({
-            |  id: 'check13',
+            |  id: 'check14',
             |  checked: false,
             |  valid: false,
             |  label: 'Error'
             |})
+            |
+            |+checkboxes({
+            |  id: 'check15',
+            |  checked: true,
+            |  valid: true,
+            |  label: 'Success',
+            |  disabled: true
+            |})
+            |+checkboxes({
+            |  id: 'check16',
+            |  checked: false,
+            |  valid: false,
+            |  label: 'Error',
+            |  disabled: true
 
 .row
-  .col-12.col-sm-12.col-md-6.col-lg-6.col-xl-6
+  .col-12.col-sm-12.col-md-6
       .code-example
         h4.h4 Checkbox validation full color
         .demo
           +checkboxes({
-            id: 'check14',
+            id: 'check17',
             checked: true,
             valid: true,
             label: 'Success'
           })(class="custom-control-checkbox--valid custom-control-checkbox--inline")
           +checkboxes({
-            id: 'check15',
+            id: 'check18',
             checked: false,
             valid: false,
             label: 'Error'
           })(class="custom-control-checkbox--invalid custom-control-checkbox--inline")
+          +checkboxes({
+            id: 'check19',
+            checked: true,
+            valid: true,
+            label: 'Success',
+            disabled: true
+          })(class="custom-control-checkbox--valid custom-control-checkbox--inline")
+          +checkboxes({
+            id: 'check20',
+            checked: false,
+            valid: false,
+            label: 'Error',
+            disabled: true
+          })(class="custom-control-checkbox--invalid custom-control-checkbox--inline")
         pre
           code
             |+checkboxes({
-            |  id: 'check12',
+            |  id: 'check17',
             |  checked: true,
             |  valid: true,
             |  label: 'Success'
-            |})
+            |})(class="custom-control-checkbox--valid custom-control-checkbox--inline")
             |+checkboxes({
-            |  id: 'check13',
+            |  id: 'check18',
             |  checked: false,
             |  valid: false,
             |  label: 'Error'
-            |})
+            |})(class="custom-control-checkbox--invalid custom-control-checkbox--inline")
+            |
+            |+checkboxes({
+            |  id: 'check19',
+            |  checked: true,
+            |  valid: true,
+            |  label: 'Success',
+            |  disabled: true
+            |})(class="custom-control-checkbox--valid custom-control-checkbox--inline")
+            |+checkboxes({
+            |  id: 'check20',
+            |  checked: false,
+            |  valid: false,
+            |  label: 'Error',
+            |  disabled: true
+            |})(class="custom-control-checkbox--invalid custom-control-checkbox--inline")

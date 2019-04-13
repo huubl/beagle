@@ -3,6 +3,7 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'material-design-iconic-font/scss/material-design-iconic-font';
 @import 'vendor/bootstrap-datetimepicker';
+@import 'vendor/perfect-scrollbar';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
@@ -18,5 +19,6 @@
 @import 'components/checkboxes';
 @import 'components/radio';
 @import 'components/switch';
+@import 'components/datetimepicker';
 @import 'pages/home';
 @import 'pages/page-list';

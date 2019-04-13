@@ -16,11 +16,11 @@
 
 - 
   var listButtonsIcons = [
-    {text: 'Secondary', type: 'secondary', icon: 'zmdi-globe'}, 
-    {text: 'Primary', type: 'primary', icon: 'zmdi-cloud-done'},
-    {text: 'Danger', type: 'danger', icon: 'zmdi-alert-circle'},
-    {text: 'Warning', type: 'warning', icon: 'zmdi-alert-triangle'},
-    {text: 'Success', type: 'success', icon: 'zmdi-check'}
+    {text: 'Secondary', type: 'secondary', icon: 'zmdi zmdi-globe'}, 
+    {text: 'Primary', type: 'primary', icon: 'zmdi zmdi-cloud-done'},
+    {text: 'Danger', type: 'danger', icon: 'zmdi zmdi-alert-circle'},
+    {text: 'Warning', type: 'warning', icon: 'zmdi zmdi-alert-triangle'},
+    {text: 'Success', type: 'success', icon: 'zmdi zmdi-check'}
   ]
 
 //- Basic button
@@ -28,7 +28,7 @@ h2.demo__title Basic Button
 each item in listType
   .row
     each val, index in listSizes
-        .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
+        .col-6.col-sm-6.col-md-4
           .code-example
             .demo.text-center
               +buttons({
@@ -49,7 +49,7 @@ h2.demo__title Button with Icon
 each item in listButtonsIcons
   .row
     each val, index in listSizes
-        .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
+        .col-6.col-sm-6.col-md-4
           .code-example
             .demo.text-center
               +buttons({
@@ -72,7 +72,7 @@ h2.demo__title Buttons Rounded Standard
 each item in listButtonsIcons
   .row
     each val in listSizes
-      .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
+      .col-6.col-sm-6.col-md-4
         .code-example
           .demo.text-center
             +buttons({
@@ -95,7 +95,7 @@ h2.demo__title Buttons Rounded with Icon
 each item in listButtonsIcons
   .row
     each val in listSizes
-      .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
+      .col-6.col-sm-6.col-md-4
         .code-example
           .demo.text-center
             +buttons({

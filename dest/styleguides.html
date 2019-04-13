@@ -40,12 +40,15 @@
       .list-group {
         position: sticky;
         top: 0;
+        max-height: 90vh;
+        overflow-y: auto;
       }
 
       @media (max-width: 576px) {
         .list-group {
           position: relative;
           margin-bottom: 24px;
+          max-height: auto;
         }
       }
 
@@ -61,7 +64,7 @@
       </div>
       <div class="row">
         <div class="col-12 col-sm-3 col-md-3 col-lg-2 col-xl-2">
-          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-button-tab" href="#v-pills-button" aria-controls="v-pills-button">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-input-tab" href="#v-pills-input" aria-controls="v-pills-input">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radios</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switches</a>
+          <div class="list-group" id="v-pills-tab" role="tablist" aria-orientation="vertical"><a class="list-group-item active" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-colors-tab" href="#v-pills-colors" aria-controls="v-pills-colors">Colors</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-button-tab" href="#v-pills-button" aria-controls="v-pills-button">Buttons</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-input-tab" href="#v-pills-input" aria-controls="v-pills-input">Inputs</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-checkbox-tab" href="#v-pills-checkbox" aria-controls="v-pills-checkbox">Checkboxes</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-radio-tab" href="#v-pills-radio" aria-controls="v-pills-radio">Radios</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-switch-tab" href="#v-pills-switch" aria-controls="v-pills-switch">Switches</a><a class="list-group-item" data-toggle="pill" role="tab" aria-selected="true" id="v-pills-date-tab" href="#v-pills-date" aria-controls="v-pills-date">DatetimePicker</a>
           </div>
         </div>
         <div class="col-12 col-sm-9 col-md-9 col-lg-10 col-xl-10">
@@ -337,7 +340,7 @@
             <div class="tab-pane fade" role="tabpanel" id="v-pills-button" aria-labelledby="v-pills-button-tab">
               <h2 class="demo__title">Basic Button</h2>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xs">Secondary
@@ -350,7 +353,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-sm">Secondary
@@ -363,7 +366,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-md">Secondary
@@ -376,7 +379,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-lg">Secondary
@@ -389,7 +392,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xl">Secondary
@@ -404,7 +407,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xs">Primary
@@ -417,7 +420,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-sm">Primary
@@ -430,7 +433,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-md">Primary
@@ -443,7 +446,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-lg">Primary
@@ -456,7 +459,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xl">Primary
@@ -471,7 +474,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xs">Danger
@@ -484,7 +487,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-sm">Danger
@@ -497,7 +500,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-md">Danger
@@ -510,7 +513,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-lg">Danger
@@ -523,7 +526,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xl">Danger
@@ -538,7 +541,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xs">Warning
@@ -551,7 +554,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-sm">Warning
@@ -564,7 +567,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-md">Warning
@@ -577,7 +580,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-lg">Warning
@@ -590,7 +593,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xl">Warning
@@ -605,7 +608,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xs">Success
@@ -618,7 +621,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-sm">Success
@@ -631,7 +634,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-md">Success
@@ -644,7 +647,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-lg">Success
@@ -657,7 +660,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xl">Success
@@ -673,7 +676,7 @@
               </div>
               <h2 class="demo__title">Button with Icon</h2>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xs"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -683,11 +686,11 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'xs',
- iconBefore: 'zmdi-globe'
+ iconBefore: 'zmdi zmdi-globe'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-sm"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -697,11 +700,11 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'sm',
- iconBefore: 'zmdi-globe'
+ iconBefore: 'zmdi zmdi-globe'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-md"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -711,11 +714,11 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'md',
- iconBefore: 'zmdi-globe'
+ iconBefore: 'zmdi zmdi-globe'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-lg"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -725,11 +728,11 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'lg',
- iconBefore: 'zmdi-globe'
+ iconBefore: 'zmdi zmdi-globe'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xl"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -739,13 +742,13 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'xl',
- iconBefore: 'zmdi-globe'
+ iconBefore: 'zmdi zmdi-globe'
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xs"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -755,11 +758,11 @@
  type: 'primary',
  text: 'Primary',
  size: 'xs',
- iconBefore: 'zmdi-cloud-done'
+ iconBefore: 'zmdi zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-sm"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -769,11 +772,11 @@
  type: 'primary',
  text: 'Primary',
  size: 'sm',
- iconBefore: 'zmdi-cloud-done'
+ iconBefore: 'zmdi zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-md"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -783,11 +786,11 @@
  type: 'primary',
  text: 'Primary',
  size: 'md',
- iconBefore: 'zmdi-cloud-done'
+ iconBefore: 'zmdi zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-lg"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -797,11 +800,11 @@
  type: 'primary',
  text: 'Primary',
  size: 'lg',
- iconBefore: 'zmdi-cloud-done'
+ iconBefore: 'zmdi zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xl"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -811,13 +814,13 @@
  type: 'primary',
  text: 'Primary',
  size: 'xl',
- iconBefore: 'zmdi-cloud-done'
+ iconBefore: 'zmdi zmdi-cloud-done'
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xs"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -827,11 +830,11 @@
  type: 'danger',
  text: 'Danger',
  size: 'xs',
- iconBefore: 'zmdi-alert-circle'
+ iconBefore: 'zmdi zmdi-alert-circle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-sm"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -841,11 +844,11 @@
  type: 'danger',
  text: 'Danger',
  size: 'sm',
- iconBefore: 'zmdi-alert-circle'
+ iconBefore: 'zmdi zmdi-alert-circle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-md"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -855,11 +858,11 @@
  type: 'danger',
  text: 'Danger',
  size: 'md',
- iconBefore: 'zmdi-alert-circle'
+ iconBefore: 'zmdi zmdi-alert-circle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-lg"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -869,11 +872,11 @@
  type: 'danger',
  text: 'Danger',
  size: 'lg',
- iconBefore: 'zmdi-alert-circle'
+ iconBefore: 'zmdi zmdi-alert-circle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xl"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -883,13 +886,13 @@
  type: 'danger',
  text: 'Danger',
  size: 'xl',
- iconBefore: 'zmdi-alert-circle'
+ iconBefore: 'zmdi zmdi-alert-circle'
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xs"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -899,11 +902,11 @@
  type: 'warning',
  text: 'Warning',
  size: 'xs',
- iconBefore: 'zmdi-alert-triangle'
+ iconBefore: 'zmdi zmdi-alert-triangle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-sm"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -913,11 +916,11 @@
  type: 'warning',
  text: 'Warning',
  size: 'sm',
- iconBefore: 'zmdi-alert-triangle'
+ iconBefore: 'zmdi zmdi-alert-triangle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-md"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -927,11 +930,11 @@
  type: 'warning',
  text: 'Warning',
  size: 'md',
- iconBefore: 'zmdi-alert-triangle'
+ iconBefore: 'zmdi zmdi-alert-triangle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-lg"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -941,11 +944,11 @@
  type: 'warning',
  text: 'Warning',
  size: 'lg',
- iconBefore: 'zmdi-alert-triangle'
+ iconBefore: 'zmdi zmdi-alert-triangle'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xl"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -955,13 +958,13 @@
  type: 'warning',
  text: 'Warning',
  size: 'xl',
- iconBefore: 'zmdi-alert-triangle'
+ iconBefore: 'zmdi zmdi-alert-triangle'
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xs"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -971,11 +974,11 @@
  type: 'success',
  text: 'Success',
  size: 'xs',
- iconBefore: 'zmdi-check'
+ iconBefore: 'zmdi zmdi-check'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-sm"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -985,11 +988,11 @@
  type: 'success',
  text: 'Success',
  size: 'sm',
- iconBefore: 'zmdi-check'
+ iconBefore: 'zmdi zmdi-check'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-md"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -999,11 +1002,11 @@
  type: 'success',
  text: 'Success',
  size: 'md',
- iconBefore: 'zmdi-check'
+ iconBefore: 'zmdi zmdi-check'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-lg"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -1013,11 +1016,11 @@
  type: 'success',
  text: 'Success',
  size: 'lg',
- iconBefore: 'zmdi-check'
+ iconBefore: 'zmdi zmdi-check'
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xl"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -1027,14 +1030,14 @@
  type: 'success',
  text: 'Success',
  size: 'xl',
- iconBefore: 'zmdi-check'
+ iconBefore: 'zmdi zmdi-check'
 })</code></pre>
                   </div>
                 </div>
               </div>
               <h2 class="demo__title">Buttons Rounded Standard</h2>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xs btn-rounded">Secondary
@@ -1048,7 +1051,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-sm btn-rounded">Secondary
@@ -1062,7 +1065,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-md btn-rounded">Secondary
@@ -1076,7 +1079,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-lg btn-rounded">Secondary
@@ -1090,7 +1093,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xl btn-rounded">Secondary
@@ -1106,7 +1109,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xs btn-rounded">Primary
@@ -1120,7 +1123,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-sm btn-rounded">Primary
@@ -1134,7 +1137,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-md btn-rounded">Primary
@@ -1148,7 +1151,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-lg btn-rounded">Primary
@@ -1162,7 +1165,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xl btn-rounded">Primary
@@ -1178,7 +1181,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xs btn-rounded">Danger
@@ -1192,7 +1195,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-sm btn-rounded">Danger
@@ -1206,7 +1209,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-md btn-rounded">Danger
@@ -1220,7 +1223,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-lg btn-rounded">Danger
@@ -1234,7 +1237,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xl btn-rounded">Danger
@@ -1250,7 +1253,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xs btn-rounded">Warning
@@ -1264,7 +1267,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-sm btn-rounded">Warning
@@ -1278,7 +1281,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-md btn-rounded">Warning
@@ -1292,7 +1295,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-lg btn-rounded">Warning
@@ -1306,7 +1309,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xl btn-rounded">Warning
@@ -1322,7 +1325,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xs btn-rounded">Success
@@ -1336,7 +1339,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-sm btn-rounded">Success
@@ -1350,7 +1353,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-md btn-rounded">Success
@@ -1364,7 +1367,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-lg btn-rounded">Success
@@ -1378,7 +1381,7 @@
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xl btn-rounded">Success
@@ -1395,7 +1398,7 @@
               </div>
               <h2 class="demo__title">Buttons Rounded with Icon</h2>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -1405,12 +1408,12 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'xs',
- iconBefore: 'zmdi-globe', 
+ iconBefore: 'zmdi zmdi-globe', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -1420,12 +1423,12 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'sm',
- iconBefore: 'zmdi-globe', 
+ iconBefore: 'zmdi zmdi-globe', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -1435,12 +1438,12 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'md',
- iconBefore: 'zmdi-globe', 
+ iconBefore: 'zmdi zmdi-globe', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -1450,12 +1453,12 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'lg',
- iconBefore: 'zmdi-globe', 
+ iconBefore: 'zmdi zmdi-globe', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-secondary btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-globe"></i>Secondary
@@ -1465,14 +1468,14 @@
  type: 'secondary',
  text: 'Secondary',
  size: 'xl',
- iconBefore: 'zmdi-globe', 
+ iconBefore: 'zmdi zmdi-globe', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -1482,12 +1485,12 @@
  type: 'primary',
  text: 'Primary',
  size: 'xs',
- iconBefore: 'zmdi-cloud-done', 
+ iconBefore: 'zmdi zmdi-cloud-done', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -1497,12 +1500,12 @@
  type: 'primary',
  text: 'Primary',
  size: 'sm',
- iconBefore: 'zmdi-cloud-done', 
+ iconBefore: 'zmdi zmdi-cloud-done', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -1512,12 +1515,12 @@
  type: 'primary',
  text: 'Primary',
  size: 'md',
- iconBefore: 'zmdi-cloud-done', 
+ iconBefore: 'zmdi zmdi-cloud-done', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -1527,12 +1530,12 @@
  type: 'primary',
  text: 'Primary',
  size: 'lg',
- iconBefore: 'zmdi-cloud-done', 
+ iconBefore: 'zmdi zmdi-cloud-done', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-primary btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-cloud-done"></i>Primary
@@ -1542,14 +1545,14 @@
  type: 'primary',
  text: 'Primary',
  size: 'xl',
- iconBefore: 'zmdi-cloud-done', 
+ iconBefore: 'zmdi zmdi-cloud-done', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -1559,12 +1562,12 @@
  type: 'danger',
  text: 'Danger',
  size: 'xs',
- iconBefore: 'zmdi-alert-circle', 
+ iconBefore: 'zmdi zmdi-alert-circle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -1574,12 +1577,12 @@
  type: 'danger',
  text: 'Danger',
  size: 'sm',
- iconBefore: 'zmdi-alert-circle', 
+ iconBefore: 'zmdi zmdi-alert-circle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -1589,12 +1592,12 @@
  type: 'danger',
  text: 'Danger',
  size: 'md',
- iconBefore: 'zmdi-alert-circle', 
+ iconBefore: 'zmdi zmdi-alert-circle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -1604,12 +1607,12 @@
  type: 'danger',
  text: 'Danger',
  size: 'lg',
- iconBefore: 'zmdi-alert-circle', 
+ iconBefore: 'zmdi zmdi-alert-circle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-danger btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-alert-circle"></i>Danger
@@ -1619,14 +1622,14 @@
  type: 'danger',
  text: 'Danger',
  size: 'xl',
- iconBefore: 'zmdi-alert-circle', 
+ iconBefore: 'zmdi zmdi-alert-circle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -1636,12 +1639,12 @@
  type: 'warning',
  text: 'Warning',
  size: 'xs',
- iconBefore: 'zmdi-alert-triangle', 
+ iconBefore: 'zmdi zmdi-alert-triangle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -1651,12 +1654,12 @@
  type: 'warning',
  text: 'Warning',
  size: 'sm',
- iconBefore: 'zmdi-alert-triangle', 
+ iconBefore: 'zmdi zmdi-alert-triangle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -1666,12 +1669,12 @@
  type: 'warning',
  text: 'Warning',
  size: 'md',
- iconBefore: 'zmdi-alert-triangle', 
+ iconBefore: 'zmdi zmdi-alert-triangle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -1681,12 +1684,12 @@
  type: 'warning',
  text: 'Warning',
  size: 'lg',
- iconBefore: 'zmdi-alert-triangle', 
+ iconBefore: 'zmdi zmdi-alert-triangle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-warning btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-alert-triangle"></i>Warning
@@ -1696,14 +1699,14 @@
  type: 'warning',
  text: 'Warning',
  size: 'xl',
- iconBefore: 'zmdi-alert-triangle', 
+ iconBefore: 'zmdi zmdi-alert-triangle', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xs btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -1713,12 +1716,12 @@
  type: 'success',
  text: 'Success',
  size: 'xs',
- iconBefore: 'zmdi-check', 
+ iconBefore: 'zmdi zmdi-check', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-sm btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -1728,12 +1731,12 @@
  type: 'success',
  text: 'Success',
  size: 'sm',
- iconBefore: 'zmdi-check', 
+ iconBefore: 'zmdi zmdi-check', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-md btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -1743,12 +1746,12 @@
  type: 'success',
  text: 'Success',
  size: 'md',
- iconBefore: 'zmdi-check', 
+ iconBefore: 'zmdi zmdi-check', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-lg btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -1758,12 +1761,12 @@
  type: 'success',
  text: 'Success',
  size: 'lg',
- iconBefore: 'zmdi-check', 
+ iconBefore: 'zmdi zmdi-check', 
  rounded: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-6 col-sm-6 col-md-4">
                   <div class="code-example">
                     <div class="demo text-center">
                       <button class="btn btn-space btn-success btn-xl btn-rounded"><i class="icon icon-left zmdi zmdi-check"></i>Success
@@ -1773,7 +1776,7 @@
  type: 'success',
  text: 'Success',
  size: 'xl',
- iconBefore: 'zmdi-check', 
+ iconBefore: 'zmdi zmdi-check', 
  rounded: true
 })</code></pre>
                   </div>
@@ -1995,197 +1998,110 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Default</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})</code></pre>
-                  </div>
-                </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Readonly</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" readonly="readonly" size="16" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true,
-  size: "16",
-  readonly: true
-})</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Only Date</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-date-format="yyyy-mm-dd" data-min-view="2" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})(data-date-format="yyyy-mm-dd" data-min-view="2")</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Decade View</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Year View</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Day View</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Hour View</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Day View Meridian</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <div class="code-example">
-                    <h4 class="h4">Date Picker Hour View Meridian</h4>
-                    <div class="demo">
-                      <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
-                    </div>
-                    <pre><code>+input-field({
-  datetimepicker: true
-})(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="tab-pane fade" role="tabpanel" id="v-pills-checkbox" aria-labelledby="v-pills-checkbox-tab">
               <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-6">
                   <div class="code-example">
                     <h4 class="h4">Basic Checkbox</h4>
                     <div class="demo">
                       <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input" type="checkbox" id="check3" checked="checked" />
-                        <label class="custom-checkbox-label" for="check3">Option 1</label>
+                        <input class="custom-checkbox-input" type="checkbox" id="check1" checked="checked" />
+                        <label class="custom-checkbox-label" for="check1">Option 1</label>
                       </div>
                       <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input" type="checkbox" id="check4" />
-                        <label class="custom-checkbox-label" for="check4">Option 2</label>
+                        <input class="custom-checkbox-input" type="checkbox" id="check2" />
+                        <label class="custom-checkbox-label" for="check2">Option 2</label>
                       </div>
                       <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input" type="checkbox" id="check5" />
-                        <label class="custom-checkbox-label" for="check5">Option 3</label>
+                        <input class="custom-checkbox-input" type="checkbox" id="check3" />
+                        <label class="custom-checkbox-label" for="check3">Option 3</label>
+                      </div>
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input" type="checkbox" id="check4" disabled="disabled" />
+                        <label class="custom-checkbox-label" for="check4">Option 4</label>
+                      </div>
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check21" />
+                        <label class="custom-checkbox-label" for="check21">Option 5</label>
                       </div>
                     </div>
                     <pre><code>+checkboxes({
- id: 'check3',
+ id: 'check1',
  checked: true,
  label: 'Option 1'
+})
++checkboxes({
+ id: 'check2',
+ checked: false,
+ label: 'Option 2'
+})
++checkboxes({
+ id: 'check3',
+ checked: false,
+ label: 'Option 3'
 })
 +checkboxes({
  id: 'check4',
  checked: false,
- label: 'Option 2'
+ label: 'Option 4',
+ disabled: true
 })
 +checkboxes({
- id: 'check5',
+ id: 'check21',
  checked: false,
- label: 'Option 3'
+ label: 'Option 5',
+ lineThrough: true
 })</code></pre>
                   </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-6">
                   <div class="code-example">
                     <h4 class="h4">Inline Checkbox</h4>
                     <div class="demo">
                       <div class="custom-control-checkbox custom-control-checkbox--inline">
-                        <input class="custom-checkbox-input" type="checkbox" id="check6" checked="checked" />
-                        <label class="custom-checkbox-label" for="check6">Option 1</label>
+                        <input class="custom-checkbox-input" type="checkbox" id="check5" checked="checked" />
+                        <label class="custom-checkbox-label" for="check5">Option 1</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check6" />
+                        <label class="custom-checkbox-label" for="check6">Option 2</label>
                       </div>
                       <div class="custom-control-checkbox custom-control-checkbox--inline">
                         <input class="custom-checkbox-input" type="checkbox" id="check7" />
-                        <label class="custom-checkbox-label" for="check7">Option 2</label>
+                        <label class="custom-checkbox-label" for="check7">Option 3</label>
                       </div>
                       <div class="custom-control-checkbox custom-control-checkbox--inline">
-                        <input class="custom-checkbox-input" type="checkbox" id="check8" />
-                        <label class="custom-checkbox-label" for="check8">Option 3</label>
+                        <input class="custom-checkbox-input" type="checkbox" id="check8" disabled="disabled" />
+                        <label class="custom-checkbox-label" for="check8">Option 4</label>
                       </div>
                     </div>
                     <pre><code>+checkboxes({
- id: 'check6',
+ id: 'check5',
  checked: true,
  label: 'Option 1'
 })(class="custom-control-checkbox--inline")
 +checkboxes({
- id: 'check7',
+ id: 'check6',
  checked: false,
  label: 'Option 2'
 })(class="custom-control-checkbox--inline")
 +checkboxes({
- id: 'check8',
+ id: 'check7',
  checked: false,
  label: 'Option 3'
+})(class="custom-control-checkbox--inline")
++checkboxes({
+ id: 'check8',
+ checked: false,
+ label: 'Option 4',
+ disabled: true
 })(class="custom-control-checkbox--inline")</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-6">
                   <div class="code-example">
                     <h4 class="h4">Checkbox full color</h4>
                     <div class="demo">
@@ -2201,6 +2117,10 @@
                         <input class="custom-checkbox-input" type="checkbox" id="check11" />
                         <label class="custom-checkbox-label" for="check11">Option 3</label>
                       </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--color custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input" type="checkbox" id="check12" disabled="disabled" />
+                        <label class="custom-checkbox-label" for="check12">Option 4</label>
+                      </div>
                     </div>
                     <pre><code>+checkboxes({
  id: 'check9',
@@ -2215,64 +2135,115 @@
 +checkboxes({
  id: 'check11',
  checked: false,
- label: 'Option 3'
+ label: 'Option 3',
+})(class="custom-control-checkbox--color custom-control-checkbox--inline")
++checkboxes({
+ id: 'check12',
+ checked: false,
+ label: 'Option 4',
+ disabled: true
 })(class="custom-control-checkbox--color custom-control-checkbox--inline")</code></pre>
                   </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-6">
                   <div class="code-example">
                     <h4 class="h4">Checkbox validation</h4>
                     <div class="demo">
                       <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check12" checked="checked" />
-                        <label class="custom-checkbox-label" for="check12">Success</label>
+                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check13" checked="checked" />
+                        <label class="custom-checkbox-label" for="check13">Success</label>
                       </div>
                       <div class="custom-control-checkbox">
-                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check13" />
-                        <label class="custom-checkbox-label" for="check13">Error</label>
+                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check14" />
+                        <label class="custom-checkbox-label" for="check14">Error</label>
+                      </div>
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check15" checked="checked" disabled="disabled" />
+                        <label class="custom-checkbox-label" for="check15">Success</label>
+                      </div>
+                      <div class="custom-control-checkbox">
+                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check16" disabled="disabled" />
+                        <label class="custom-checkbox-label" for="check16">Error</label>
                       </div>
                     </div>
                     <pre><code>+checkboxes({
- id: 'check12',
+ id: 'check13',
  checked: true,
  valid: true,
  label: 'Success'
 })
 +checkboxes({
- id: 'check13',
+ id: 'check14',
  checked: false,
  valid: false,
  label: 'Error'
-})</code></pre>
+})
+
++checkboxes({
+ id: 'check15',
+ checked: true,
+ valid: true,
+ label: 'Success',
+ disabled: true
+})
++checkboxes({
+ id: 'check16',
+ checked: false,
+ valid: false,
+ label: 'Error',
+ disabled: true</code></pre>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="col-12 col-sm-12 col-md-6">
                   <div class="code-example">
                     <h4 class="h4">Checkbox validation full color</h4>
                     <div class="demo">
                       <div class="custom-control-checkbox custom-control-checkbox--valid custom-control-checkbox--inline">
-                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check14" checked="checked" />
-                        <label class="custom-checkbox-label" for="check14">Success</label>
+                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check17" checked="checked" />
+                        <label class="custom-checkbox-label" for="check17">Success</label>
                       </div>
                       <div class="custom-control-checkbox custom-control-checkbox--invalid custom-control-checkbox--inline">
-                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check15" />
-                        <label class="custom-checkbox-label" for="check15">Error</label>
+                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check18" />
+                        <label class="custom-checkbox-label" for="check18">Error</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--valid custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input is--valid" type="checkbox" id="check19" checked="checked" disabled="disabled" />
+                        <label class="custom-checkbox-label" for="check19">Success</label>
+                      </div>
+                      <div class="custom-control-checkbox custom-control-checkbox--invalid custom-control-checkbox--inline">
+                        <input class="custom-checkbox-input is--invalid" type="checkbox" id="check20" disabled="disabled" />
+                        <label class="custom-checkbox-label" for="check20">Error</label>
                       </div>
                     </div>
                     <pre><code>+checkboxes({
- id: 'check12',
+ id: 'check17',
  checked: true,
  valid: true,
  label: 'Success'
-})
+})(class="custom-control-checkbox--valid custom-control-checkbox--inline")
 +checkboxes({
- id: 'check13',
+ id: 'check18',
  checked: false,
  valid: false,
  label: 'Error'
-})</code></pre>
+})(class="custom-control-checkbox--invalid custom-control-checkbox--inline")
+
++checkboxes({
+ id: 'check19',
+ checked: true,
+ valid: true,
+ label: 'Success',
+ disabled: true
+})(class="custom-control-checkbox--valid custom-control-checkbox--inline")
++checkboxes({
+ id: 'check20',
+ checked: false,
+ valid: false,
+ label: 'Error',
+ disabled: true
+})(class="custom-control-checkbox--invalid custom-control-checkbox--inline")</code></pre>
                   </div>
                 </div>
               </div>
@@ -2284,17 +2255,42 @@
                     <h4 class="h4">Icon Radio</h4>
                     <div class="demo">
                       <label class="custom-control-radio custom-control-radio--icon custom-control-radio--inline">
-                        <input class="custom-radio-input" type="radio" id="radioIcon1" checked="checked" name="radio-icon" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-female"></i></span>
+                        <input class="custom-radio-input" type="radio" id="radio1" checked="checked" name="radio" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-female"></i></span>
                       </label>
                       <label class="custom-control-radio custom-control-radio--icon custom-control-radio--inline">
-                        <input class="custom-radio-input" type="radio" id="radioIcon2" name="radio-icon" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-male"></i></span>
+                        <input class="custom-radio-input" type="radio" id="radio2" name="radio" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-male"></i></span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--icon custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radio3" checked="checked" disabled="disabled" name="radio1" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-female"></i></span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--icon custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radio4" disabled="disabled" name="radio1" /><span class="custom-radio-label--icon"><i class="zmdi zmdi-male"></i></span>
                       </label>
                     </div>
                     <pre><code>+radio({
- id: 'radioIcon1',
- name: 'radio-icon',
+ id: 'radio1',
+ name: 'radio',
  checked: true,
- icon: 'zmdi-female'
+ icon: 'zmdi zmdi-female'
+})(class='custom-control-radio--inline')
++radio({
+ id: 'radio2',
+ name: 'radio',
+ icon: 'zmdi zmdi-male'
+})(class='custom-control-radio--inline')
+
++radio({
+ id: 'radio3',
+ name: 'radio1',
+ checked: true,
+ icon: 'zmdi zmdi-female',
+ disabled: true
+})(class='custom-control-radio--inline')
++radio({
+ id: 'radio4',
+ name: 'radio1',
+ icon: 'zmdi zmdi-male',
+ disabled: true
 })(class='custom-control-radio--inline')</code></pre>
                   </div>
                 </div>
@@ -2303,32 +2299,39 @@
                     <h4 class="h4">Radio</h4>
                     <div class="demo">
                       <label class="custom-control-radio">
-                        <input class="custom-radio-input" type="radio" id="radioIcon3" checked="checked" name="radio-icon1" /><span class="custom-radio-label--text">Option 1</span>
+                        <input class="custom-radio-input" type="radio" id="radio5" checked="checked" name="radio2" /><span class="custom-radio-label--text">Option 1</span>
                       </label>
                       <label class="custom-control-radio">
-                        <input class="custom-radio-input" type="radio" id="radioIcon4" name="radio-icon1" /><span class="custom-radio-label--text">Option 2</span>
+                        <input class="custom-radio-input" type="radio" id="radio6" name="radio2" /><span class="custom-radio-label--text">Option 2</span>
                       </label>
                       <label class="custom-control-radio">
-                        <input class="custom-radio-input" type="radio" id="radioIco5" name="radio-icon1" /><span class="custom-radio-label--text">Option 3</span>
+                        <input class="custom-radio-input" type="radio" id="radio7" name="radio2" /><span class="custom-radio-label--text">Option 3</span>
+                      </label>
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input" type="radio" id="radio8" disabled="disabled" name="radio2" /><span class="custom-radio-label--text">Option 4</span>
                       </label>
                     </div>
                     <pre><code>+radio({
- id: 'radioIcon3',
- name: 'radio-icon1',
+ id: 'radio5',
+ name: 'radio2',
  label: 'Option 1',
  checked: true,
 })
 +radio({
- id: 'radioIcon4',
- name: 'radio-icon1',
+ id: 'radio6',
+ name: 'radio2',
  label: 'Option 2',
- checked: false,
 })
 +radio({
- id: 'radioIco5',
- name: 'radio-icon1',
+ id: 'radio7',
+ name: 'radio2',
  label: 'Option 3',
- checked: false,
+})
++radio({
+ id: 'radio8',
+ name: 'radio2',
+ label: 'Option 4',
+ disabled: true
 })</code></pre>
                   </div>
                 </div>
@@ -2339,32 +2342,39 @@
                     <h4 class="h4">Inline Radio</h4>
                     <div class="demo">
                       <label class="custom-control-radio custom-control-radio--inline">
-                        <input class="custom-radio-input" type="radio" id="radioIcon6" checked="checked" name="radio-icon2" /><span class="custom-radio-label--text">Option 1</span>
+                        <input class="custom-radio-input" type="radio" id="radio9" checked="checked" name="radio3" /><span class="custom-radio-label--text">Option 1</span>
                       </label>
                       <label class="custom-control-radio custom-control-radio--inline">
-                        <input class="custom-radio-input" type="radio" id="radioIcon7" name="radio-icon2" /><span class="custom-radio-label--text">Option 2</span>
+                        <input class="custom-radio-input" type="radio" id="radio10" name="radio3" /><span class="custom-radio-label--text">Option 2</span>
                       </label>
                       <label class="custom-control-radio custom-control-radio--inline">
-                        <input class="custom-radio-input" type="radio" id="radioIcon8" name="radio-icon2" /><span class="custom-radio-label--text">Option 3</span>
+                        <input class="custom-radio-input" type="radio" id="radio11" name="radio3" /><span class="custom-radio-label--text">Option 3</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input" type="radio" id="radio12" disabled="disabled" name="radio3" /><span class="custom-radio-label--text">Option 4</span>
                       </label>
                     </div>
                     <pre><code>+radio({
- id: 'radioIcon6',
- name: 'radio-icon2',
+ id: 'radio9',
+ name: 'radio3',
  label: 'Option 1',
  checked: true,
 })(class='custom-control-radio--inline')
 +radio({
- id: 'radioIcon7',
- name: 'radio-icon2',
+ id: 'radio10',
+ name: 'radio3',
  label: 'Option 2',
- checked: false,
 })(class='custom-control-radio--inline')
 +radio({
- id: 'radioIcon8',
- name: 'radio-icon2',
+ id: 'radio11',
+ name: 'radio3',
  label: 'Option 3',
- checked: false,
+})(class='custom-control-radio--inline')
++radio({
+ id: 'radio12',
+ name: 'radio3',
+ label: 'Option 4',
+ disabled: true
 })(class='custom-control-radio--inline')</code></pre>
                   </div>
                 </div>
@@ -2373,32 +2383,39 @@
                     <h4 class="h4">Inline Radio Full Color</h4>
                     <div class="demo">
                       <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
-                        <input class="custom-radio-input" type="radio" id="radioIcon9" checked="checked" name="radio-icon3" /><span class="custom-radio-label--text">Option 1</span>
+                        <input class="custom-radio-input" type="radio" id="radio13" checked="checked" name="radio4" /><span class="custom-radio-label--text">Option 1</span>
                       </label>
                       <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
-                        <input class="custom-radio-input" type="radio" id="radioIcon10" name="radio-icon3" /><span class="custom-radio-label--text">Option 2</span>
+                        <input class="custom-radio-input" type="radio" id="radio14" name="radio4" /><span class="custom-radio-label--text">Option 2</span>
                       </label>
                       <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
-                        <input class="custom-radio-input" type="radio" id="radioIcon11" name="radio-icon3" /><span class="custom-radio-label--text">Option 3</span>
+                        <input class="custom-radio-input" type="radio" id="radio15" name="radio4" /><span class="custom-radio-label--text">Option 3</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input" type="radio" id="radio16" disabled="disabled" name="radio4" /><span class="custom-radio-label--text">Option 4</span>
                       </label>
                     </div>
                     <pre><code>+radio({
- id: 'radioIcon9',
- name: 'radio-icon3',
+ id: 'radio13',
+ name: 'radio4',
  label: 'Option 1',
  checked: true,
 })(class='custom-control-radio--inline custom-control-radio--color')
 +radio({
- id: 'radioIcon10',
- name: 'radio-icon3',
+ id: 'radio14',
+ name: 'radio4',
  label: 'Option 2',
- checked: false,
 })(class='custom-control-radio--inline custom-control-radio--color')
 +radio({
- id: 'radioIcon11',
- name: 'radio-icon3',
+ id: 'radio15',
+ name: 'radio4',
  label: 'Option 3',
- checked: false,
+})(class='custom-control-radio--inline custom-control-radio--color')
++radio({
+ id: 'radio16',
+ name: 'radio4',
+ label: 'Option 4',
+ disabled: true
 })(class='custom-control-radio--inline custom-control-radio--color')</code></pre>
                   </div>
                 </div>
@@ -2409,25 +2426,46 @@
                     <h4 class="h4">Radio valid</h4>
                     <div class="demo">
                       <label class="custom-control-radio">
-                        <input class="custom-radio-input is--valid" type="radio" id="radioIcon12" checked="checked" name="radio-icon4" /><span class="custom-radio-label--text">Success</span>
+                        <input class="custom-radio-input is--valid" type="radio" id="radio17" checked="checked" name="radio5" /><span class="custom-radio-label--text">Success</span>
                       </label>
                       <label class="custom-control-radio">
-                        <input class="custom-radio-input is--invalid" type="radio" id="radioIcon13" name="radio-icon4" /><span class="custom-radio-label--text">Error</span>
+                        <input class="custom-radio-input is--invalid" type="radio" id="radio18" name="radio5" /><span class="custom-radio-label--text">Error</span>
+                      </label>
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input is--valid" type="radio" id="radio19" checked="checked" disabled="disabled" name="radio6" /><span class="custom-radio-label--text">Success</span>
+                      </label>
+                      <label class="custom-control-radio">
+                        <input class="custom-radio-input is--invalid" type="radio" id="radio20" disabled="disabled" name="radio6" /><span class="custom-radio-label--text">Error</span>
                       </label>
                     </div>
                     <pre><code>+radio({
- id: 'radioIcon12',
- name: 'radio-icon4',
+ id: 'radio17',
+ name: 'radio5',
  label: 'Success',
  checked: true,
  valid: true
 })
 +radio({
- id: 'radioIcon13',
- name: 'radio-icon4',
+ id: 'radio18',
+ name: 'radio5',
  label: 'Error',
- checked: false,
  valid: false
+})
+
++radio({
+ id: 'radio19',
+ name: 'radio6',
+ label: 'Success',
+ checked: true,
+ valid: true,
+ disabled: true
+})
++radio({
+ id: 'radio20',
+ name: 'radio6',
+ label: 'Error',
+ valid: false,
+ disabled: true
 })</code></pre>
                   </div>
                 </div>
@@ -2436,25 +2474,46 @@
                     <h4 class="h4">Radio valid inline</h4>
                     <div class="demo">
                       <label class="custom-control-radio custom-control-radio--inline">
-                        <input class="custom-radio-input is--valid" type="radio" id="radioIcon14" checked="checked" name="radio-icon5" /><span class="custom-radio-label--text">Success</span>
+                        <input class="custom-radio-input is--valid" type="radio" id="radio21" checked="checked" name="radio7" /><span class="custom-radio-label--text">Success</span>
                       </label>
                       <label class="custom-control-radio custom-control-radio--inline">
-                        <input class="custom-radio-input is--invalid" type="radio" id="radioIcon14" name="radio-icon5" /><span class="custom-radio-label--text">Error</span>
+                        <input class="custom-radio-input is--invalid" type="radio" id="radio22" name="radio7" /><span class="custom-radio-label--text">Error</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input is--valid" type="radio" id="radio23" checked="checked" disabled="disabled" name="radio8" /><span class="custom-radio-label--text">Success</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline">
+                        <input class="custom-radio-input is--invalid" type="radio" id="radio24" disabled="disabled" name="radio8" /><span class="custom-radio-label--text">Error</span>
                       </label>
                     </div>
                     <pre><code>+radio({
- id: 'radioIcon14',
- name: 'radio-icon5',
+ id: 'radio21',
+ name: 'radio7',
  label: 'Success',
  checked: true,
  valid: true
 })(class='custom-control-radio--inline')
 +radio({
- id: 'radioIcon14',
- name: 'radio-icon5',
+ id: 'radio22',
+ name: 'radio7',
  label: 'Error',
- checked: false,
  valid: false
+})(class='custom-control-radio--inline')
+
++radio({
+ id: 'radio23',
+ name: 'radio8',
+ label: 'Success',
+ checked: true,
+ valid: true,
+ disabled: true
+})(class='custom-control-radio--inline')
++radio({
+ id: 'radio24',
+ name: 'radio8',
+ label: 'Error',
+ valid: false,
+ disabled: true
 })(class='custom-control-radio--inline')</code></pre>
                   </div>
                 </div>
@@ -2465,25 +2524,46 @@
                     <h4 class="h4">Radio valid inline full color</h4>
                     <div class="demo">
                       <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
-                        <input class="custom-radio-input is--valid" type="radio" id="radioIcon15" checked="checked" name="radio-icon6" /><span class="custom-radio-label--text">Success</span>
+                        <input class="custom-radio-input is--valid" type="radio" id="radioIcon25" checked="checked" name="radio9" /><span class="custom-radio-label--text">Success</span>
                       </label>
                       <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
-                        <input class="custom-radio-input is--invalid" type="radio" id="radioIcon15" name="radio-icon6" /><span class="custom-radio-label--text">Error</span>
+                        <input class="custom-radio-input is--invalid" type="radio" id="radio26" name="radio9" /><span class="custom-radio-label--text">Error</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input is--valid" type="radio" id="radio27" checked="checked" disabled="disabled" name="radio10" /><span class="custom-radio-label--text">Success</span>
+                      </label>
+                      <label class="custom-control-radio custom-control-radio--inline custom-control-radio--color">
+                        <input class="custom-radio-input is--invalid" type="radio" id="radio28" disabled="disabled" name="radio10" /><span class="custom-radio-label--text">Error</span>
                       </label>
                     </div>
                     <pre><code>+radio({
- id: 'radioIcon15',
- name: 'radio-icon6',
+ id: 'radioIcon25',
+ name: 'radio9',
  label: 'Success',
  checked: true,
  valid: true
 })(class='custom-control-radio--inline custom-control-radio--color')
 +radio({
- id: 'radioIcon15',
- name: 'radio-icon6',
+ id: 'radio26',
+ name: 'radio9',
  label: 'Error',
- checked: false,
  valid: false
+})(class='custom-control-radio--inline custom-control-radio--color')
+
++radio({
+ id: 'radio27',
+ name: 'radio10',
+ label: 'Success',
+ checked: true,
+ valid: true,
+ disabled: true
+})(class='custom-control-radio--inline custom-control-radio--color')
++radio({
+ id: 'radio28',
+ name: 'radio10',
+ label: 'Error',
+ valid: false,
+ disabled: true
 })(class='custom-control-radio--inline custom-control-radio--color')</code></pre>
                   </div>
                 </div>
@@ -2497,7 +2577,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--xs switch-button--primary">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt00" id="swt00" /><span>
-                          <label for="swt00"></label></span>
+                          <label class="label label--xs" for="swt00"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2514,7 +2594,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--sm switch-button--primary">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt01" id="swt01" /><span>
-                          <label for="swt01"></label></span>
+                          <label class="label label--sm" for="swt01"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2531,7 +2611,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--md switch-button--primary">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt02" id="swt02" /><span>
-                          <label for="swt02"></label></span>
+                          <label class="label label--md" for="swt02"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2548,7 +2628,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--lg switch-button--primary">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt03" id="swt03" /><span>
-                          <label for="swt03"></label></span>
+                          <label class="label label--lg" for="swt03"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2567,7 +2647,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--xs switch-button--success">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt10" id="swt10" /><span>
-                          <label for="swt10"></label></span>
+                          <label class="label label--xs" for="swt10"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2584,7 +2664,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--sm switch-button--success">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt11" id="swt11" /><span>
-                          <label for="swt11"></label></span>
+                          <label class="label label--sm" for="swt11"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2601,7 +2681,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--md switch-button--success">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt12" id="swt12" /><span>
-                          <label for="swt12"></label></span>
+                          <label class="label label--md" for="swt12"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2618,7 +2698,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--lg switch-button--success">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt13" id="swt13" /><span>
-                          <label for="swt13"></label></span>
+                          <label class="label label--lg" for="swt13"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2637,7 +2717,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--xs switch-button--warning">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt20" id="swt20" /><span>
-                          <label for="swt20"></label></span>
+                          <label class="label label--xs" for="swt20"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2654,7 +2734,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--sm switch-button--warning">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt21" id="swt21" /><span>
-                          <label for="swt21"></label></span>
+                          <label class="label label--sm" for="swt21"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2671,7 +2751,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--md switch-button--warning">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt22" id="swt22" /><span>
-                          <label for="swt22"></label></span>
+                          <label class="label label--md" for="swt22"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2688,7 +2768,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--lg switch-button--warning">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt23" id="swt23" /><span>
-                          <label for="swt23"></label></span>
+                          <label class="label label--lg" for="swt23"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2707,7 +2787,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--xs switch-button--danger">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt30" id="swt30" /><span>
-                          <label for="swt30"></label></span>
+                          <label class="label label--xs" for="swt30"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2724,7 +2804,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--sm switch-button--danger">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt31" id="swt31" /><span>
-                          <label for="swt31"></label></span>
+                          <label class="label label--sm" for="swt31"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2741,7 +2821,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--md switch-button--danger">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt32" id="swt32" /><span>
-                          <label for="swt32"></label></span>
+                          <label class="label label--md" for="swt32"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2758,7 +2838,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--lg switch-button--danger">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt33" id="swt33" /><span>
-                          <label for="swt33"></label></span>
+                          <label class="label label--lg" for="swt33"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2777,7 +2857,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--xs switch-button--yesno">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt40" id="swt40" /><span>
-                          <label for="swt40"></label></span>
+                          <label class="label label--xs" for="swt40"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2794,7 +2874,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--sm switch-button--yesno">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt41" id="swt41" /><span>
-                          <label for="swt41"></label></span>
+                          <label class="label label--sm" for="swt41"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2811,7 +2891,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--md switch-button--yesno">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt42" id="swt42" /><span>
-                          <label for="swt42"></label></span>
+                          <label class="label label--md" for="swt42"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2828,7 +2908,7 @@
                     <div class="demo">
                       <div class="switch-button switch-button--lg switch-button--yesno">
                         <input class="switch-button-input" type="checkbox" checked="checked" name="swt43" id="swt43" /><span>
-                          <label for="swt43"></label></span>
+                          <label class="label label--lg" for="swt43"></label></span>
                       </div>
                     </div>
                     <pre><code>+switch({
@@ -2838,6 +2918,159 @@
  size: 'lg',
  checked: true
 })</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" role="tabpanel" id="v-pills-date" aria-labelledby="v-pills-date-tab">
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Default</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" id="date1" />
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+ id: 'date1'
+})</code></pre>
+                  </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Readonly</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" readonly="readonly" size="16" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+size: "16",
+ icon: 'zmdi zmdi-calendar',
+ readonly: true
+})</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-sm-12 col-md-6">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Only Date</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" data-date-format="yyyy-mm-dd" data-min-view="2" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+  icon: 'zmdi zmdi-calendar',
+})(data-date-format="yyyy-mm-dd" data-min-view="2")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Decade View</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+  icon: 'zmdi zmdi-calendar',
+})(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Year View</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+  icon: 'zmdi zmdi-calendar',
+})(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Day View</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+  icon: 'zmdi zmdi-calendar',
+})(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Hour View</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+  icon: 'zmdi zmdi-calendar',
+})(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Day View Meridian</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+  icon: 'zmdi zmdi-calendar',
+})(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <div class="code-example">
+                    <h4 class="h4">Date Picker Hour View Meridian</h4>
+                    <div class="demo">
+                      <div class="input-group">
+                        <input class="form__control datetimepicker" type="text" data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii" />
+                        <button class="btn btn-space btn-primary js-datetimepicker"><i class="icon icon-left zmdi zmdi-calendar"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <pre><code>+datetimepicker({
+  icon: 'zmdi zmdi-calendar',
+})(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")</code></pre>
                   </div>
                 </div>
               </div>

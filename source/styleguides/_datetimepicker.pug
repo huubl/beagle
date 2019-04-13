@@ -1,0 +1,126 @@
+.row
+  .col-12.col-sm-12.col-md-6
+    .code-example
+      h4.h4 Date Picker Default
+      .demo
+        +datetimepicker({
+          id: 'date1'
+        })
+      pre
+        code
+          |+datetimepicker({
+          |  id: 'date1'
+          |})
+  .col-12.col-sm-12.col-md-6
+    .code-example
+      h4.h4 Date Picker Readonly
+      .demo
+        +datetimepicker({
+          size: "16",
+          icon: 'zmdi zmdi-calendar',
+          readonly: true
+        })
+      pre
+        code
+          |+datetimepicker({
+          | size: "16",
+          |  icon: 'zmdi zmdi-calendar',
+          |  readonly: true
+          |})
+
+.row
+  .col-12.col-sm-12.col-md-6
+    .code-example
+      h4.h4 Date Picker Only Date
+      .demo
+        +datetimepicker({
+          icon: 'zmdi zmdi-calendar',
+        })(data-date-format="yyyy-mm-dd", data-min-view="2")
+      pre
+        code
+          | +datetimepicker({
+          |   icon: 'zmdi zmdi-calendar',
+          | })(data-date-format="yyyy-mm-dd" data-min-view="2")
+.row
+  .col-10
+    .code-example
+      h4.h4 Date Picker Decade View
+      .demo
+        +datetimepicker({
+          icon: 'zmdi zmdi-calendar',
+        })(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +datetimepicker({
+          |   icon: 'zmdi zmdi-calendar',
+          | })(data-start-view="4" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-10
+    .code-example
+      h4.h4 Date Picker Year View
+      .demo
+        +datetimepicker({
+          icon: 'zmdi zmdi-calendar',
+        })(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +datetimepicker({
+          |   icon: 'zmdi zmdi-calendar',
+          | })(data-start-view="3" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-10
+    .code-example
+      h4.h4 Date Picker Day View
+      .demo
+        +datetimepicker({
+          icon: 'zmdi zmdi-calendar',
+        })(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +datetimepicker({
+          |   icon: 'zmdi zmdi-calendar',
+          | })(data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-10
+    .code-example
+      h4.h4 Date Picker Hour View
+      .demo
+        +datetimepicker({
+          icon: 'zmdi zmdi-calendar',
+        })(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +datetimepicker({
+          |   icon: 'zmdi zmdi-calendar',
+          | })(data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-10
+    .code-example
+      h4.h4 Date Picker Day View Meridian
+      .demo
+        +datetimepicker({
+          icon: 'zmdi zmdi-calendar',
+        })(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +datetimepicker({
+          |   icon: 'zmdi zmdi-calendar',
+          | })(data-show-meridian="true" data-start-view="1" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+
+.row
+  .col-10
+    .code-example
+      h4.h4 Date Picker Hour View Meridian
+      .demo
+        +datetimepicker({
+          icon: 'zmdi zmdi-calendar',
+        })(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")
+      pre
+        code
+          | +datetimepicker({
+          |   icon: 'zmdi zmdi-calendar',
+          | })(data-show-meridian="true" data-start-view="0" data-date="1979-09-16T05:25:07Z" data-date-format="yyyy-mm-dd - HH:ii")

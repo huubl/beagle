@@ -2,7 +2,7 @@
 //- Modules :: Radio
 //-------------------------------------------------------
 
-mixin radio({ id, name, type, label, icon, checked, valid })
+mixin radio({ id, name, type, label, icon, checked, valid, disabled })
   label.custom-control-radio(
     class= icon ? `custom-control-radio--icon` : null
   )&attributes(attributes)
@@ -10,6 +10,7 @@ mixin radio({ id, name, type, label, icon, checked, valid })
       type= type ? type : 'radio'
       id= id ? id : null
       checked= (checked===true) ? true : false
+      disabled= (disabled===true) ? true : false
       name= name ? name : null
       class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
     )
@@ -19,5 +20,5 @@ mixin radio({ id, name, type, label, icon, checked, valid })
       if (typeof icon === 'undefined')
         | #{label}
       else
-        i.zmdi(class=`${icon}`)
+        i(class=`${icon}`)
 

@@ -7,8 +7,8 @@
         "bg": "gray"
       },
       {
-        "title": "Owner Top page",
-        "url": "SO-0-01-Toppage",
+        "title": "Home",
+        "url": "home",
         "bg": "#1984c6"
       }
     ]

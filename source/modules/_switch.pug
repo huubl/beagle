@@ -14,6 +14,8 @@ mixin switch({ id, type, name, size, checked })
       id= id ? id : null
     )
     span
-      label(
+      label.label(
         for= id ? id : null
+        class= size ? `label--${size}` : null
       )
+    

@@ -9,7 +9,6 @@ mixin input-field({ id, type, placeholder, disabled, readonly, value, sizing, si
       class= (type=="file" && typeof multiple !== "undefined") ? "multi-file" : null
       class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
       class= sizing ? `form__control--${sizing}` : null
-      class= (datetimepicker===true) ? `datetimepicker` : null
       type= type ? type : 'text'
       placeholder= placeholder ? placeholder : null
       value= value ? value : null

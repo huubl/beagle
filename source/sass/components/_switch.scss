@@ -2,144 +2,69 @@
 // Components :: Switch
 // ======================================================
 
-/* stylelint-disable */
 .switch-button {
+  /* stylelint-disable */
   $block: &;
+  /* stylelint-enable */
   display: inline-block;
   border-radius: 50px;
-  background-color: #b3b3b3;
+  background-color: $cl-gray-light-3;
   width: 60px;
   height: 27px;
   padding: 4px;
   position: relative;
   vertical-align: middle;
 
-  &-input {
-    position: absolute;
-    opacity: 0;
-    box-sizing: border-box;
-    padding: 0;
-
-    &:focus ~ span label:before {
-      box-shadow: 0 0 0 .15rem rgba(135, 135, 135, .3);
-    }
-
-    &:checked:focus ~ span label:before {
-      box-shadow: 0 0 0 .15rem rgba(66, 133, 244, .5);
-    }
-
-    ~ span label {
-      white-space: nowrap;
-      border-radius: 100%;
-      background-color: #fff;
-      height: 19px;
-      width: 19px;
-      display: inline-block;
-      cursor: pointer;
-
-      &:before {
-        position: absolute;
-        font-size: .8462rem;
-        font-weight: 600;
-        content: 'OFF';
-        right: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        line-height: 27px;
-        top: 0;
-        text-align: right;
-        padding-right: 10px;
-        color: #fff;
-        border-radius: 50px;
-      }
-    }
-
-    &:checked ~ span {
-      border-radius: 100px;
-      background-color: #4285f4;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 4px;
-
-      label {
-        float: right;
-
-        &:before {
-          position: absolute;
-          font-size: .8462rem;
-          font-weight: 600;
-          content: 'ON';
-          color: #fff;
-          left: 0;
-          text-align: left;
-          padding-left: 10px;
-        }
-      }
-    }
-  }
-
   &--success {
-    #{$block}-input {
-      &:checked ~ span {
-        background-color: #34a853;
+    #{$block}-input:checked ~ span {
+      background-color: $cl-green-light;
 
-        label {
-          border-color: #34a853;
-        }
+      .label {
+        border-color: $cl-green-light;
       }
+    }
 
-      &:checked:focus ~ span label:before {
-        box-shadow: 0 0 0 .15rem rgba(52, 168, 83, .5);
-      }
+    #{$block}-input:checked:focus ~ span label:before {
+      box-shadow: 0 0 0 .15rem rgba($cl-green-light, .5);
     }
   }
 
   &--warning {
-    #{$block}-input {
-      &:checked ~ span {
-        background-color: #e3aa04;
+    #{$block}-input:checked ~ span {
+      background-color: $cl-yellow-light-2;
 
-        label {
-          border-color: #e3aa04;
-        }
+      .label {
+        border-color: $cl-yellow-light-2;
       }
+    }
 
-      &:checked:focus ~ span label:before {
-        box-shadow: 0 0 0 .15rem rgba(251, 188, 5, .5);
-      }
+    #{$block}-input:checked:focus ~ span label:before {
+      box-shadow: 0 0 0 .15rem rgba($cl-yellow-light, .5);
     }
   }
 
+
   &--danger {
-    #{$block}-input {
-      &:checked ~ span {
-        background-color: #e82e1e;
+    #{$block}-input:checked ~ span {
+      background-color: $cl-red-dark-3;
 
-        label {
-          border-color: #e82e1e;
-        }
+      .label {
+        border-color: $cl-red-dark-3;
       }
+    }
 
-      &:checked:focus ~ span label:before {
-        box-shadow: 0 0 0 .15rem rgba(234, 67, 53, .5);
-      }
+    #{$block}-input:checked:focus ~ span label:before {
+      box-shadow: 0 0 0 .15rem rgba($cl-red-light, .5);
     }
   }
 
   &--yesno {
-    #{$block}-input {
-      ~ span label:before {
-        content: 'NO';
-      }
+    #{$block}-input ~ span label:before {
+      content: 'NO';
+    }
 
-      &:checked ~ span label:before {
-        content: 'YES';
-      }
+    #{$block}-input:checked ~ span label:before {
+      content: 'YES';
     }
   }
 
@@ -148,7 +73,7 @@
     line-height: 16px;
     width: 50px;
 
-    #{$block}-input ~ span label {
+    #{$block}-input ~ span label:after {
       height: 12px;
       width: 12px;
 
@@ -163,7 +88,7 @@
     width: 57px;
     line-height: 20px;
 
-    #{$block}-input ~ span label {
+    #{$block}-input ~ span label:after {
       height: 16px;
       width: 16px;
 
@@ -178,7 +103,7 @@
     line-height: 26px;
     width: 65px;
 
-    #{$block}-input ~ span label {
+    #{$block}-input ~ span label:after {
       height: 22px;
       width: 22px;
 
@@ -188,4 +113,113 @@
     }
   }
 }
-/* stylelint-enable */
+
+.switch-button-input {
+  position: absolute;
+  opacity: 0;
+  box-sizing: border-box;
+  padding: 0;
+
+  &:focus ~ span label:before {
+    box-shadow: 0 0 0 .15rem rgba($cl-dark-light-4, .3);
+  }
+
+  &:checked:focus ~ span label:before {
+    box-shadow: 0 0 0 .15rem rgba($cl-blue, .5);
+  }
+
+  ~ span .label {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    cursor: pointer;
+
+    &:after {
+      left: 4px;
+      top: 4px;
+      position: absolute;
+      content: '';
+      white-space: nowrap;
+      border-radius: 100%;
+      background-color: $cl-white;
+      height: 19px;
+      width: 19px;
+      display: inline-block;
+      cursor: pointer;
+      transition: all .3s ease;
+    }
+
+    &:before {
+      position: absolute;
+      font-size: .8462rem;
+      font-weight: $font-weight-bold;
+      content: 'OFF';
+      right: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      text-align: right;
+      padding-right: 10px;
+      color: $cl-white;
+      border-radius: 50px;
+    }
+
+    &--xs:before {
+      line-height: 21px;
+    }
+
+    &--sm:before {
+      line-height: 24px;
+    }
+
+    &--md:before {
+      line-height: 27px;
+    }
+
+    &--lg:before {
+      line-height: 30px;
+    }
+  }
+
+  &:checked ~ span {
+    border-radius: 100px;
+    background-color: $cl-blue;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+
+    .label {
+      &:before {
+        content: 'ON';
+        left: 0;
+        text-align: left;
+        padding-left: 10px;
+      }
+
+      &--xs:after {
+        left: calc(100% - 16px);
+      }
+
+      &--sm:after {
+        left: calc(100% - 20px);
+      }
+
+      &--md:after {
+        left: calc(100% - 24px);
+      }
+
+      &--lg:after {
+        left: calc(100% - 26px);
+      }
+    }
+  }
+}

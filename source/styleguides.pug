@@ -1,5 +1,5 @@
 extends modules/layout/_page-other
-                
+                         
 block head
   +head('Styleguides')
   style.
@@ -8,16 +8,16 @@ block head
     }
     .code-example {
       margin-bottom: 25px;
-    }
+    } 
     .code-example .demo {
-      box-sizing: border-box;
+      box-sizing: border-box; 
       padding: 1.5rem;
       position: relative;
       border: 1px solid rgba(0, 0, 0, 0.125);
       border-radius: 0.25rem 0.25rem 0 0;
     }
     .code-example pre {
-      margin: 0;
+      margin: 0;  
       background-color: rgba(0, 0, 0, 0.125);
       padding: 15px;
       border-radius: 0 0 0.25rem 0.25rem;
@@ -28,15 +28,18 @@ block head
       font-weight: 400;
     }
 
-    .list-group{
+    .list-group {
       position: sticky;
       top: 0;
+      max-height: 90vh;
+      overflow-y: auto;
     }
 
     @media (max-width: 576px) {
-      .list-group{
+      .list-group {
         position: relative;
         margin-bottom: 24px;
+        max-height: auto;
       }
     }
 
@@ -63,6 +66,9 @@ block main
       },{
         id: 'switch',
         title: 'Switches'
+      },{
+        id: 'date',
+        title: 'DatetimePicker'
       }
     ];
 
@@ -112,5 +118,7 @@ block main
                   include styleguides/_switch
                 when 'radio'
                   include styleguides/_radio
+                when 'date'
+                  include styleguides/_datetimepicker
                 default
                   - throw new Error('"val.id" must be in "components" variable')

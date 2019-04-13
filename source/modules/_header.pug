@@ -2,5 +2,118 @@
 //- Modules :: Header
 //-------------------------------------------------------
 
-mixin header()
-  .header Header
+mixin header(title)
+  .navbar.navbar-expand.fixed-top.top-header
+    .container-fluid
+      .navbar-brand-wrapper
+        a.navbar-brand(href="home.html")
+      .page-title
+        span=title
+      .navbar-right
+        ul.nav.navbar-nav.float-right.user-nav
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.nav-link--user(data-toggle="dropdown" role="button" aria-expanded="false")
+              img.user-img(src="images/avatar.png")
+              span.user-name Túpac Amaru
+            .dropdown-menu.dropdown-user
+              .user-info
+                span.user-name Túpac Amaru
+                span.user-position.online Available
+              a.dropdown-item(href="#")
+                i.icon.zmdi.zmdi-face
+                | Account
+              a.dropdown-item(href="#")
+                i.icon.zmdi.zmdi-settings
+                | Settings
+              a.dropdown-item(href="#")
+                i.icon.zmdi.zmdi-power
+                | Logout
+
+        ul.nav.navbar-nav.float-right.icons-nav
+          li.nav-item.dropdown
+            a.nav-link.nav-link--icon.js-toggle-right-sidebar(href="#" role="button" aria-expanded="false")
+              i.icon.zmdi.zmdi-settings
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.nav-link--noti(data-toggle="dropdown" role="button" aria-expanded="false")
+              i.icon.zmdi.zmdi-notifications
+              span.indicator
+            .dropdown-menu.drop-notifications
+              .title
+                | Notifications
+                span.badge.badge-pill 3
+              .list
+                .content.js-list-scrollbar
+                  ul
+                    li.notification.notification-unread
+                      a(href="#")
+                        .image
+                          img(src="images/avatar2.png", alt="")
+                        .notification-info
+                          p.text
+                            span.user-name Jessica Caruso
+                            span accepted your invitation to join the team.
+                          p.time 2 min ago
+                    li.notification
+                      a(href="#")
+                        .image
+                          img(src="images/avatar3.png", alt="")
+                        .notification-info
+                          p.text
+                            span.user-name Joel King
+                            span is now following you
+                          p.time 2 days ago 
+                    li.notification
+                        a(href="#")
+                          .image
+                            img(src="images/avatar4.png", alt="")
+                          .notification-info
+                            p.text
+                              span.user-name John Doe
+                              span is watching your main repository
+                            p.time 2 days ago
+                    li.notification
+                      a(href="#")
+                        .image
+                          img(src="images/avatar5.png", alt="")
+                        .notification-info
+                          p.text
+                            span.user-name Emily Carter
+                            span is now following you
+                          p.time 5 days ago 
+              .footer
+                a(href="#") View all notifications
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle.nav-link--connect(data-toggle="dropdown" role="button" aria-expanded="false")
+              i.icon.zmdi.zmdi-apps
+            .dropdown-menu.drop-connect
+              .list-connect
+                .row
+                  .col
+                    a.connect-item(href="#")
+                      img(src="images/github.png", alt="")
+                      span GitHub
+                  .col
+                    a.connect-item(href="#")
+                      img(src="images/bitbucket.png", alt="")
+                      span BitBucket
+                  .col
+                    a.connect-item(href="#")
+                      img(src="images/slack.png", alt="")
+                      span Slack
+                .row
+                  .col
+                    a.connect-item(href="#")
+                      img(src="images/dribbble.png", alt="")
+                      span Dribbble
+                  .col
+                    a.connect-item(href="#")
+                      img(src="images/mail_chimp.png", alt="")
+                      span Mail Chimp
+                  .col
+                    a.connect-item(href="#")
+                      img(src="images/dropbox.png", alt="")
+                      span Dropbox
+              .footer
+                a(href="#") More
+
+

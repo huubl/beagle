@@ -7,9 +7,9 @@ mixin buttons({type, text, iconBefore, size, rounded})
     class= type ? `btn-${type}` : null
     class= size ? `btn-${size}` : null
     class= (rounded === true) ? `btn-rounded` : null
-  )
+  )&attributes(attributes)
     if iconBefore
-      i.icon.icon-left.zmdi(
+      i.icon.icon-left(
         class= iconBefore ? iconBefore : null
       )
     | #{text}
