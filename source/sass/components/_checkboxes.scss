@@ -47,6 +47,25 @@
       }
     }
   }
+
+  cursor: pointer;
+
+  &:hover > i {
+    display: inline-block;
+  }
+
+  > i {
+    display: none;
+    float: right;
+    font-size: 1.308rem;
+    color: $cl-gray-light-3;
+    margin-left: 5px;
+    cursor: pointer;
+
+    &:hover {
+      color: $cl-gray;
+    }
+  }
 }
 
 .custom-checkbox-input {

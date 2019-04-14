@@ -140,7 +140,7 @@
       position: static;
 
       &.show>a,
-      &.show>a>i {
+      &.show>a>i.icon {
         color: #4285f4;
       }
 

@@ -4,12 +4,92 @@
       {
         "title": "Style Guides",
         "url": "styleguides",
+        "categories" : "N/A",
         "bg": "gray"
       },
       {
         "title": "Home",
         "url": "home",
+        "categories" : "Home",
         "bg": "#1984c6"
+      },
+      {
+        "title": "Pages blank",
+        "url": "pages-blank",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages Blank Header",
+        "url": "pages-blank-header",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages login",
+        "url": "pages-login",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages login v2",
+        "url": "pages-login2",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Page 404",
+        "url": "pages-404",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Page sign up",
+        "url": "pages-sign-up",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages forgot password",
+        "url": "pages-forgot-password",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages profile",
+        "url": "pages-profile",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages pricing tables",
+        "url": "pages-pricing-tables",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages pricing tables v2",
+        "url": "pages-pricing-tables2",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages timeline",
+        "url": "pages-timeline",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages timeline v2",
+        "url": "pages-timeline2",
+        "categories" : "Pages",
+        "bg": "#dea604"
+      },
+      {
+        "title": "Pages invoice",
+        "url": "pages-invoice",
+        "categories" : "Pages",
+        "bg": "#dea604"
       }
     ]
   }

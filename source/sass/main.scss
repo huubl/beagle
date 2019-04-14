@@ -12,13 +12,14 @@
 @import 'base/colors';
 @import 'base/images';
 @import 'base/global';
-@import 'layout/header';
-@import 'layout/footer';
 @import 'components/button';
 @import 'components/input';
 @import 'components/checkboxes';
 @import 'components/radio';
 @import 'components/switch';
 @import 'components/datetimepicker';
+@import 'layout/header';
+@import 'layout/sidebar';
+@import 'layout/footer';
 @import 'pages/home';
 @import 'pages/page-list';

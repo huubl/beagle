@@ -2,8 +2,10 @@
 //- Modules :: Checkbox
 //-------------------------------------------------------
 
-mixin checkboxes({ id, type, checked, label, valid, disabled, lineThrough })
+mixin checkboxes({ id, type, checked, label, valid, disabled, lineThrough, icon })
   .custom-control-checkbox&attributes(attributes)
+    if icon
+      i(class=`${icon}`)
     input.custom-checkbox-input(
       type= type ? type : "checkbox"
       id= id ? id : null

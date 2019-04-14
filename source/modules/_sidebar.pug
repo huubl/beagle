@@ -1,0 +1,252 @@
+//-------------------------------------------------------
+//- Modules :: Sidebar
+//-------------------------------------------------------
+
+mixin sidebarRight()
+  aside.right-sidebar
+    .right-sidebar-inner
+      .tab-navigation
+        ul.nav.nav-tab
+          li.nav-item
+            a.nav-link.active(
+              href="#tab1" aria-controls="tab1" data-toggle="tab" aria-selected="false"
+            ) Chat
+          li.nav-item
+            a.nav-link(
+              href="#tab2" aria-controls="tab1" data-toggle="tab" aria-selected="false"
+            ) Todo
+          li.nav-item
+            a.nav-link(
+              href="#tab3" aria-controls="tab1" data-toggle="tab" aria-selected="false"
+            ) Settings
+      .tab-panel
+        .tab-content
+          .tab-chat.tab-pane#tab1.active
+            .tab-chat-inner
+              .chat-content
+                h2 Recent
+                .contact-list.contact-list-recent
+                  ul.list
+                    li.user
+                      a.js-contact-link(href="#!") 
+                        img(src="images/avatar1.png", alt="")
+                        .user-data
+                          span.status.away 
+                          span.name Claire Sassu
+                          span.message Can you share the...
+                    li.user
+                      a.js-contact-link(href="#!") 
+                        img(src="images/avatar2.png", alt="")
+                        .user-data
+                          span.status 
+                          span.name Maggie jackson
+                          span.message I confirmed the info.
+                    li.user
+                      a.js-contact-link(href="#!") 
+                        img(src="images/avatar3.png", alt="")
+                        .user-data
+                          span.status.offline 
+                          span.name Joel King
+                          span.message Ready for the meeti...
+                h2 Contacts
+                .contact-list
+                  ul.list
+                    li.user
+                      a.js-contact-link(href="#!") 
+                        img(src="images/avatar4.png", alt="")
+                        .user-data-contact
+                          span.status 
+                          span.name Mike Bolthort
+                    li.user
+                      a.js-contact-link(href="#!") 
+                        img(src="images/avatar5.png", alt="")
+                        .user-data-contact
+                          span.status 
+                          span.name Maggie jackson
+                    li.user
+                      a.js-contact-link(href="#!") 
+                        img(src="images/avatar6.png", alt="")
+                        .user-data-contact
+                          span.status.offline 
+                          span.name Jhon Voltemar
+              .chat-input
+                +input-field({
+                  id: 'chatsearch',
+                  placeholder: 'Search...'
+                })(class='input-chat' name='q')
+                i.zmdi.zmdi-search
+            .chat-windows
+              .chat-header
+                .user
+                  img.user__img(src="images/avatar2.png", alt="")
+                  h2.user__name Maggie jackson
+                  span.user__status Active 1h ago
+                a.js-chat
+                  i.zmdi.zmdi-chevron-left
+              .chat-message
+                ul
+                  li.friend
+                    p.msg Hello
+                  li.self
+                    p.msg Hi, how are you?
+                  li.friend
+                    p.msg Good, I'll need support with my pc
+                  li.self
+                    p.msg Sure, just tell me what is going on with your computer?
+                  li.friend
+                    p.msg I don't know it just turns off suddenly
+              .chat-input
+                i.zmdi.zmdi-camera.send-camera
+                +input-field({
+                  placeholder: 'Message...'
+                })(name="q" autocomplete="off")
+                i.zmdi.zmdi-mail-send.send-msg
+          .tab-todo.tab-pane#tab2
+            .tab-todo-inner
+              .todo-content
+                h3 Today
+                ul.todo-list
+                  li
+                    +checkboxes({
+                      id: 'check1',
+                      checked: true,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Initialize the project',
+                      lineThrough: true
+                    })
+                  li
+                    +checkboxes({
+                      id: 'check2',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Create the main structure',
+                      lineThrough: true
+                    })
+                  li
+                    +checkboxes({
+                      id: 'check3',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Updates changes to GitHub',
+                      lineThrough: true
+                    })
+                h3 Tomorrow
+                ul.todo-list
+                  li
+                    +checkboxes({
+                      id: 'check4',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Initialize the project',
+                      lineThrough: true
+                    })
+                  li
+                    +checkboxes({
+                      id: 'check5',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Create the main structure',
+                      lineThrough: true
+                    })
+                  li
+                    +checkboxes({
+                      id: 'check6',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'Updates changes to GitHub',
+                      lineThrough: true
+                    })
+                  li
+                    +checkboxes({
+                      id: 'check7',
+                      checked: false,
+                      icon: 'zmdi zmdi-delete',
+                      label: 'This task is too long to be displayed in a normal space!',
+                      lineThrough: true
+                    })(title='This task is too long to be displayed in a normal space!')
+              .todo-input
+                +input-field({
+                  id: 'todoip',
+                  placeholder: 'Create new task...'
+                })(class='input-todo' name='q')
+                i.zmdi.zmdi-plus
+          .tab-settings.tab-pane#tab3
+            .tab-settings-inner
+              h3 General
+              ul.settings-list
+                li
+                  span.name Available
+                  +switch({
+                    id: 'swt01',
+                    name: 'swt01',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name Enable notifications
+                  +switch({
+                    id: 'swt02',
+                    name: 'swt02',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name Login with Facebook
+                  +switch({
+                    id: 'swt03',
+                    name: 'swt03',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+              h3 Notifications
+              ul.settings-list
+                li
+                  span.name Email notifications
+                  +switch({
+                    id: 'swt04',
+                    name: 'swt04',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: false
+                  })
+                li
+                  span.name Project updates
+                  +switch({
+                    id: 'swt05',
+                    name: 'swt05',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name New comments
+                  +switch({
+                    id: 'swt06',
+                    name: 'swt06',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: true
+                  })
+                li
+                  span.name Chat messages
+                  +switch({
+                    id: 'swt07',
+                    name: 'swt07',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: false
+                  })
+              h3 Workflow
+              ul.settings-list
+                li
+                  span.name Deploy on commit
+                  +switch({
+                    id: 'swt08',
+                    name: 'swt08',
+                    type: 'primary',
+                    size: 'sm',
+                    checked: false
+                  })
