@@ -1,0 +1,119 @@
+extends modules/layout/_page-default
+
+block head
+  +head('Beagle')
+
+block main
+  +header("Invoice")
+  +sidebarLeft("pages", "be-14-pages-invoice.html")
+  +sidebarRight()
+  section.page-content.page-invoice
+    .page-head
+      h2.page-head-title Invoice
+      nav.breadcrumb
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="/") Home
+          li.breadcrumb-item
+            a(href="#!") Pages
+          li.breadcrumb-item.active
+            a(href="#!") Invoice
+    .container-fluid.main-content
+      .row
+        .col-12
+          .invoice
+            .row.invoice__header
+              .col-sm-7
+                .invoice__logo
+              .col-sm-5
+                .invoice__id
+                  | Invoice #2308
+                .invoice__date
+                  | August 23, 2018
+            .row.invoice__data
+              .col-sm-5
+                span.name Kristopher Donny
+                span.career Developer and Designer
+                span.email donny@designer.co
+                span.add 661 Bubby Street
+                span.country United States
+              .col-sm-2.invoice__payment-direction
+                i.zmdi.zmdi-chevron-right
+              .col-sm-5.invoice__person
+                span.name Elliot Mark
+                span.career CEO at BLX
+                span.email ceoblx@company.co
+                span.add 839 Owagner Drive
+                span.country United States
+            .row.invoice__detail
+              .col-12
+                  table.invoice-details
+                      tr
+                        th(style="width:60%;") Description
+                        th(class="hours" style="width:17%") Hours
+                        th(class="amount" style="width:15%") Amount
+                      tr
+                        td(class="description") Web design (Etiam sagittis metus sit amet mauris gravida hendrerit)
+                        td(class="hours") 60
+                        td(class="amount") $4,200.00
+                      tr
+                        td(class="description") Responsive design (Etiam sagittis metus sit amet mauris gravida hendrerit)
+                        td(class="hours") 10
+                        td(class="amount") $1,500.00
+                      tr
+                        td(class="description") Logo design (Cras faucibus tincidunt elit id rhoncus.)
+                        td(class="hours") 12
+                        td(class="amount") $1,700.00
+                      tr
+                        td
+                        td(class="summary") Subtotal
+                        td(class="amount") $7,400,00
+                      tr
+                        td
+                        td(class="summary") Discount (20%)
+                        td(class="amount") $1,480,00
+                      tr
+                        td
+                        td(class="summary total") Total
+                        td(class="amount total-value") $5,920
+            .row.invoice__payment-method
+              .col-12
+                span.title Payment Method
+                span.type Credit card
+                span.card-type Credit card type: mastercard
+                span.num Number verification: 4256981387
+            .row.invoice__message
+              .col-12
+                span.title Thank you for contacting us
+                p.para Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis massa nisl. Sed fringilla turpis id mi ultrices, et faucibus ipsum aliquam. Sed ut eros placerat, facilisis est eu, congue felis.
+            .row.invoice__company-info
+              .col-md-6.col-lg-2
+                img(src="images/logo-symbol.png", alt="")
+              .col-md-6.col-lg-4
+                span.title Beagle Company
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              .col-sm-6.col-lg-3
+                span.phone +1(535)-8999278
+                span.phone +1(656)-3558302
+              .col-sm-6.col-lg-3
+                span.mail beagle@company.co
+                span.mail beagle@support.co
+            .row.invoice__footer
+              .col-12
+                +buttons({
+                  type: 'secondary',
+                  text: 'Save PDF',
+                  size: 'lg'
+                })
+                +buttons({
+                  type: 'secondary',
+                  text: 'Print',
+                  size: 'lg'
+                })
+                +buttons({
+                  type: 'primary',
+                  text: 'Pay now',
+                  size: 'lg'
+                })
+
+

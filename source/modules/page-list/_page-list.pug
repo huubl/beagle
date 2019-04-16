@@ -4,7 +4,7 @@ mixin page-list(data)
       h1.page-list__title Page List
       table.table.table-striped
         thead
-          tr.style(style="background-color: #000")
+          tr.style(style="background-color: #173e51")
             th #
             th Link
             th Categories
@@ -16,8 +16,8 @@ mixin page-list(data)
               - if(ent.url == '')
                   a('#').page-list__link= ent.title
               - else
-                  a(href=`${ent.url}.html`).page-list__link= ent.title
+                  a(href=`${ent.url}.html` target='blank').page-list__link= ent.title
             td= ent.categories
             td
               - if(ent.url != '')
-                  a(href=`${ent.url}.html`).page-list__link= `${ent.url}.html`
+                  a(href=`${ent.url}.html` target='blank').page-list__link= `${ent.url}.html`

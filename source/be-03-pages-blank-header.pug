@@ -1,0 +1,22 @@
+extends modules/layout/_page-default
+      
+block head
+  +head('Beagle')
+
+block main
+  +header("Blank Page")
+  +sidebarLeft("pages", "be-03-pages-blank-header.html")
+  +sidebarRight()
+  section.page-content
+    .page-head
+      h2.page-head-title Blank Page
+      nav.breadcrumb
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="/") Home
+          li.breadcrumb-item
+            a(href="#!") Pages
+          li.breadcrumb-item.active
+            a(href="#!") Blank Page Header
+    .container-fluid.main-content
+      h3.text-center.page-blank__title Content goes here!

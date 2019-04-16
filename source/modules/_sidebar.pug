@@ -3,7 +3,7 @@
 //-------------------------------------------------------
 
 mixin sidebarRight()
-  aside.right-sidebar
+  .right-sidebar
     .right-sidebar-inner
       .tab-navigation
         ul.nav.nav-tab
@@ -250,3 +250,17 @@ mixin sidebarRight()
                     size: 'sm',
                     checked: false
                   })
+
+mixin sidebarLeft(page, href)
+  aside.left-sidebar
+    .left-sidebar-inner
+      .sidebar-nav
+        +menu(page, href)
+      .sidebar-progress 
+        .sidebar-progress__data
+          span.progress-value 60%
+          span.name Current Project
+        .sidebar-progress__status.progress
+          .progress-bar.progress-bar-primary(
+            style= "width: 60%"
+          )

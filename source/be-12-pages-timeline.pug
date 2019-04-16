@@ -1,0 +1,130 @@
+extends modules/layout/_page-default
+
+block head
+  +head('Beagle')
+
+block main
+  +header("Timeline")
+  +sidebarLeft("pages", "be-12-pages-timeline.html")
+  +sidebarRight()
+  section.page-content.page-timeline
+    .page-head
+      h2.page-head-title Timeline
+      nav.breadcrumb
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href="/") Home
+          li.breadcrumb-item
+            a(href="#!") Pages
+          li.breadcrumb-item.active
+            a(href="#!") Timeline
+    .container-fluid.main-content
+      .row
+        .col-12
+          ul.timeline
+            -
+              var listTimeline = [
+                {
+                  "class" : "timeline__item",
+                  "date" : "September 16, 2018",
+                  "avatar" : "images/avatar6.png",
+                  "time": "4:34 PM",
+                  "author": "Penelope Thornton",
+                  "activity": "Pellentesque imperdiet sit",
+                  "link": "Amet nisl sed mattis"
+                },
+                {
+                  "class" : "timeline__item timeline__item--detailed",
+                  "date" : "September 13, 2018",
+                  "avatar" : "images/avatar.png",
+                  "time": "9:54 AM",
+                  "author": "Kristopher Donny",
+                  "activity": "Mauris condimentum est",
+                  "link": "Viverra erat fermentum",
+                  "summary": "Suspendisse ac libero sed mauris tempor vehicula porttitor non sapien. Aliquam viver..."
+                },
+                {
+                  "class" : "timeline__item timeline__item--detailed timeline__item--gallery",
+                  "date" : "August 23, 2018",
+                  "avatar" : "images/avatar3.png",
+                  "time": "10:42 AM",
+                  "author": "Sherwood Clifford",
+                  "activity": "pellentesque tortor",
+                  "link": "enim",
+                  "gallery": [
+                    {
+                      "img" : "images/img2.jpg"
+                    },
+                    {
+                      "img" : "images/img4.jpg"
+                    },
+                    {
+                      "img" : "images/img11.jpg"
+                    },
+                    {
+                      "img" : "images/img12.jpg"
+                    }
+                  ]
+                },
+                {
+                  "class" : "timeline__item timeline__item--detailed",
+                  "date" : "August 6, 2018",
+                  "avatar" : "images/avatar4.png",
+                  "time": "7:15 PM",
+                  "author": "Benji Harper",
+                  "activity": "Mauris condimentum est",
+                  "link": "Vestibulum justo neque",
+                  "summary": "Quisque condimentum enim nec porttitor egestas. Morbi fermentum in ante volutpat..."
+                },
+                {
+                  "class" : "timeline__item",
+                  "date" : "August 4, 2018",
+                  "avatar" : "images/avatar5.png",
+                  "time": "12:02 PM",
+                  "author": "Justine Myranda",
+                  "activity": "Pellentesque imperdiet sit",
+                  "link": "Amet nisl sed mattiss"
+                },
+                {
+                  "class" : "timeline__item timeline__item--detailed",
+                  "date" : "June 11, 2018",
+                  "avatar" : "images/avatar3.png",
+                  "time": "6:25 AM",
+                  "author": "Sherwood Clifford",
+                  "activity": "pellentesque tortor",
+                  "link": "Aliquam viverra",
+                  "blockquote" : {
+                    "text": "Quisque condimentum enim nec porttitor egestas.",
+                    "footer": "Aliquam viverra ornare dolor."
+                  }
+                }
+              ];
+            each item, index in listTimeline
+              li(
+                class= item.class ? item.class : null
+              )
+                .timeline__date
+                  span= item.date ? item.date : null
+                .timeline__content
+                  .timeline__avatar
+                    img.circle(src=item.avatar ? item.avatar : null, alt="")
+                  .timeline__header
+                    span.timeline__time= item.time ? item.time : null
+                    span.timeline__author= item.author ? item.author : null
+                    .timeline__activity
+                      if item.activity
+                        | #{item.activity}
+                      a(href="#!")= item.link ? item.link : null
+                    if item.summary
+                      p.timeline__summary= item.summary ? item.summary : null
+                    if item.gallery
+                      .timeline__gallery
+                        each val in item.gallery
+                          img.gallery-thumbnail(src=val.img)
+                    if item.blockquote
+                      blockquote
+                        p=item.blockquote.text
+                        .footer=item.blockquote.footer
+              if (index===listTimeline.length-1)
+                li.timeline__item.timeline--loadmore
+                  a Load more

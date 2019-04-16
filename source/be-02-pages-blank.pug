@@ -1,0 +1,12 @@
+extends modules/layout/_page-default
+      
+block head
+  +head('Beagle')
+
+block main
+  +header("Blank Page")
+  +sidebarLeft("pages", "be-02-pages-blank.html")
+  +sidebarRight()
+  section.page-content
+    .container-fluid.main-content
+      h3.text-center.page-blank__title Content goes here!

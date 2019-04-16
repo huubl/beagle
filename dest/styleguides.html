@@ -11,6 +11,7 @@
     <style>
       body {
         background-color: #fff;
+        padding: 0;
       }
 
       .code-example {
@@ -1858,7 +1859,7 @@
                     <h4 class="h4">Input Choose File</h4>
                     <div class="demo">
                       <div class="file-custom">
-                        <input class="file-input" type="file" id="inputGroupFile01" />
+                        <input class="file-input js-file" type="file" id="inputGroupFile01" />
                         <label class="file-label" for="inputGroupFile01">Choose file</label>
                       </div>
                     </div>
@@ -1876,7 +1877,7 @@
                   <div class="code-example">
                     <h4 class="h4">Button multi file input</h4>
                     <div class="demo">
-                      <input class="file-input multi-file js-multi-file" type="file" id="file-2" multiple="multiple" />
+                      <input class="file-input js-file multi-file js-multi-file" type="file" id="file-2" multiple="multiple" />
                       <label class="btn-secondary" for="file-2"><i class="zmdi zmdi-upload"></i><span>Browse files...</span></label>
                     </div>
                     <pre><code>+input-field({
@@ -1892,7 +1893,7 @@
                   <div class="code-example">
                     <h4 class="h4">Custom button multi file input</h4>
                     <div class="demo">
-                      <input class="file-input multi-file js-multi-file" type="file" id="file-3" multiple="multiple" />
+                      <input class="file-input js-file multi-file js-multi-file" type="file" id="file-3" multiple="multiple" />
                       <label class="btn-primary" for="file-3"><i class="zmdi zmdi-upload"></i><span>Browse files...</span></label>
                     </div>
                     <pre><code>+input-field({
@@ -2025,10 +2026,6 @@
                         <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check21" />
                         <label class="custom-checkbox-label" for="check21">Option 5</label>
                       </div>
-                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
-                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check22" />
-                        <label class="custom-checkbox-label" for="check22">Option 6</label>
-                      </div>
                     </div>
                     <pre><code>+checkboxes({
  id: 'check1',
@@ -2055,13 +2052,6 @@
  id: 'check21',
  checked: false,
  label: 'Option 5',
- lineThrough: true
-})
-+checkboxes({
- id: 'check22',
- checked: false,
- label: 'Option 6',
- icon: 'zmdi zmdi-delete',
  lineThrough: true
 })</code></pre>
                   </div>

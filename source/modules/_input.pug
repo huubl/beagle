@@ -5,7 +5,7 @@
 //- Input field
 mixin input-field({ id, type, placeholder, disabled, readonly, value, sizing, size, valid, datetimepicker, label, required, multiple, text, labelType })
   input(
-      class= (type=="file") ? "file-input" : "form__control"
+      class= (type=="file") ? "file-input js-file" : "form__control"
       class= (type=="file" && typeof multiple !== "undefined") ? "multi-file js-multi-file" : null
       class= typeof valid !== "undefined" ? ((valid==true) ? "is--valid" : "is--invalid") : null
       class= sizing ? `form__control--${sizing}` : null

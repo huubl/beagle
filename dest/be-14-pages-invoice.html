@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beagle</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Beagle" />
+    <meta name="keywords" content="Beagle" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section class="navbar navbar-expand fixed-top top-header">
+      <div class="container-fluid">
+        <div class="navbar-brand-wrapper"><a class="navbar-brand" href="index.html"></a></div>
+        <div class="page-title"><span>Invoice</span></div>
+        <div class="navbar-right">
+          <ul class="nav navbar-nav float-right user-nav">
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle nav-link--user" data-toggle="dropdown" role="button" aria-expanded="false"><img class="user-img" src="images/avatar.png" /><span class="user-name">Túpac Amaru</span></a>
+              <div class="dropdown-menu dropdown-user">
+                <div class="user-info"><span class="user-name">Túpac Amaru</span><span class="user-position online">Available</span></div><a class="dropdown-item" href="#!"><i class="icon zmdi zmdi-face"></i>Account</a><a class="dropdown-item" href="#!"><i class="icon zmdi zmdi-settings"></i>Settings</a><a class="dropdown-item" href="#!"><i class="icon zmdi zmdi-power"></i>Logout</a>
+              </div>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav float-right icons-nav">
+            <li class="nav-item dropdown"><a class="nav-link nav-link--icon js-toggle-right-sidebar" href="#!" role="button" aria-expanded="false"><i class="icon zmdi zmdi-settings"></i></a></li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle nav-link--noti" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-notifications"></i><span class="indicator"></span></a>
+              <div class="dropdown-menu drop-notifications">
+                <div class="title">Notifications<span class="badge badge-pill">3</span></div>
+                <div class="list">
+                  <div class="content js-list-scrollbar">
+                    <ul>
+                      <li class="notification notification-unread"><a href="#!">
+                          <div class="image"><img src="images/avatar2.png" alt="" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">Jessica Caruso</span><span>accepted your invitation to join the team.</span></p>
+                            <p class="time">2 min ago</p>
+                          </div>
+                        </a></li>
+                      <li class="notification"><a href="#!">
+                          <div class="image"><img src="images/avatar3.png" alt="" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">Joel King</span><span>is now following you</span></p>
+                            <p class="time">2 days ago </p>
+                          </div>
+                        </a></li>
+                      <li class="notification"><a href="#!">
+                          <div class="image"><img src="images/avatar4.png" alt="" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">John Doe</span><span>is watching your main repository</span></p>
+                            <p class="time">2 days ago</p>
+                          </div>
+                        </a></li>
+                      <li class="notification"><a href="#!">
+                          <div class="image"><img src="images/avatar5.png" alt="" /></div>
+                          <div class="notification-info">
+                            <p class="text"><span class="user-name">Emily Carter</span><span>is now following you</span></p>
+                            <p class="time">5 days ago </p>
+                          </div>
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer"><a href="#!">View all notifications</a></div>
+              </div>
+            </li>
+            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle nav-link--connect" data-toggle="dropdown" role="button" aria-expanded="false"><i class="icon zmdi zmdi-apps"></i></a>
+              <div class="dropdown-menu drop-connect">
+                <div class="list-connect">
+                  <div class="row">
+                    <div class="col"><a class="connect-item" href="#!"><img src="images/github.png" alt="" /><span>GitHub</span></a></div>
+                    <div class="col"><a class="connect-item" href="#!"><img src="images/bitbucket.png" alt="" /><span>BitBucket</span></a></div>
+                    <div class="col"><a class="connect-item" href="#!"><img src="images/slack.png" alt="" /><span>Slack</span></a></div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><a class="connect-item" href="#!"><img src="images/dribbble.png" alt="" /><span>Dribbble</span></a></div>
+                    <div class="col"><a class="connect-item" href="#!"><img src="images/mail_chimp.png" alt="" /><span>Mail Chimp</span></a></div>
+                    <div class="col"><a class="connect-item" href="#!"><img src="images/dropbox.png" alt="" /><span>Dropbox</span></a></div>
+                  </div>
+                </div>
+                <div class="footer"><a href="#!">More</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <aside class="left-sidebar">
+      <div class="left-sidebar-inner">
+        <div class="sidebar-nav">
+          <ul class="nav">
+            <li class="divider">Menu</li>
+            <li class="nav__item lv1"><a class="nav__link" href="be-01-index.html"><i class="zmdi zmdi-home"></i><span class="nav__text">Dashboard</span></a>
+            </li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#ui-elements" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-face"></i><span class="nav__text">UI Elements</span></a>
+              <div class="collapse js-collapse01" id="ui-elements">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-alerts.html"><span class="nav__text">Alerts</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-buttonsd.html"><span class="nav__text">Buttons</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-cards.html"><span class="nav__text">Cards</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-panels.html"><span class="nav__text">Panels</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-general.html"><span class="nav__text">General</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-modals.html"><span class="nav__text">Modals</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-notifications.html"><span class="nav__text">Notifications</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-icons.html"><span class="nav__text">Icons</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-grid.html"><span class="nav__text">Grid</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-tabs-accordions.html"><span class="nav__text">Tabs &amp; Accordions</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-nestable-list.html"><span class="nav__text">Nestable Lists</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-typography.html"><span class="nav__text">Typography</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-dragdrop.html"><span class="nav__text">Drag &amp; Drop</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="ui-sweetalert2.html"><span class="nav__text">Sweetalert 2</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#chart" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-chart-donut"></i><span class="nav__text">Charts</span></a>
+              <div class="collapse js-collapse01" id="chart">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="charts-flot.html"><span class="nav__text">Flot</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="charts-sparklines.html"><span class="nav__text">Sparklines</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="charts-chartjs.html"><span class="nav__text">Chart.js</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="charts-morrisjs.html"><span class="nav__text">Morris.js</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#forms" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-dot-circle"></i><span class="nav__text">Forms</span></a>
+              <div class="collapse js-collapse01" id="forms">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="form-elements.html"><span class="nav__text">Elements</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="form-validation.html"><span class="nav__text">Validation</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="form-multiselect.html"><span class="nav__text">Multiselect</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="form-wizard.html"><span class="nav__text">Wizard</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="form-masks.html"><span class="nav__text">Input Masks</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="form-wysiwyg.html"><span class="nav__text">WYSIWYG Editor</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="form-upload.html"><span class="nav__text">Multi Upload</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#tables" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-border-all"></i><span class="nav__text">Tables</span></a>
+              <div class="collapse js-collapse01" id="tables">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="tables-general.html"><span class="nav__text">General</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="tables-datatables.html"><span class="nav__text">Data Tables</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="tables-filters.html"><span class="nav__text">Table Filters</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1 active has-child"><a class="nav__link" href="#pages" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-layers"></i><span class="nav__text">Pages</span></a>
+              <div class="collapse js-collapse01 show" id="pages">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="be-02-pages-blank.html"><span class="nav__text">Blank Page</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-03-pages-blank-header.html"><span class="nav__text">Blank Page Header</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-04-pages-login.html"><span class="nav__text">Login</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-05-pages-login2.html"><span class="nav__text">Login v2</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-06-pages-404.html"><span class="nav__text">404 Page</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-07-pages-sign-up.html"><span class="nav__text">Sign Up</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-08-pages-forgot-password.html"><span class="nav__text">Forgot Password</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-09-pages-profile.html"><span class="nav__text">Profile</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-10-pages-pricing-table.html"><span class="nav__text">Pricing Tables</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-11-pages-pricing-table2.html"><span class="nav__text">Pricing Tables v2</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-12-pages-timeline.html"><span class="nav__text">Timeline</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="be-13-pages-timeline2.html"><span class="nav__text">Timeline v2</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link active" href="be-14-pages-invoice.html"><span class="nav__text">Invoice</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="pages-calendar.html"><span class="nav__text">Calendar</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="pages-gallery.html"><span class="nav__text">Gallery</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="pages-code-editor.html"><span class="nav__text">Code Editor</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="pages-booking.html"><span class="nav__text">Booking</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="pages-loaders.html"><span class="nav__text">Loaders</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="pages-ajax-loader.html"><span class="nav__text">AJAX Loader</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="divider">Featured</li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#email" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-inbox"></i><span class="nav__text">Email</span></a>
+              <div class="collapse js-collapse01" id="email">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Inbox</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Email Detail</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Email Compose</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#layout" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-view-web"></i><span class="nav__text">Layouts</span></a>
+              <div class="collapse js-collapse01" id="layout">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Primary Header</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Success Header</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Warning Header</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Danger Header</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Search Input</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Off Canvas Menu</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Top Menu</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Without Left Sidebar</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Without Right Sidebar</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Without Both Sidebars</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Fixed Left Sidebar</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Boxed Layout</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Collapsible Sidebar</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Sub Navigation</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Mega Menu</span><span class="badge badge-primary">New</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#maps" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-pin"></i><span class="nav__text">Maps</span></a>
+              <div class="collapse js-collapse01" id="maps">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Google Maps</span></a>
+                  </li>
+                  <li class="nav__item lv2"><a class="nav__link" href="#!"><span class="nav__text">Vector Maps</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1 has-child"><a class="nav__link" href="#menulevel" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-folder"></i><span class="nav__text">Menu Levels</span></a>
+              <div class="collapse js-collapse01" id="menulevel">
+                <ul class="dropdown-nav lv1">
+                  <li class="nav__item lv2 has-child"><a class="nav__link" href="#menulevel1" data-toggle="collapse" aria-expanded="false"><span class="nav__text">Level 1</span></a>
+                    <div class="collapse js-collapse02" id="menulevel1">
+                      <ul class="dropdown-nav lv2">
+                        <li class="nav__item lv3"><a class="nav__link" href="#!"><span class="nav__text">Level 2</span></a>
+                        </li>
+                        <li class="nav__item lv3 has-child"><a class="nav__link" href="#menulevel2" data-toggle="collapse" aria-expanded="false"><span class="nav__text">Level 2</span></a>
+                          <div class="collapse js-collapse03" id="menulevel2">
+                            <ul class="dropdown-nav lv3">
+                              <li class="nav__item lv4"><a class="nav__link" href="#!"><span class="nav__text">Level 3</span></a></li>
+                              <li class="nav__item lv4"><a class="nav__link" href="#!"><span class="nav__text">Level 3</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav__item lv2 has-child"><a class="nav__link" href="#menulv1" data-toggle="collapse" aria-expanded="false"><span class="nav__text">Level 1</span></a>
+                    <div class="collapse js-collapse02" id="menulv1">
+                      <ul class="dropdown-nav lv2">
+                        <li class="nav__item lv3"><a class="nav__link" href="#!"><span class="nav__text">Level 2</span></a>
+                        </li>
+                        <li class="nav__item lv3 has-child"><a class="nav__link" href="#menulv2" data-toggle="collapse" aria-expanded="false"><span class="nav__text">Level 2</span></a>
+                          <div class="collapse js-collapse03" id="menulv2">
+                            <ul class="dropdown-nav lv3">
+                              <li class="nav__item lv4"><a class="nav__link" href="#!"><span class="nav__text">Level 3</span></a></li>
+                              <li class="nav__item lv4"><a class="nav__link" href="#!"><span class="nav__text">Level 3</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item lv1"><a class="nav__link" href="##!" data-toggle="collapse" aria-expanded="false"><i class="zmdi zmdi-book"></i><span class="nav__text">Documentation</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-progress">
+          <div class="sidebar-progress__data"><span class="progress-value">60%</span><span class="name">Current Project</span></div>
+          <div class="sidebar-progress__status progress">
+            <div class="progress-bar progress-bar-primary" style="width: 60%"></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div class="right-sidebar">
+      <div class="right-sidebar-inner">
+        <div class="tab-navigation">
+          <ul class="nav nav-tab">
+            <li class="nav-item"><a class="nav-link active" href="#tab1" aria-controls="tab1" data-toggle="tab" aria-selected="false">Chat</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab2" aria-controls="tab1" data-toggle="tab" aria-selected="false">Todo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tab3" aria-controls="tab1" data-toggle="tab" aria-selected="false">Settings</a></li>
+          </ul>
+        </div>
+        <div class="tab-panel">
+          <div class="tab-content">
+            <div class="tab-chat tab-pane active" id="tab1">
+              <div class="tab-chat-inner">
+                <div class="chat-content">
+                  <h2>Recent</h2>
+                  <div class="contact-list contact-list-recent">
+                    <ul class="list">
+                      <li class="user"><a class="js-contact-link" href="#!"> <img src="images/avatar1.png" alt="" />
+                          <div class="user-data"><span class="status away"> </span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div>
+                        </a></li>
+                      <li class="user"><a class="js-contact-link" href="#!"> <img src="images/avatar2.png" alt="" />
+                          <div class="user-data"><span class="status"> </span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div>
+                        </a></li>
+                      <li class="user"><a class="js-contact-link" href="#!"> <img src="images/avatar3.png" alt="" />
+                          <div class="user-data"><span class="status offline"> </span><span class="name">Joel King</span><span class="message">Ready for the meeti...</span></div>
+                        </a></li>
+                    </ul>
+                  </div>
+                  <h2>Contacts</h2>
+                  <div class="contact-list">
+                    <ul class="list">
+                      <li class="user"><a class="js-contact-link" href="#!"> <img src="images/avatar4.png" alt="" />
+                          <div class="user-data-contact"><span class="status"> </span><span class="name">Mike Bolthort</span></div>
+                        </a></li>
+                      <li class="user"><a class="js-contact-link" href="#!"> <img src="images/avatar5.png" alt="" />
+                          <div class="user-data-contact"><span class="status"> </span><span class="name">Maggie jackson</span></div>
+                        </a></li>
+                      <li class="user"><a class="js-contact-link" href="#!"> <img src="images/avatar6.png" alt="" />
+                          <div class="user-data-contact"><span class="status offline"> </span><span class="name">Jhon Voltemar</span></div>
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="chat-input">
+                  <input class="form__control input-chat" type="text" placeholder="Search..." id="chatsearch" name="q" /><i class="zmdi zmdi-search"></i>
+                </div>
+              </div>
+              <div class="chat-windows">
+                <div class="chat-header">
+                  <div class="user"><img class="user__img" src="images/avatar2.png" alt="" />
+                    <h2 class="user__name">Maggie jackson</h2><span class="user__status">Active 1h ago</span>
+                  </div><a class="js-chat"><i class="zmdi zmdi-chevron-left"></i></a>
+                </div>
+                <div class="chat-message">
+                  <ul>
+                    <li class="friend">
+                      <p class="msg">Hello</p>
+                    </li>
+                    <li class="self">
+                      <p class="msg">Hi, how are you?</p>
+                    </li>
+                    <li class="friend">
+                      <p class="msg">Good, I'll need support with my pc</p>
+                    </li>
+                    <li class="self">
+                      <p class="msg">Sure, just tell me what is going on with your computer?</p>
+                    </li>
+                    <li class="friend">
+                      <p class="msg">I don't know it just turns off suddenly</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="chat-input"><i class="zmdi zmdi-camera send-camera"></i>
+                  <input class="form__control" type="text" placeholder="Message..." name="q" autocomplete="off" /><i class="zmdi zmdi-mail-send send-msg"></i>
+                </div>
+              </div>
+            </div>
+            <div class="tab-todo tab-pane" id="tab2">
+              <div class="tab-todo-inner">
+                <div class="todo-content">
+                  <h3>Today</h3>
+                  <ul class="todo-list">
+                    <li>
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check1" checked="checked" />
+                        <label class="custom-checkbox-label" for="check1">Initialize the project</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check2" />
+                        <label class="custom-checkbox-label" for="check2">Create the main structure</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check3" />
+                        <label class="custom-checkbox-label" for="check3">Updates changes to GitHub</label>
+                      </div>
+                    </li>
+                  </ul>
+                  <h3>Tomorrow</h3>
+                  <ul class="todo-list">
+                    <li>
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check4" />
+                        <label class="custom-checkbox-label" for="check4">Initialize the project</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check5" />
+                        <label class="custom-checkbox-label" for="check5">Create the main structure</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control-checkbox"><i class="zmdi zmdi-delete"></i>
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check6" />
+                        <label class="custom-checkbox-label" for="check6">Updates changes to GitHub</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="custom-control-checkbox" title="This task is too long to be displayed in a normal space!"><i class="zmdi zmdi-delete"></i>
+                        <input class="custom-checkbox-input custom-checkbox-input--line-through" type="checkbox" id="check7" />
+                        <label class="custom-checkbox-label" for="check7">This task is too long to be displayed in a normal space!</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="todo-input">
+                  <input class="form__control input-todo" type="text" placeholder="Create new task..." id="todoip" name="q" /><i class="zmdi zmdi-plus"></i>
+                </div>
+              </div>
+            </div>
+            <div class="tab-settings tab-pane" id="tab3">
+              <div class="tab-settings-inner">
+                <h3>General</h3>
+                <ul class="settings-list">
+                  <li><span class="name">Available</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" checked="checked" name="swt01" id="swt01" /><span>
+                        <label class="label label--sm" for="swt01"></label></span>
+                    </div>
+                  </li>
+                  <li><span class="name">Enable notifications</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" checked="checked" name="swt02" id="swt02" /><span>
+                        <label class="label label--sm" for="swt02"></label></span>
+                    </div>
+                  </li>
+                  <li><span class="name">Login with Facebook</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" checked="checked" name="swt03" id="swt03" /><span>
+                        <label class="label label--sm" for="swt03"></label></span>
+                    </div>
+                  </li>
+                </ul>
+                <h3>Notifications</h3>
+                <ul class="settings-list">
+                  <li><span class="name">Email notifications</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" name="swt04" id="swt04" /><span>
+                        <label class="label label--sm" for="swt04"></label></span>
+                    </div>
+                  </li>
+                  <li><span class="name">Project updates</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" checked="checked" name="swt05" id="swt05" /><span>
+                        <label class="label label--sm" for="swt05"></label></span>
+                    </div>
+                  </li>
+                  <li><span class="name">New comments</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" checked="checked" name="swt06" id="swt06" /><span>
+                        <label class="label label--sm" for="swt06"></label></span>
+                    </div>
+                  </li>
+                  <li><span class="name">Chat messages</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" name="swt07" id="swt07" /><span>
+                        <label class="label label--sm" for="swt07"></label></span>
+                    </div>
+                  </li>
+                </ul>
+                <h3>Workflow</h3>
+                <ul class="settings-list">
+                  <li><span class="name">Deploy on commit</span>
+                    <div class="switch-button switch-button--sm switch-button--primary">
+                      <input class="switch-button-input" type="checkbox" name="swt08" id="swt08" /><span>
+                        <label class="label label--sm" for="swt08"></label></span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="page-content page-invoice">
+      <div class="page-head">
+        <h2 class="page-head-title">Invoice</h2>
+        <nav class="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="#!">Pages</a></li>
+            <li class="breadcrumb-item active"><a href="#!">Invoice</a></li>
+          </ol>
+        </nav>
+      </div>
+      <div class="container-fluid main-content">
+        <div class="row">
+          <div class="col-12">
+            <div class="invoice">
+              <div class="row invoice__header">
+                <div class="col-sm-7">
+                  <div class="invoice__logo"></div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="invoice__id">Invoice #2308</div>
+                  <div class="invoice__date">August 23, 2018</div>
+                </div>
+              </div>
+              <div class="row invoice__data">
+                <div class="col-sm-5"><span class="name">Kristopher Donny</span><span class="career">Developer and Designer</span><span class="email">donny@designer.co</span><span class="add">661 Bubby Street</span><span class="country">United States</span></div>
+                <div class="col-sm-2 invoice__payment-direction"><i class="zmdi zmdi-chevron-right"></i></div>
+                <div class="col-sm-5 invoice__person"><span class="name">Elliot Mark</span><span class="career">CEO at BLX</span><span class="email">ceoblx@company.co</span><span class="add">839 Owagner Drive</span><span class="country">United States</span></div>
+              </div>
+              <div class="row invoice__detail">
+                <div class="col-12">
+                  <table class="invoice-details">
+                    <tr>
+                      <th style="width:60%;">Description</th>
+                      <th class="hours" style="width:17%">Hours</th>
+                      <th class="amount" style="width:15%">Amount</th>
+                    </tr>
+                    <tr>
+                      <td class="description">Web design (Etiam sagittis metus sit amet mauris gravida hendrerit)</td>
+                      <td class="hours">60</td>
+                      <td class="amount">$4,200.00</td>
+                    </tr>
+                    <tr>
+                      <td class="description">Responsive design (Etiam sagittis metus sit amet mauris gravida hendrerit)</td>
+                      <td class="hours">10</td>
+                      <td class="amount">$1,500.00</td>
+                    </tr>
+                    <tr>
+                      <td class="description">Logo design (Cras faucibus tincidunt elit id rhoncus.)</td>
+                      <td class="hours">12</td>
+                      <td class="amount">$1,700.00</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td class="summary">Subtotal</td>
+                      <td class="amount">$7,400,00</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td class="summary">Discount (20%)</td>
+                      <td class="amount">$1,480,00</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td class="summary total">Total</td>
+                      <td class="amount total-value">$5,920</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="row invoice__payment-method">
+                <div class="col-12"><span class="title">Payment Method</span><span class="type">Credit card</span><span class="card-type">Credit card type: mastercard</span><span class="num">Number verification: 4256981387</span></div>
+              </div>
+              <div class="row invoice__message">
+                <div class="col-12"><span class="title">Thank you for contacting us</span>
+                  <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis massa nisl. Sed fringilla turpis id mi ultrices, et faucibus ipsum aliquam. Sed ut eros placerat, facilisis est eu, congue felis.</p>
+                </div>
+              </div>
+              <div class="row invoice__company-info">
+                <div class="col-md-6 col-lg-2"><img src="images/logo-symbol.png" alt=""></div>
+                <div class="col-md-6 col-lg-4"><span class="title">Beagle Company</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                </div>
+                <div class="col-sm-6 col-lg-3"><span class="phone">+1(535)-8999278</span><span class="phone">+1(656)-3558302</span></div>
+                <div class="col-sm-6 col-lg-3"><span class="mail">beagle@company.co</span><span class="mail">beagle@support.co</span></div>
+              </div>
+              <div class="row invoice__footer">
+                <div class="col-12">
+                  <button class="btn btn-space btn-secondary btn-lg">Save PDF
+                  </button>
+                  <button class="btn btn-space btn-secondary btn-lg">Print
+                  </button>
+                  <button class="btn btn-space btn-primary btn-lg">Pay now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>

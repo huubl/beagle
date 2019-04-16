@@ -1,11 +1,12 @@
 extends modules/layout/_page-other
-       
+
 block head
   +head('List links')
 
   style.
     body {
       background-color: #fff;
+      padding: 20px 0 0;
     }
 block body
   +page-list(pageList.data)

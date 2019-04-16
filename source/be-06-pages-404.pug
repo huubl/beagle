@@ -1,0 +1,19 @@
+extends modules/layout/_page-other
+
+block head
+  +head('Beagle')
+
+block body
+  .page-404
+    .main-content
+      .page-404__header 404
+      .page-404__description The page you are looking for might have been removed.
+      .page-404__goback-txt Would you like to go home?
+      .page-404__goback-btn
+        a(href="index.html")
+          +buttons({
+            type: 'primary',
+            text: 'Let\'s go home',
+            size: 'xl'
+          })
+      .footer © 2018 Your Company

@@ -1,0 +1,63 @@
+//-------------------------------------------------------
+//- Modules :: Menu
+//-------------------------------------------------------
+mixin menu(page, href)
+  ul.nav
+    each item in listMenu.data
+      if (typeof item.href === "undefined")
+        li.divider= item.item
+      else
+        li.nav__item.lv1(
+          class= (item.href === page) ? "active" : null 
+          class= item.sub ? "has-child" : null
+        )
+          a.nav__link(
+            href= (item.collapse === false) ? (item.href ? item.href : "javascript:void(0)") : (item.href ? `#${item.href}` : "javascript:void(0)")
+            data-toggle= (item.collapse !== false) ? "collapse" : null
+            aria-expanded= (item.collapse !== false) ? "false" : null
+          )
+            if item.icon
+              i(class= item.icon ? item.icon : null)
+            span.nav__text= item.item
+          if item.sub
+            .collapse.js-collapse01(
+              id=item.href
+              class= (item.href === page) ? "show" : null 
+            )
+              ul.dropdown-nav.lv1
+                each val in item.sub
+                  li.nav__item.lv2(
+                    class= val.submenu ? "has-child" : null
+                  )
+                    a.nav__link(
+                      href= val.submenu ? `#${val.href}` : `${val.href}`
+                      data-toggle= val.submenu ? "collapse" : null
+                      aria-expanded= val.submenu ? "false" : null
+                      class= (val.href === href) ? "active" : null 
+                    )
+                      span.nav__text= val.item
+                      if val.badge
+                        span.badge.badge-primary New
+                    if val.submenu
+                      .collapse.js-collapse02(id=val.href)
+                        ul.dropdown-nav.lv2
+                          each ent in val.submenu
+                            li.nav__item.lv3(
+                              class= ent.subnav ? "has-child" : null
+                            )
+                              a.nav__link(
+                                href= ent.subnav ? `#${ent.href}` : `${ent.href}`
+                                data-toggle= ent.subnav ? "collapse" : null
+                                aria-expanded= ent.subnav ? "false" : null
+                              )
+                                span.nav__text= ent.item
+                              if ent.subnav
+                                .collapse.js-collapse03(id=ent.href)
+                                  ul.dropdown-nav.lv3
+                                    each sub in ent.subnav
+                                      li.nav__item.lv4
+                                        a.nav__link(
+                                          href= sub.href ? `${sub.href}` : `javascript:void(0)`
+                                        )
+                                          span.nav__text= sub.item
+

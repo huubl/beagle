@@ -1,0 +1,55 @@
+// ======================================================
+// Pages :: Blank Header
+// ======================================================
+
+.page-head {
+  padding: 20px 25px 10px;
+  position: relative;
+
+  &-title {
+    display: block;
+    margin-bottom: 2px;
+    margin-top: 6px;
+    font-weight: $font-weight-light;
+    letter-spacing: -1px;
+    font-size: 2.154rem;
+    color: $cl-gray-dark-7;
+    line-height: 36px;
+  }
+
+  .breadcrumb {
+    background-color: transparent;
+    padding: 3px 0;
+    margin-bottom: 7px;
+    line-height: 16px;
+  }
+
+  .breadcrumb-item {
+    padding-left: 0;
+  }
+
+  .breadcrumb > li {
+    font-size: 1.077rem;
+    font-weight: $font-weight-light;
+
+    > a {
+      color: $cl-gray-dark-8;
+    }
+
+    + li:before {
+      padding: 0 5px;
+      color: $cl-gray-dark-9;
+    }
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item:before {
+  display: inline-block;
+  padding-right: .6154rem;
+  color: $cl-dark-light-4;
+  content: '/';
+}
+
+.breadcrumb > li + li:before {
+  color: $cl-dark-light-12;
+}

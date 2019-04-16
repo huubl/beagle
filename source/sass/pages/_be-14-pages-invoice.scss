@@ -1,0 +1,203 @@
+// ======================================================
+// Pages :: Invoices
+// ======================================================
+
+$span : 'span';
+$td: 'td';
+
+.page-invoice .page-head {
+  padding-bottom: 0;
+}
+
+.invoice {
+  background-color: $cl-white;
+  padding: 100px 100px 70px;
+  color: $cl-dark-light-11;
+
+  &__header {
+    margin-bottom: 100px;
+  }
+
+  &__logo {
+    height: 54px;
+    min-width: 204px;
+    background-image: url('#{$path-image}/logo-xx.png');
+    background-repeat: no-repeat;
+    background-position: 0;
+  }
+
+  &__id {
+    display: block;
+    text-align: right;
+    font-size: 2.308rem;
+    line-height: 2.308rem;
+  }
+
+  &__date {
+    display: block;
+    font-size: 1.385rem;
+    text-align: right;
+  }
+
+  &__data {
+    margin-bottom: 110px;
+
+    #{$span} {
+      font-size: 1.385rem;
+      line-height: 2rem;
+      display: block;
+
+      &.name {
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+
+  &__person {
+    text-align: right;
+  }
+
+  &__payment-direction {
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+
+    i {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: $cl-white-dark;
+      font-size: 3.846rem;
+      color: $cl-gray-light-13;
+      line-height: 80px;
+    }
+  }
+
+  &-details {
+    width: 100%;
+    font-size: 1.231rem;
+
+    th:first-child {
+      text-align: left;
+    }
+
+    th {
+      text-align: right;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $cl-white-dark-1;
+    }
+
+    tr > td {
+      padding: 20px 0;
+    }
+
+    #{$td}.amount,
+    #{$td}.description,
+    #{$td}.hours,
+    #{$td}.summary {
+      border-bottom: 1px solid $cl-white-dark-1;
+    }
+
+    #{$td}.hours {
+      text-align: right;
+    }
+
+    #{$td}.summary {
+      color: $cl-gray-dark-6;
+    }
+
+    #{$td}.amount {
+      text-align: right;
+    }
+
+    #{$td}.total {
+      color: $cl-dark-light-11;
+      font-weight: $font-weight-medium;
+    }
+
+    #{$td}.total-value {
+      font-size: 1.692rem;
+      color: $cl-blue;
+    }
+  }
+
+  &__payment-method {
+    margin-bottom: 75px;
+
+    #{$span} {
+      display: block;
+      font-size: 1.385rem;
+      line-height: 2rem;
+
+      &.title {
+        font-weight: $font-weight-medium;
+      }
+    }
+  }
+
+  &__message {
+    font-size: 1.231rem;
+    margin-bottom: 62px;
+
+    .title {
+      font-weight: $font-weight-medium;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    p {
+      line-height: 2rem;
+      margin: 0 0 15px;
+    }
+  }
+
+  &__company-info {
+    margin-bottom: 70px;
+
+    > div {
+      padding: 8px 40px;
+      border-left: 1px solid $cl-white-dark-1;
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:nth-of-type(2) {
+        padding: 0 40px;
+        line-height: 16px;
+      }
+
+      &:nth-of-type(2) .title {
+        color: $cl-dark-light-11;
+        font-size: 1.077rem;
+        line-height: 21px;
+        font-weight: $font-weight-medium;
+      }
+
+      &:nth-of-type(2) p {
+        line-height: 16px;
+        margin: 0 0 15px;
+      }
+
+      &:nth-of-type(n+3) {
+        line-height: 20px;
+      }
+
+      &:nth-of-type(n+3) span {
+        display: block;
+      }
+    }
+  }
+
+  &__footer {
+    text-align: center;
+
+    .btn {
+      min-width: 96px;
+      font-size: 1.077rem;
+      margin-right: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}

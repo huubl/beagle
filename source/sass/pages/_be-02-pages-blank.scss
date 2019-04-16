@@ -1,0 +1,15 @@
+// ======================================================
+// Pages :: Blank
+// ======================================================
+
+.page-blank {
+  &__title {
+    font-size: 1.769rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: $font-weight-light;
+    line-height: 1.1;
+    color: inherit;
+  }
+}

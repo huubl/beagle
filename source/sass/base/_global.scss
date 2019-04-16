@@ -1,5 +1,5 @@
 // ======================================================
-// Base :: Global like html, body, img, a, ul
+// Base :: Global
 // ======================================================
 
 html {
@@ -13,13 +13,14 @@ body {
   font-weight: $font-weight-base;
   margin: 0;
   font-size: $font-size-base - 1;
-  line-height: 1.428571;
-  color: $cl-dark-medium;
+  line-height: 1.42857143;
+  color: $cl-dark-light;
   text-align: left;
   padding: 0;
   background-color: $cl-gray;
   height: auto;
   min-height: 100%;
+  padding-top: 61px;
 }
 
 img {
@@ -49,7 +50,7 @@ ol {
 }
 
 .dropdown-menu {
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 0 6px 0 rgba($cl-dark, .12);
   border-radius: 3px;
   padding: 7px 0;
   min-width: 185px;
@@ -69,4 +70,15 @@ ol {
 
 .icon-arrow-right:before {
   content: '\f2fb';
+}
+
+.page-content {
+  position: relative;
+  left: 0;
+  margin-left: 230px;
+  min-height: 100%;
+}
+
+.main-content {
+  padding: 25px;
 }

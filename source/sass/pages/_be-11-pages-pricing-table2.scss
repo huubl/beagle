@@ -1,0 +1,63 @@
+// ======================================================
+// Pages :: Pricing tables
+// ======================================================
+
+$block: '.pricing__table';
+
+.pricing-2 {
+  #{$block}-content {
+    color: $cl-white;
+  }
+
+  #{$block}-primary {
+    background-color: $cl-blue-light-3;
+    border-color: $cl-blue-light-3;
+
+    #{$block}-title {
+      border-bottom-color: $cl-blue-light-4;
+    }
+  }
+
+  #{$block}-warning {
+    background-color: $cl-yellow-light-2;
+    border-color: $cl-yellow-light-2;
+
+    #{$block}-title {
+      border-bottom-color: $cl-yellow-light-3;
+    }
+  }
+
+  #{$block}-success {
+    background-color: $cl-green-light-4;
+    border-color: $cl-green-light-4;
+
+    #{$block}-title {
+      border-bottom-color: $cl-green-light-5;
+    }
+  }
+
+  #{$block}-danger {
+    background-color: $cl-red-light-4;
+    border-color: $cl-red-light-4;
+
+    #{$block}-title {
+      border-bottom-color: $cl-red-light-5;
+    }
+  }
+
+  svg path {
+    fill: $cl-white;
+  }
+
+  .btn {
+    border-color: rgba($cl-white, .5);
+    box-shadow: none;
+    background-color: rgba($cl-white, .1);
+    border-width: 2px;
+    transition: none;
+
+    &:hover {
+      border-color: $cl-white;
+    }
+  }
+}

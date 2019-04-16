@@ -1,0 +1,415 @@
+{
+  "listMenu": {
+    "data": [
+      {
+        "item": "Menu"
+      },
+      {
+        "href": "be-01-index.html",
+        "item": "Dashboard",
+        "icon": "zmdi zmdi-home",
+        "collapse": false
+      },
+      {
+        "href": "ui-elements",
+        "item": "UI Elements",
+        "icon": "zmdi zmdi-face",
+        "sub": [
+          {
+            "item": "Alerts",
+            "href": "ui-alerts.html"
+          },
+          {
+            "item": "Buttons",
+            "href": "ui-buttonsd.html"
+          },
+          {
+            "item": "Cards",
+            "href": "ui-cards.html",
+            "badge": true
+          },
+          {
+            "item": "Panels",
+            "href": "ui-panels.html"
+          },
+          {
+            "item": "General",
+            "href": "ui-general.html"
+          },
+          {
+            "item": "Modals",
+            "href": "ui-modals.html"
+          },
+          {
+            "item": "Notifications",
+            "href": "ui-notifications.html"
+          },
+          {
+            "item": "Icons",
+            "href": "ui-icons.html"
+          },
+          {
+            "item": "Grid",
+            "href": "ui-grid.html"
+          },
+          {
+            "item": "Tabs & Accordions",
+            "href": "ui-tabs-accordions.html"
+          },
+          {
+            "item": "Nestable Lists",
+            "href": "ui-nestable-list.html"
+          },
+          {
+            "item": "Typography",
+            "href": "ui-typography.html"
+          },
+          {
+            "item": "Drag & Drop",
+            "href": "ui-dragdrop.html",
+            "badge": true
+          },
+          {
+            "item": "Sweetalert 2",
+            "href": "ui-sweetalert2.html",
+            "badge": true
+          }
+        ]
+      },
+      {
+        "href": "chart",
+        "item": "Charts",
+        "icon": "zmdi zmdi-chart-donut",
+        "sub": [
+          {
+            "item": "Flot",
+            "href": "charts-flot.html"
+          },
+          {
+            "item": "Sparklines",
+            "href": "charts-sparklines.html"
+          },
+          {
+            "item": "Chart.js",
+            "href": "charts-chartjs.html"
+          },
+          {
+            "item": "Morris.js",
+            "href": "charts-morrisjs.html"
+          }
+        ]
+      },
+      {
+        "href": "forms",
+        "item": "Forms",
+        "icon": "zmdi zmdi-dot-circle",
+        "sub": [
+          {
+            "item": "Elements",
+            "href": "form-elements.html"
+          },
+          {
+            "item": "Validation",
+            "href": "form-validation.html"
+          },
+          {
+            "item": "Multiselect",
+            "href": "form-multiselect.html"
+          },
+          {
+            "item": "Wizard",
+            "href": "form-wizard.html"
+          },
+          {
+            "item": "Input Masks",
+            "href": "form-masks.html"
+          },
+          {
+            "item": "WYSIWYG Editor",
+            "href": "form-wysiwyg.html"
+          },
+          {
+            "item": "Multi Upload",
+            "href": "form-upload.html"
+          }
+        ]
+      },
+      {
+        "href": "tables",
+        "item": "Tables",
+        "icon": "zmdi zmdi-border-all",
+        "sub": [
+          {
+            "item": "General",
+            "href": "tables-general.html"
+          },
+          {
+            "item": "Data Tables",
+            "href": "tables-datatables.html"
+          },
+          {
+            "item": "Table Filters",
+            "href": "tables-filters.html",
+            "badge": true
+          }
+        ]
+      },
+      {
+        "href": "pages",
+        "item": "Pages",
+        "icon": "zmdi zmdi-layers",
+        "sub": [
+          {
+            "item": "Blank Page",
+            "href": "be-02-pages-blank.html"
+          },
+          {
+            "item": "Blank Page Header",
+            "href": "be-03-pages-blank-header.html"
+          },
+          {
+            "item": "Login",
+            "href": "be-04-pages-login.html"
+          },
+          {
+            "item": "Login v2",
+            "href": "be-05-pages-login2.html"
+          },
+          {
+            "item": "404 Page",
+            "href": "be-06-pages-404.html"
+          },
+          {
+            "item": "Sign Up",
+            "href": "be-07-pages-sign-up.html"
+          },
+          {
+            "item": "Forgot Password",
+            "href": "be-08-pages-forgot-password.html"
+          },
+          {
+            "item": "Profile",
+            "href": "be-09-pages-profile.html"
+          },
+          {
+            "item": "Pricing Tables",
+            "href": "be-10-pages-pricing-table.html"
+          },
+          {
+            "item": "Pricing Tables v2",
+            "href": "be-11-pages-pricing-table2.html"
+          },
+          {
+            "item": "Timeline",
+            "href": "be-12-pages-timeline.html"
+          },
+          {
+            "item": "Timeline v2",
+            "href": "be-13-pages-timeline2.html"
+          },
+          {
+            "item": "Invoice",
+            "href": "be-14-pages-invoice.html",
+            "badge": true
+          },
+          {
+            "item": "Calendar",
+            "href": "pages-calendar.html"
+          },
+          {
+            "item": "Gallery",
+            "href": "pages-gallery.html"
+          },
+          {
+            "item": "Code Editor",
+            "href": "pages-code-editor.html",
+            "badge": true
+          },
+          {
+            "item": "Booking",
+            "href": "pages-booking.html",
+            "badge": true
+          },
+          {
+            "item": "Loaders",
+            "href": "pages-loaders.html",
+            "badge": true
+          },
+          {
+            "item": "AJAX Loader",
+            "href": "pages-ajax-loader.html",
+            "badge": true
+          }
+        ]
+      },
+      {
+        "item": "Featured"
+      },
+      {
+        "item": "Email",
+        "href": "email",
+        "icon": "zmdi zmdi-inbox",
+        "sub": [
+          {
+            "item": "Inbox",
+            "href": "#!"
+          },
+          {
+            "item": "Email Detail",
+            "href": "#!"
+          },
+          {
+            "item": "Email Compose",
+            "href": "#!"
+          }
+        ]
+      },
+      {
+        "href": "layout",
+        "item": "Layouts",
+        "icon": "zmdi zmdi-view-web",
+        "sub": [
+          {
+            "item": "Primary Header",
+            "href": "#!"
+          },
+          {
+            "item": "Success Header",
+            "href": "#!"
+          },
+          {
+            "item": "Warning Header",
+            "href": "#!"
+          },
+          {
+            "item": "Danger Header",
+            "href": "#!"
+          },
+          {
+            "item": "Search Input",
+            "href": "#!"
+          },
+          {
+            "item": "Off Canvas Menu",
+            "href": "#!"
+          },
+          {
+            "item": "Top Menu",
+            "href": "#!",
+            "badge": true
+          },
+          {
+            "item": "Without Left Sidebar",
+            "href": "#!"
+          },
+          {
+            "item": "Without Right Sidebar",
+            "href": "#!"
+          },
+          {
+            "item": "Without Both Sidebars",
+            "href": "#!"
+          },
+          {
+            "item": "Fixed Left Sidebar",
+            "href": "#!"
+          },
+          {
+            "item": "Boxed Layout",
+            "href": "#!",
+            "badge": true
+          },
+          {
+            "item": "Collapsible Sidebar",
+            "href": "#!"
+          },
+          {
+            "item": "Sub Navigation",
+            "href": "#!",
+            "badge": true
+          },
+          {
+            "item": "Mega Menu",
+            "href": "#!",
+            "badge": true
+          }
+        ]
+      },
+      {
+        "item": "Maps",
+        "href": "maps",
+        "icon": "zmdi zmdi-pin",
+        "sub": [
+          {
+            "item": "Google Maps",
+            "href": "#!"
+          },
+          {
+            "item": "Vector Maps",
+            "href": "#!"
+          }
+        ]
+      },
+      {
+        "item": "Menu Levels",
+        "href": "menulevel",
+        "icon": "zmdi zmdi-folder",
+        "sub": [
+          {
+            "item": "Level 1",
+            "href": "menulevel1",
+            "submenu": [
+              {
+                "item": "Level 2",
+                "href": "#!"
+              },
+              {
+                "item": "Level 2",
+                "href": "menulevel2",
+                "subnav": [
+                  {
+                    "item": "Level 3",
+                    "href": "#!"
+                  },
+                  {
+                    "item": "Level 3",
+                    "href": "#!"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "item": "Level 1",
+            "href": "menulv1",
+            "submenu": [
+              {
+                "item": "Level 2",
+                "href": "#!"
+              },
+              {
+                "item": "Level 2",
+                "href": "menulv2",
+                "subnav": [
+                  {
+                    "item": "Level 3",
+                    "href": "#!"
+                  },
+                  {
+                    "item": "Level 3",
+                    "href": "#!"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "item": "Documentation",
+        "href": "#!",
+        "icon": "zmdi zmdi-book"
+      }
+    ]
+  }
+}

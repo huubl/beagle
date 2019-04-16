@@ -1,0 +1,122 @@
+// ======================================================
+// Pages :: Pricing tables
+// ======================================================
+
+.pricing {
+  &__heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    margin: 20px 0 15px;
+    line-height: 1.1;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 29px;
+    margin: 0 0 50px;
+  }
+
+  &__table-content {
+    margin: 30px 0 20px;
+
+    > div {
+      padding: 0 10px;
+    }
+  }
+
+  &__table-col {
+    box-shadow: 0 0 4px 0 rgba($cl-dark, .04);
+    border-radius: 3px;
+    border-top: 3px solid $cl-gray-medium-1;
+    padding: 35px 20px;
+    background: $cl-white;
+    text-align: center;
+    margin: 0 0 20px;
+  }
+
+  &__table {
+    &-primary {
+      border-color: $cl-blue;
+    }
+
+    &-primary svg path {
+      fill: $cl-blue;
+    }
+
+    &-warning {
+      border-color: $cl-yellow-light;
+    }
+
+    &-warning svg path {
+      fill: $cl-yellow-light;
+    }
+
+    &-success {
+      border-color: $cl-green-light;
+    }
+
+    &-success svg path {
+      fill: $cl-green-light;
+    }
+
+    &-danger {
+      border-color: $cl-red-light;
+    }
+
+    &-danger svg path {
+      fill: $cl-red-light;
+    }
+
+    &-title {
+      padding: 0 0 20px;
+      font-size: 1.538rem;
+      font-weight: $font-weight-light;
+      margin: 15px 0 20px;
+      border-bottom: 1px solid $cl-gray-light-12;
+    }
+
+    &-price {
+      padding: 5px 0 20px;
+
+      .currency {
+        vertical-align: top;
+      }
+
+      .value {
+        font-size: 35px;
+        line-height: 40px;
+      }
+
+      .frecuency {
+        font-size: 1.538rem;
+        font-weight: $font-weight-light;
+      }
+    }
+
+    &-features {
+      text-align: center;
+      margin: 0 0 25px;
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: 1.077rem;
+        font-weight: $font-weight-light;
+        line-height: 33px;
+      }
+    }
+
+    &-btn {
+      .btn {
+        padding: 0 10px;
+        font-size: 1rem;
+        border-radius: 2px;
+        line-height: 36px;
+        min-width: 120px;
+      }
+    }
+  }
+}

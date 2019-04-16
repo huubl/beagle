@@ -4,22 +4,34 @@
 @import 'material-design-iconic-font/scss/material-design-iconic-font';
 @import 'vendor/bootstrap-datetimepicker';
 @import 'vendor/perfect-scrollbar';
+
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
 @import 'components/font';
+
 @import 'base/typography';
 @import 'base/colors';
 @import 'base/images';
 @import 'base/global';
+
 @import 'components/button';
 @import 'components/input';
 @import 'components/checkboxes';
 @import 'components/radio';
 @import 'components/switch';
 @import 'components/datetimepicker';
+
 @import 'layout/header';
 @import 'layout/sidebar';
 @import 'layout/footer';
-@import 'pages/home';
+
 @import 'pages/page-list';
+@import 'pages/be-01-index';
+@import 'pages/be-02-pages-blank';
+@import 'pages/be-03-pages-blank-header';
+@import 'pages/be-06-pages-404';
+@import 'pages/be-10-pages-pricing-table';
+@import 'pages/be-11-pages-pricing-table2';
+@import 'pages/be-12-pages-timeline';
+@import 'pages/be-14-pages-invoice';

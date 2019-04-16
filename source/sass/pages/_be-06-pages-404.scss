@@ -1,0 +1,42 @@
+// ======================================================
+// Pages :: 404
+// ======================================================
+
+.page-404 {
+  margin-top: -61px;
+  text-align: center;
+
+  &__header {
+    margin-top: 100px;
+    display: block;
+    font-size: 11.54rem;
+    font-weight: 700;
+    line-height: 240px;
+    margin-bottom: 30px;
+    max-height: 240px;
+    background: url('#{$path-image}/404-bg.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  &__description {
+    font-size: 2.308rem;
+    font-weight: $font-weight-light;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
+
+  &__goback-txt {
+    font-size: 1.692rem;
+    font-weight: $font-weight-light;
+    margin-bottom: 30px;
+    margin-top: 15px;
+  }
+
+  &__goback-btn {
+    margin-bottom: 30px;
+
+    .btn {
+      min-width: 153px;
+    }
+  }
+}
