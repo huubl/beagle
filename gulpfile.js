@@ -58,7 +58,7 @@ var options = {
     pretty: '\t'
   },
   scss: {
-    outputStyle: 'nested',
+    outputStyle: 'compressed',
     precison: 3,
     errLogToConsole: true,
     includePaths: [

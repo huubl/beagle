@@ -1,0 +1,119 @@
+//-------------------------------------------------------
+//- Modules :: Form
+//-------------------------------------------------------
+
+mixin form-group-login(ver)
+  form&attributes(attributes)
+    .form-group
+      +input-field({
+        id: 'inputEmail',
+        placeholder: 'Username'
+      })
+    .form-group
+      +input-field({
+        id: 'inputPassword',
+        placeholder: 'Password',
+        type: 'password'
+      })
+    .form-group.row.login-label
+      .col-6.login-remember
+        +checkboxes({
+          id: 'remember',
+          label: 'Remember Me'
+        })
+      .col-6.login-forgot-password
+        a(href='be-08-pages-forgot-password.html') Forgot Password?
+    .form-group.row.login-submit
+      if (ver=='2')
+        .col-6
+          +buttons({
+            type: 'secondary',
+            text: 'Register',
+            size: 'xl'
+          })
+        .col-6
+          +buttons({
+            type: 'primary',
+            text: 'Sign in',
+            size: 'xl'
+          })
+      else
+        .col-12
+          +buttons({
+            type: 'primary',
+            text: 'Sign me in',
+            size: 'xl'
+          })
+
+mixin form-group-signup()
+  form&attributes(attributes)
+    .form-group
+      +input-field({
+        id: 'username',
+        placeholder: 'Username'
+      })
+    .form-group
+      +input-field({
+        id: 'email',
+        placeholder: 'E-mail',
+        type: 'email'
+      })
+    .form-group.row.signup-password
+      .col-6
+        +input-field({
+          id: 'pass',
+          placeholder: 'Password',
+          type: 'password'
+        })
+      .col-6
+        +input-field({
+          id: 'confirm',
+          placeholder: 'Confirm',
+          type: 'password'
+        })
+    .form-group
+      +buttons({
+        type: 'primary',
+        text: 'Sign Up',
+        size: 'xl'
+      })
+    .title or
+    .form-group.row.signup-social
+      .col-6
+        +buttons({
+          type: 'primary',
+          text: 'Facebook',
+          size: 'lg',
+          iconBefore: 'zmdi zmdi-facebook'
+        })(class='btn--facebook')
+      .col-6
+        +buttons({
+          type: 'primary',
+          text: 'Google Plus',
+          size: 'lg',
+          iconBefore: 'zmdi zmdi-google-plus'
+        })(class='btn--google')
+    .form-group.signup-term
+      +checkboxes({
+        id: 'check1',
+        label: 'By creating an account, you agree the terms and conditions.'
+      })
+
+mixin form-forgot-password()
+  form&attributes(attributes)
+    p.para Don't worry, we'll send you an email to reset your password.
+    .form-group
+      +input-field({
+        id: 'forgotPass',
+        type: 'email',
+        placeholder: 'Your email'
+      })
+    .msg
+      | Don't remember your email? 
+      a(href="#!") Contact Support
+    .from-group
+      +buttons({
+        type: 'primary',
+        text: 'Reset password',
+        size: 'lg'
+      })

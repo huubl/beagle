@@ -1,5 +1,5 @@
 extends modules/layout/_page-default
-     
+             
 block head
   +head('Beagle')
 
@@ -7,3 +7,178 @@ block main
   +header("Dashboard")
   +sidebarLeft("be-01-index.html")
   +sidebarRight()
+  section.page-content.index
+    .main-content.container-fluid
+      .row 
+        .col-12.col-lg-6.col-xl-3
+          .widget 
+            .row
+              .col-auto
+                .chart.sparkline#chart1
+              .col
+                .data-info
+                  .desc New Users
+                  .value
+                    i.indicator.indicator--equal.zmdi.zmdi-chevron-right
+                    span.number(data-toggle= "counter" data-end= "113") 0
+        .col-12.col-lg-6.col-xl-3
+          .widget
+            .row
+              .col-auto
+                .chart.sparkline#chart2
+              .col
+                .data-info
+                  .desc Monthly Sales
+                  .value
+                    i.indicator.indicator--positive.zmdi.zmdi-chevron-up
+                    span.number(data-toggle="counter" data-end="80" data-suffix="%") 0
+        .col-12.col-lg-6.col-xl-3
+          .widget
+            .row
+              .col-auto
+                .chart.sparkline#chart3
+              .col
+                .data-info
+                  .desc Impressions
+                  .value
+                    i.indicator.indicator--positive.zmdi.zmdi-chevron-up
+                    span.number(data-toggle="counter" data-end="532") 0
+        .col-12.col-lg-6.col-xl-3
+          .widget
+            .row
+              .col-auto
+                .chart.sparkline#chart4
+              .col
+                .data-info
+                  .desc Downloads
+                  .value
+                    i.indicator.indicator--negative.zmdi.zmdi-chevron-down
+                    span.number(data-toggle="counter" data-end="113") 0
+          
+      .row
+        .col-12.col-lg-6
+          .card.card-table.table-stats
+            .card-header
+              .title Purchases
+              .dropdown
+                .dropdown__btn
+                  i.zmdi.zmdi-download
+                  a(class="dropdown-btn" href="#" role="button" data-toggle="dropdown")
+                    i.zmdi.zmdi-more-vert
+                  .dropdown-menu
+                    a.dropdown-item Action
+                    a.dropdown-item Another action
+                    a.dropdown-item Something else here
+                    .dropdown-divider
+                    a.dropdown-item Separated link
+            .card-body.table-responsive
+              table(class="table table-striped table-index")
+                thead
+                  tr
+                    th(style="width:40%") Product
+                    th(class="number") Price
+                    th(style="width:20%") Date
+                    th(style="width:20%") State
+                    th(class="actions" style="width:5%")
+                tbody
+                  tr
+                    td Sony Xperia M4
+                    td(class="number") $149
+                    td Aug 23, 2018
+                    td(class="text-success") Completed
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-plus-circle-o")
+                  tr
+                    td Apple iPhone 6
+                    td(class="number") $535
+                    td Aug 20, 2018
+                    td(class="text-success") Completed
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-plus-circle-o")
+                  tr
+                    td Samsung Galaxy S7
+                    td(class="number") $583
+                    td Aug 18, 2018
+                    td(class="text-warning") Pending
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-plus-circle-o")
+                  tr
+                    td HTC One M9
+                    td(class="number") $350
+                    td Aug 15, 2018
+                    td(class="text-warning") Pending
+                    td(class="actions")
+                      a(class="icon" href="#")
+                          i(class="zmdi zmdi-plus-circle-o")
+                  tr
+                    td Sony Xperia Z5
+                    td(class="number") $495
+                    td Aug 13, 2018
+                    td(class="text-danger") Cancelled
+                    td(class="actions")
+                      a(class="icon" href="#")
+                          i(class="zmdi zmdi-plus-circle-o")
+        .col-12.col-lg-6
+          .card.card-table.table-stats
+            .card-header
+              .title Latest Commits
+              .dropdown
+                .dropdown__btn
+                  i.zmdi.zmdi-download
+                  a(class="dropdown-btn" href="#" role="button" data-toggle="dropdown")
+                    i.zmdi.zmdi-more-vert
+                  .dropdown-menu.dropdown-menu-right
+                    a.dropdown-item Action
+                    a.dropdown-item Another action
+                    a.dropdown-item Something else here
+                    .dropdown-divider
+                    a.dropdown-item Separated link
+            .card-body.table-responsive
+              table(class="table table-striped table-index")
+                thead
+                  tr
+                    th(style="width:37%") User
+                    th(style="width:36%") Commit
+                    th Date
+                    th(class="actions")
+                tbody
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar6.png", alt="")
+                      | Penelope Thornton
+                    td Topbar dropdown style
+                    td Aug 16, 2018
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-github-alt")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar4.png", alt="")
+                      | Benji Harper
+                    td Left sidebar adjusments
+                    td Jul 15, 2018
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-github-alt")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar5.png", alt="")
+                      | Justine Myranda
+                    td Main structure markup
+                    td Jul 28, 2018
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-github-alt")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar3.png", alt="")
+                      | Sherwood Clifford
+                    td Initial commit
+                    td Jun 30, 2018
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-github-alt")
+  

@@ -24,14 +24,17 @@
 
 @import 'layout/header';
 @import 'layout/sidebar';
-@import 'layout/footer';
 
 @import 'pages/page-list';
 @import 'pages/be-01-index';
 @import 'pages/be-02-pages-blank';
 @import 'pages/be-03-pages-blank-header';
+@import 'pages/be-04-05-pages-login';
 @import 'pages/be-06-pages-404';
+@import 'pages/be-07-pages-sign-up';
+@import 'pages/be-08-pages-forgot-password';
 @import 'pages/be-10-pages-pricing-table';
 @import 'pages/be-11-pages-pricing-table2';
 @import 'pages/be-12-pages-timeline';
+@import 'pages/be-13-pages-timeline2';
 @import 'pages/be-14-pages-invoice';

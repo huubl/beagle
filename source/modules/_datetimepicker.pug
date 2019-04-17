@@ -2,7 +2,7 @@
 //- Modules :: Datetimepicker
 //-------------------------------------------------------
 
-mixin datetimepicker({ type, readonly, id, size, icon })
+mixin datetimepicker({ type, readonly, id, size })
   .input-group
     input.form__control.datetimepicker(
         type= type ? type : 'text'
@@ -11,8 +11,3 @@ mixin datetimepicker({ type, readonly, id, size, icon })
         size= size ? size : null
         id= id ? id : null
       )&attributes(attributes)
-    if icon
-      +buttons({
-        type: 'primary',
-        iconBefore: icon
-      })(class="js-datetimepicker")

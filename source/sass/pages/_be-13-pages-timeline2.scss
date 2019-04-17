@@ -1,0 +1,225 @@
+// ======================================================
+// Pages :: Timeline 2
+// ======================================================
+
+.timeline2 {
+  /* stylelint-disable */
+  $this: &;
+  /* stylelint-enable */
+  margin: 0 auto 40px;
+  padding: 0;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    background: $cl-gray-light;
+    z-index: -1;
+    margin-left: -1px;
+    left: 50%;
+    top: 70px;
+  }
+
+  &-month {
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin: 30px 0 15px;
+    padding: 0 0 12px;
+    font-size: 1.385rem;
+    background: $cl-gray;
+    font-weight: $font-weight-light;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &-item {
+    position: relative;
+    padding-left: 0;
+    list-style: none;
+    margin-top: 30px;
+
+    &.right {
+      right: 0;
+      padding-left: calc(50% + 45px);
+    }
+
+    &.left {
+      left: 0;
+      padding-right: calc(50% + 45px);
+
+      .timeline2-icon {
+        left: initial;
+        right: -67px;
+      }
+
+      #{$this}-content:after,
+      #{$this}-content:before {
+        right: -5px;
+        left: inherit;
+      }
+    }
+  }
+
+  &-content {
+    position: relative;
+    background-color: $cl-white;
+    padding: 25px 30px 25px 28px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba($cl-dark, .07);
+    min-height: 85px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $cl-white;
+      transform: rotate(45deg);
+      top: 37.5px;
+      left: -5px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: transparent;
+      transform: rotate(45deg);
+      top: 37.5px;
+      left: -5px;
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    color: $cl-white;
+    top: 20px;
+    left: -67px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.538rem;
+    border: 2px solid $cl-white;
+    text-align: center;
+    background-color: $cl-gray-dark-4;
+    border-radius: 50%;
+
+    i {
+      line-height: 40px;
+      vertical-align: middle;
+    }
+  }
+
+  &-header {
+    display: block;
+    padding: 0 0 0 46px;
+  }
+
+  &-avatar {
+    width: 35px;
+    height: 35px;
+    display: block;
+    border-radius: 50px;
+    overflow: hidden;
+    vertical-align: middle;
+    float: left;
+  }
+
+  &-author {
+    display: inline-block;
+    font-weight: $font-weight-bold + 100;
+  }
+
+  &-activity {
+    display: inline;
+    line-height: 16px;
+
+    a {
+      display: inline-block;
+      padding-left: 5px;
+    }
+  }
+
+  &-time {
+    color: $cl-gray-dark-5;
+    display: block;
+    line-height: 21px;
+  }
+
+  &-item--detailed &-header {
+    border-bottom: 1px solid $cl-gray;
+    padding-bottom: 15px;
+  }
+
+  &-summary {
+    margin-top: 20px;
+    color: $cl-gray-dark-2;
+  }
+
+  &-gallery {
+    margin-top: 20px;
+
+    img {
+      display: inline-block;
+      max-width: 100px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-blockquote {
+    margin: 20px 0 0 5px;
+    padding: 4px 10px;
+    border-left: 4px solid $cl-gray-light-5;
+    color: $cl-gray-dark-2;
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    .footer {
+      font-size: 1rem;
+
+      &:before {
+        content: '\2014\00A0';
+      }
+    }
+  }
+
+  &-loadmore {
+    text-align: center;
+    margin-bottom: 40px;
+
+    a {
+      background-color: $cl-gray-light;
+      border-radius: 2px;
+      padding: 5px 9px;
+      color: $cl-dark-light-13;
+      outline: 0;
+      font-size: .92308rem;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .file .timeline2-icon {
+    background-color: $cl-blue;
+  }
+
+  .comment .timeline2-icon {
+    background-color: $cl-yellow-light;
+  }
+
+  .gallery .timeline2-icon {
+    background-color: $cl-green-light;
+  }
+
+  .quote .timeline2-icon {
+    background-color: $cl-red-light;
+  }
+}

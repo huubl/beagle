@@ -1,0 +1,98 @@
+// ======================================================
+// Pages :: Sign up
+// ======================================================
+
+.page-signup {
+  margin-top: -61px;
+
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .card-primary {
+    border-top-color: $cl-blue;
+    border-top-width: 3px;
+  }
+
+  .card-header {
+    padding-top: 40px;
+    background: $cl-white;
+    border-bottom: 0;
+    font-weight: $font-weight-light;
+    padding-bottom: 0;
+  }
+
+  .login {
+    &__title {
+      text-align: center;
+      display: block;
+      font-size: 1.308rem;
+      font-weight: $font-weight-light;
+      padding-bottom: 1.539rem;
+    }
+  }
+
+  .card-body {
+    padding: 20px 30px 15px;
+  }
+
+  .form-group {
+    margin-bottom: 1.538rem;
+  }
+
+  .signup-password {
+    padding: 0;
+    margin-bottom: 1.3842rem;
+    padding-bottom: .769231rem;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    > div {
+      padding: 0 10px;
+    }
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    font-size: 1.1538rem;
+    border-radius: 3px;
+    font-weight: 500;
+
+    &--facebook {
+      background-color: $cl-blue-dark-3;
+      border-color: $cl-blue-dark-3;
+    }
+
+    &--google {
+      background-color: $cl-red-dark-4;
+      border-color: $cl-red-dark-4;
+    }
+
+    i {
+      font-size: 1.615rem;
+    }
+  }
+
+  .title {
+    text-align: center;
+    display: block;
+    font-size: 1.308rem;
+    font-weight: $font-weight-light;
+    padding-bottom: 1.154rem;
+    text-transform: capitalize;
+  }
+
+  .signup-term {
+    margin-top: 1.154rem;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+
+.login.signup {
+  max-width: 433px;
+  margin: 10px auto;
+}

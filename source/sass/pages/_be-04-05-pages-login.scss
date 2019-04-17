@@ -1,0 +1,79 @@
+// ======================================================
+// Pages :: Login
+// ======================================================
+
+.page-login {
+  margin-top: -61px;
+
+  .card {
+    border-top-color: $cl-blue;
+    border-top-width: 3px;
+    margin-bottom: 30px;
+  }
+
+  .card-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    background: $cl-white;
+    border-bottom: 0;
+    font-weight: $font-weight-light;
+  }
+
+  .card-body {
+    padding: 20px 30px 15px;
+  }
+
+  .form-group {
+    margin-bottom: 1.538rem;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
+
+.login {
+  max-width: 401px;
+  margin: 50px auto;
+
+  &__img {
+    max-height: 27px;
+    display: block;
+    margin: auto;
+  }
+
+  &__des {
+    text-align: center;
+    display: block;
+    line-height: 20px;
+    font-size: 1rem;
+    color: $cl-dark-light-9;
+    margin-top: 11px;
+    padding-bottom: 10px;
+  }
+
+  .login-label {
+    padding: 13px 0 0;
+    margin-bottom: 10px;
+  }
+
+  .login-forgot-password {
+    line-height: 2.1;
+    text-align: right;
+  }
+
+  .login-submit {
+    padding: 19px 0 0;
+    margin-bottom: 1.3842rem;
+
+    .btn {
+      width: 100%;
+    }
+
+    > div {
+      padding-right: 10px;
+    }
+  }
+}

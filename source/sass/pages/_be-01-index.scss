@@ -1,8 +1,181 @@
 // ======================================================
 // Pages :: Home
 // ======================================================
-// Start classname with prefix `p-`
 
-body {
-  // https://github.com/borodean/postcss-assets#url-resolution
+$td : 'td';
+$th : 'th';
+
+.widget {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 24px 20px;
+  margin-bottom: 25px;
+
+  .chart {
+    width: 85px;
+    min-height: 45px;
+    padding: 5px 0;
+    vertical-align: middle;
+  }
+}
+
+.data-info {
+  text-align: right;
+
+  .desc {
+    font-size: 1.077rem;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .value {
+    font-size: 1.693rem;
+    font-weight: 300;
+  }
+
+  .indicator {
+    font-size: 1.923rem;
+    margin-right: 7px;
+    line-height: 24px;
+    vertical-align: middle;
+
+    &--equal {
+      color: #4285f4;
+    }
+
+    &--positive {
+      color: #34a853;
+    }
+
+    &--negative {
+      color: #ea4335;
+    }
+  }
+}
+
+.index {
+  .card-header {
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.5384rem;
+    margin: 0 1.538rem;
+    border-bottom-width: 0;
+    border-radius: 3px 3px 0 0;
+    background-color: transparent;
+  }
+
+  .table-responsive {
+    padding: 0;
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+.table-stats {
+  .card-header {
+    display: flex;
+    border-bottom: 0;
+    justify-content: space-between;
+
+    i {
+      display: inline-block;
+      font-size: 1.538rem;
+      line-height: 25px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: #bababa;
+      min-width: 1.538rem;
+      text-align: center;
+
+      &:hover {
+        color: #a6a6a6;
+      }
+    }
+  }
+}
+
+.card-table {
+  table {
+    margin-bottom: 0;
+  }
+
+  thead tr th {
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  tr {
+
+    td:last-child,
+    th:last-child {
+      padding-right: 20px;
+    }
+
+    td:first-child,
+    th:first-child {
+      padding-left: 20px;
+    }
+  }
+}
+
+.table > tbody > tr > td {
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.table-responsive tbody > tr > td {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.table-index {
+  border: 0;
+
+  th,
+  thead th {
+    border: 0;
+  }
+
+  #{$th}.number,
+  #{$td}.number {
+    text-align: right;
+  }
+
+  #{$td}.user-avatar img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+}
+
+.table tr {
+
+  #{$td}.actions,
+  #{$th}.actions {
+    text-align: center;
+  }
+
+  #{$td}.actions .icon,
+  #{$th}.actions .icon {
+    color: #a1a1a1;
+    font-size: 1.3846rem;
+    line-height: 18px;
+  }
+
+  #{$td}.actions .icon:hover,
+  #{$th}.actions .icon:hover {
+    color: #808080;
+  }
+}
+
+.dropdown-menu > .dropdown-item {
+  font-weight: 400;
+  color: #504e4e;
+  padding: 8px 20px;
+  cursor: pointer;
 }

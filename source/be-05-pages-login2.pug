@@ -1,0 +1,15 @@
+extends modules/layout/_page-default
+       
+block head
+  +head('Beagle')
+
+block main
+  .page-login
+    .main-content.container-fluid
+      .login
+        .card.card-primary
+          .card-header
+            img.login__img(src="images/logo-xx.png", alt="")
+            span.login__des Please enter your user information.
+          .card-body
+            +form-group-login(2)
