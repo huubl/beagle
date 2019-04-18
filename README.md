@@ -1,6 +1,6 @@
 ﻿# ⚡️ { Foxy Themes }
 
-{ A brief description of your project... }
+{ Hello... }
 
 ## 🛠 Installation
 
