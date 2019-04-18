@@ -40,13 +40,13 @@
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
-  border-bottom-color: rgba(0, 0, 0, .2);
+  border-bottom: 7px solid $cl-gray-dark-3;
+  border-bottom-color: rgba($cl-dark, .2);
   position: absolute;
 }
 
 [class*=' datetimepicker-dropdown']:after {
-  border-bottom: 6px solid #fff;
+  border-bottom: 6px solid $cl-white;
   position: absolute;
 }
 
@@ -55,13 +55,13 @@
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 7px solid #ccc;
-  border-top-color: rgba(0, 0, 0, .2);
+  border-top: 7px solid $cl-gray-dark-3;
+  border-top-color: rgba($cl-dark, .2);
   border-bottom: 0;
 }
 
 [class*=' datetimepicker-dropdown-top']:after {
-  border-top: 6px solid #fff;
+  border-top: 6px solid $cl-white;
   border-bottom: 0;
 }
 
@@ -144,6 +144,10 @@
   padding: 0 11px;
 }
 
+// ======================================================
+// Pages :: Datetimepicker
+// ======================================================
+
 .datetimepicker.input-group-lg .input-group-append > button {
   padding: 0 15px;
 }
@@ -156,21 +160,21 @@
 .datetimepicker table thead tr .next:hover,
 .datetimepicker table thead tr .prev:hover {
   background-color: transparent;
-  color: #4285f4;
+  color: $cl-blue;
 }
 
 .datetimepicker table thead tr .switch {
-  font-weight: 600;
+  font-weight: $font-weight-bold;
   font-size: 1.077rem;
 }
 
 .datetimepicker table thead tr .switch:hover {
   background-color: transparent;
-  color: #5a5a5a;
+  color: $cl-dark-light-9;
 }
 
 .datetimepicker table thead tr .dow {
-  font-weight: 400;
+  font-weight: $font-weight-base;
   font-size: 1.077rem;
   padding-top: 10px;
 }
@@ -182,29 +186,29 @@
 
 .datetimepicker table tbody tr .day {
   border-radius: 50%;
-  color: #737373;
+  color: $cl-dark-light-8;
 }
 
 .datetimepicker table tbody tr .day.new,
 .datetimepicker table tbody tr .day.old {
-  color: #b3b3b3;
+  color: $cl-gray-light-3;
 }
 
 .datetimepicker table tbody tr .day.active {
-  background: #4285f4;
-  color: #fff;
+  background: $cl-blue;
+  color: $cl-white;
   text-shadow: none;
 }
 
 .datetimepicker table tbody tr .day.active:hover {
-  background: #1266f1;
+  background: $cl-blue-dark;
 }
 
 .datetimepicker table tbody tr td .hour,
 .datetimepicker table tbody tr td .minute,
 .datetimepicker table tbody tr td .month,
 .datetimepicker table tbody tr td .year {
-  color: #737373;
+  color: $cl-dark-light-8;
 }
 
 .datetimepicker table tbody tr td .hour.new,
@@ -215,15 +219,15 @@
 .datetimepicker table tbody tr td .month.old,
 .datetimepicker table tbody tr td .year.new,
 .datetimepicker table tbody tr td .year.old {
-  color: #b3b3b3;
+  color: $cl-gray-light-3;
 }
 
 .datetimepicker table tbody tr td .hour.active,
 .datetimepicker table tbody tr td .minute.active,
 .datetimepicker table tbody tr td .month.active,
 .datetimepicker table tbody tr td .year.active {
-  background: #4285f4;
-  color: #fff;
+  background: $cl-blue;
+  color: $cl-white;
   text-shadow: none;
 }
 
@@ -231,23 +235,23 @@
 .datetimepicker table tbody tr td .minute.active:hover,
 .datetimepicker table tbody tr td .month.active:hover,
 .datetimepicker table tbody tr td .year.active:hover {
-  background: #1266f1;
+  background: $cl-blue-dark;
 }
 
 .datetimepicker table tbody tr td fieldset legend {
   font-size: 1.308rem;
-  font-weight: 400;
-  color: #5a5a5a;
+  font-weight: $font-weight-base;
+  color: $cl-dark-light-9;
   margin-bottom: 5px;
 }
 
 .datetimepicker.dropdown-menu {
-  border-color: rgba(0, 0, 0, .1);
+  border-color: rgba($cl-dark, .1);
   padding: 10px;
 }
 
 .datetimepicker.dropdown-menu:before {
-  border-bottom-color: rgba(0, 0, 0, .08);
+  border-bottom-color: rgba($cl-dark, .08);
 }
 
 .datetimepicker td,
@@ -268,24 +272,23 @@
 .datetimepicker table tr .hour:hover,
 .datetimepicker table tr .minute:hover {
   cursor: pointer;
-  background: #eee;
+  background: $cl-gray;
 }
 
-/* stylelint-disable */
 .datetimepicker table tr fieldset:hover {
+  /* stylelint-disable-next-line declaration-no-important */
   background: transparent !important;
 }
-/* stylelint-enable */
 
 .datetimepicker table tr .new,
 .datetimepicker table tr .old {
-  color: #999;
+  color: $cl-dark-light-2;
 }
 
 .datetimepicker table tr .disabled,
 .datetimepicker table tr .disabled:hover {
   background: 0 0;
-  color: #999;
+  color: $cl-dark-light-2;
   cursor: default;
 }
 
@@ -293,10 +296,10 @@
 .datetimepicker table tr .today.disabled,
 .datetimepicker table tr .today.disabled:hover,
 .datetimepicker table tr .today:hover {
-  background-color: #fde19a;
+  background-color: $cl-yellow-light-5;
   background-repeat: repeat-x;
-  border-color: #fdf59a #fdf59a #fbed50;
-  border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
+  border-color: $cl-yellow-light-6 $cl-yellow-light-6 $cl-yellow-light-7;
+  border-color: rgba($cl-dark, .1) rgba($cl-dark, .1) rgba($cl-dark, .25);
 }
 
 .datetimepicker table tr .today.active,
@@ -319,7 +322,7 @@
 .datetimepicker table tr .today:hover:hover,
 .datetimepicker table tr .today:hover[disabled],
 .datetimepicker table tr .today[disabled] {
-  background-color: #fdf59a;
+  background-color: $cl-yellow-light-6;
 }
 
 .datetimepicker table tr .today.active,
@@ -330,19 +333,19 @@
 .datetimepicker table tr .today:active,
 .datetimepicker table tr .today:hover.active,
 .datetimepicker table tr .today:hover:active {
-  background-color: #fbf069;
+  background-color: $cl-yellow-light-8;
 }
 
 .datetimepicker table tr .active,
 .datetimepicker table tr .active.disabled,
 .datetimepicker table tr .active.disabled:hover,
 .datetimepicker table tr .active:hover {
-  background-color: #006dcc;
+  background-color: $cl-blue-dark-2;
   background-repeat: repeat-x;
-  border-color: #04c #04c #002a80;
-  border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+  border-color: $cl-blue-dark-5 $cl-blue-dark-5 $cl-blue-dark-3;
+  border-color: rgba($cl-dark, .1) rgba($cl-dark, .1) rgba($cl-dark, .25);
+  color: $cl-white;
+  text-shadow: 0 -1px 0 rgba($cl-dark, .25);
 }
 
 .datetimepicker table tr .active.active,
@@ -365,7 +368,7 @@
 .datetimepicker table tr .active:hover:hover,
 .datetimepicker table tr .active:hover[disabled],
 .datetimepicker table tr .active[disabled] {
-  background-color: #04c;
+  background-color: $cl-blue-dark-5;
 }
 
 .datetimepicker table tr .active.active,
@@ -376,7 +379,7 @@
 .datetimepicker table tr .active:active,
 .datetimepicker table tr .active:hover.active,
 .datetimepicker table tr .active:hover:active {
-  background-color: #039;
+  background-color: $cl-blue-dark-6;
 }
 
 .datetimepicker table tr td span {
@@ -412,13 +415,13 @@
 }
 
 .datetimepicker table tr td span:hover {
-  background: #eee;
+  background: $cl-gray;
 }
 
 .datetimepicker table tr td .disabled,
 .datetimepicker table tr td .disabled:hover {
   background: 0 0;
-  color: #999;
+  color: $cl-dark-light-2;
   cursor: default;
 }
 
@@ -426,12 +429,12 @@
 .datetimepicker table tr td .active.disabled,
 .datetimepicker table tr td .active.disabled:hover,
 .datetimepicker table tr td .active:hover {
-  background-color: #006dcc;
+  background-color: $cl-blue-dark-2;
   background-repeat: repeat-x;
-  border-color: #04c #04c #002a80;
-  border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .25);
-  color: #fff;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+  border-color: $cl-blue-dark-5 $cl-blue-dark-5 $cl-blue-dark-3;
+  border-color: rgba($cl-dark, .1) rgba($cl-dark, .1) rgba($cl-dark, .25);
+  color: $cl-white;
+  text-shadow: 0 -1px 0 rgba($cl-dark, .25);
 }
 
 .datetimepicker table tr td .active.active,
@@ -454,7 +457,7 @@
 .datetimepicker table tr td .active:hover:hover,
 .datetimepicker table tr td .active:hover[disabled],
 .datetimepicker table tr td .active[disabled] {
-  background-color: #04c;
+  background-color: $cl-blue-dark-5;
 }
 
 .datetimepicker table tr td .active.active,
@@ -465,11 +468,11 @@
 .datetimepicker table tr td .active:active,
 .datetimepicker table tr td .active:hover.active,
 .datetimepicker table tr td .active:hover:active {
-  background-color: #039;
+  background-color: $cl-blue-dark-6;
 }
 
 .datetimepicker table tr td .old {
-  color: #999;
+  color: $cl-dark-light-2;
 }
 
 .datetimepicker .switch {
@@ -486,7 +489,7 @@
 }
 
 .datetimepicker tfoot tr:first-child th:hover {
-  background: #eee;
+  background: $cl-gray;
 }
 
 .input-append.date .add-on i,

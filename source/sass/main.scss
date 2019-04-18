@@ -2,17 +2,18 @@
 @import 'bootstrap/scss/bootstrap-reboot';
 @import 'bootstrap/scss/bootstrap';
 @import 'material-design-iconic-font/scss/material-design-iconic-font';
-@import 'vendor/bootstrap-datetimepicker';
-@import 'vendor/perfect-scrollbar';
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
 @import 'components/font';
 
-@import 'base/typography';
+@import 'vendor/bootstrap-datetimepicker';
+@import 'vendor/perfect-scrollbar';
+@import 'vendor/datepicker';
+@import 'vendor/jquery.flot.tooltip';
+
 @import 'base/colors';
-@import 'base/images';
 @import 'base/global';
 
 @import 'components/button';
@@ -33,6 +34,7 @@
 @import 'pages/be-06-pages-404';
 @import 'pages/be-07-pages-sign-up';
 @import 'pages/be-08-pages-forgot-password';
+@import 'pages/be-09-pages-profile';
 @import 'pages/be-10-pages-pricing-table';
 @import 'pages/be-11-pages-pricing-table2';
 @import 'pages/be-12-pages-timeline';

@@ -1,0 +1,51 @@
+// ======================================================
+// Pages :: Flot tooltip
+// ======================================================
+
+.tooltip-chart {
+  display: flex;
+}
+
+.tooltip-chart .content-chart {
+  background-color: rgba($cl-dark, .8);
+  color: $cl-white;
+  border-radius: 3px;
+  padding: 5px 12px;
+  position: relative;
+}
+
+.tooltip-chart .content-chart:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid rgba($cl-dark, .8);
+  position: absolute;
+  bottom: -5px;
+  margin-left: 50%;
+  left: -5px;
+}
+
+.tooltip-chart .content-chart.arrow-none:before {
+  display: none;
+}
+
+.tooltip-chart .content-chart span {
+  display: block;
+  font-size: 12px;
+  font-weight: $font-weight-bold;
+  margin-bottom: -2px;
+  text-align: center;
+  color: $cl-gray-dark-14;
+}
+
+.tooltip-chart .content-chart .label {
+  font-size: 11px;
+  text-align: center;
+}
+
+.tooltip-chart .content-chart .label .label-x,
+.tooltip-chart .content-chart .label .label-y {
+  display: inline-block;
+}

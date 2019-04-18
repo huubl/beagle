@@ -1,14 +1,3 @@
-// ======================================================
-// Abstracts :: Functions
-// ======================================================
-
-// z-index management
-// ======================================================
-// Example:
-//
-// .class {
-//   z-index: z(base);
-// }
 @function z($name) {
   @if (map-has-key($z-indexes, $name)) {
     @return map-get($z-indexes, $name);

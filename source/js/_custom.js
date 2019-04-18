@@ -1,4 +1,4 @@
-$(window).on('load', function () {
+$(function () {
 
   // init bootstrap datetimepicker
   $(".datetimepicker").datetimepicker();
@@ -86,7 +86,12 @@ $(window).on('load', function () {
 
   $('.js-chat').click(function (e) {
     e.preventDefault();
-    $('.tab-chat-inner, .chat-windows').removeAttr('style')
+    $('.tab-chat-inner').animate({
+      'left': '0'
+    }, 0);
+    $('.chat-windows').animate({
+      'left': '290px'
+    }, 0)
   });
 
   // back to top
@@ -190,4 +195,299 @@ $(window).on('load', function () {
     }).start()
   })
 
+  // main chart
+  if ($("#main-chart").length) {
+    $.plot($("#main-chart"), [{
+      data: [
+        [1, 35],
+        [2, 60],
+        [3, 40],
+        [4, 65],
+        [5, 45],
+        [6, 75],
+        [7, 35],
+        [8, 40],
+        [9, 60]
+      ],
+      showLabels: true,
+      label: "Purchases",
+      labelPlacement: "below",
+      canvasRender: true,
+      cColor: "#fff"
+    }, {
+      data: [
+        [1, 20],
+        [2, 40],
+        [3, 25],
+        [4, 45],
+        [5, 25],
+        [6, 50],
+        [7, 35],
+        [8, 60],
+        [9, 30]
+      ],
+      showLabels: true,
+      label: "Plans",
+      labelPlacement: "below",
+      canvasRender: true,
+      cColor: "#fff"
+    }, {
+      data: [
+        [1, 35],
+        [2, 15],
+        [3, 20],
+        [4, 30],
+        [5, 15],
+        [6, 18],
+        [7, 28],
+        [8, 10],
+        [9, 30]
+      ],
+      showLabels: true,
+      label: "Services",
+      labelPlacement: "below",
+      canvasRender: true,
+      cColor: "#fff"
+    }], {
+        series: {
+          lines: {
+            show: true,
+            lineWidth: 0,
+            fill: true,
+            fillColor: {
+              colors: [{
+                opacity: 1
+              }, {
+                opacity: 1
+              }]
+            }
+          },
+          fillColor: "rgba(0, 0, 0, 1)",
+          shadowSize: 0,
+          curvedLines: {
+            apply: true,
+            active: true,
+            monotonicFit: true
+          }
+        },
+        legend: {
+          show: false
+        },
+        grid: {
+          show: true,
+          margin: {
+            top: 20,
+            bottom: 0,
+            left: 0,
+            right: 0
+          },
+          labelMargin: 0,
+          minBorderMargin: 0,
+          axisMargin: 0,
+          tickColor: "rgba(0,0,0,0.05)",
+          borderWidth: 0,
+          hoverable: true,
+          clickable: true
+        },
+        tooltip: {
+          show: true,
+          cssClass: "tooltip-chart",
+          content: "<div class='content-chart'> <span> %s </span> <div class='label'> <div class='label-x'> %x.0 </div> - <div class='label-y'> %y.0 </div> </div></div>",
+          defaultTheme: false
+        },
+        colors: ["#4386f4", "#81adf8", "#a2c3fa"],
+        xaxis: {
+          tickFormatter: function () {
+            return ""
+          },
+          autoscaleMargin: 0,
+          ticks: 11,
+          tickDecimals: 0,
+          tickLength: 0
+        },
+        yaxis: {
+          tickFormatter: function () {
+            return ""
+          },
+          ticks: 4,
+          tickDecimals: 0
+        }
+      })
+  }
+
+  // chart page user
+  if ($("#bar-chart1").length) {
+    $.plot("#bar-chart1", [{
+      label: "Page Views",
+      data: [
+        [0, 15],
+        [1, 15],
+        [2, 19],
+        [3, 28],
+        [4, 30],
+        [5, 37],
+        [6, 35],
+        [7, 38],
+        [8, 48],
+        [9, 43],
+        [10, 38],
+        [11, 32],
+        [12, 38]
+      ]
+    }, {
+      label: "Unique Visitor",
+      data: [
+        [0, 7],
+        [1, 10],
+        [2, 15],
+        [3, 23],
+        [4, 24],
+        [5, 29],
+        [6, 25],
+        [7, 33],
+        [8, 35],
+        [9, 38],
+        [10, 32],
+        [11, 27],
+        [12, 32]
+      ]
+    
+    }], {
+      series: {
+        bars: {
+          show: true,
+          barWidth: 0.4,
+          align: "center",
+          lineWidth: 1.5,
+          order: 1,
+          fill: !0,
+          fillColor: {
+            colors: [{
+              opacity: 1
+            }, {
+              opacity: 1
+            }]
+          }
+        },
+        shadowSize: 2
+      },
+      legend: {
+        show: !1
+      },
+      grid: {
+        margin: 0,
+        show: !1,
+        labelMargin: 10,
+        axisMargin: 500,
+        hoverable: !0,
+        clickable: !0,
+        tickColor: "rgba(0,0,0,0.15)",
+        borderWidth: 0
+      },
+      tooltip: {
+        show: !0,
+        cssClass: "tooltip-chart",
+        content: "<div class='content-chart'> <span> %s </span> <div class='label'> <div class='label-x'> %x.0 </div> - <div class='label-y'> %y.0 </div> </div></div>",
+        defaultTheme: !1
+      },
+      colors: ["#4386f4", "#81adf8"],
+      xaxis: {
+        ticks: 11,
+        tickDecimals: 0
+      },
+      yaxis: {
+        autoscaleMargin: .5,
+        ticks: 4,
+        tickDecimals: 0
+      }
+    });
+  }
+
+  $("#main-chart, #bar-chart1").each(function (index, element) {
+    $(this).bind("plothover", function (event, pos, item) {
+      var _width = $(".tooltip-chart").width();
+      if (item) {
+        $(".tooltip-chart").css({
+          top: item.pageY - 60,
+          left: item.pageX - _width / 2
+        }).fadeIn(200)
+      } else {
+        $(".tooltip-chart").hide()
+      }
+    })
+  });
+
+  // jquery flot chart sale
+  if ($("#top-sale").length) {
+    $.plot("#top-sale", [{
+      label: "Services",
+      data: 33
+    }, {
+      label: "Standard Plans",
+      data: 33
+    }, {
+      label: "Services",
+      data: 33
+    }], {
+        series: {
+          pie: {
+            radius: .75,
+            innerRadius: .58,
+            show: true,
+            highlight: {
+              opacity: .1
+            },
+            label: {
+              show: false
+            }
+          }
+        },
+        grid: {
+          hoverable: true
+        },
+        legend: {
+          show: false
+        },
+        colors: ["#4285f4", "#fbbc05", "#34a853"]
+      })
+  }
+
+  // jquery ui datepicker
+  if ($("#calendar").length) {
+    $("#calendar").datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true,
+      beforeShowDay: function (e) {
+        var t = e.getMonth(),
+          o = e.getDate(),
+          i = e.getFullYear(),
+          p = new Date, h = p.getFullYear(), f = p.getMonth(), g = [h + "-" + (f + 1) + "-16", h + "-" + (f + 1) + "-20"];
+        return -1 != $.inArray(i + "-" + (t + 1) + "-" + o, g) ? [true, "has-events", "This day has events!"] : [true, "", ""]
+      }
+    })
+  }
+
+  // jquery vmap
+  if ($("#map").length) {
+    $("#map").vectorMap({
+      map: "world_en",
+      backgroundColor: null,
+      color: "#4285f4",
+      hoverOpacity: .7,
+      selectedColor: "#4285f4",
+      enableZoom: true,
+      showTooltip: true,
+      values: {
+        ru: "14",
+        us: "14",
+        ca: "10",
+        br: "10",
+        au: "11",
+        uk: "3",
+        cn: "12"
+      },
+      scaleColors: ["#4285f4", "#71a3f6"],
+      normalizeFunction: "polynomial"
+    })
+  }
 });

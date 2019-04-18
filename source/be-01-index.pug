@@ -54,7 +54,61 @@ block main
                   .value
                     i.indicator.indicator--negative.zmdi.zmdi-chevron-down
                     span.number(data-toggle="counter" data-end="113") 0
-          
+      .row
+        .col-12
+          .widget.widget-chart
+            .widget-head.widget-chart-head
+              .title Recent Movement
+              .dropdown.d-flex
+                .btn-group
+                  +buttons({
+                    type: 'secondary',
+                    text: 'Week',
+                    size: 'md'
+                  })
+                  +buttons({
+                    type: 'secondary',
+                    text: 'Month',
+                    size: 'md'
+                  })(class='active')
+                  +buttons({
+                    type: 'secondary',
+                    text: 'Year',
+                    size: 'md'
+                  })
+                .btn-group.today
+                  +buttons({
+                    type: 'secondary',
+                    text: 'Today',
+                    size: 'md'
+                  })
+                .list-icon
+                  i.icon.zmdi.zmdi-chevron-down
+                  i.icon.zmdi.zmdi-refresh-sync.toggle-loading
+                  i.icon.zmdi.zmdi-close
+            .widget-body
+              .widget-chart-info
+                ul.chart-legend
+                  li
+                    span.p1
+                    | Purchases
+                  li
+                    span.p2
+                    | Plans
+                  li
+                    span.p3
+                    | Services
+              .widget-group.widget-group-right
+                .counter.counter-big
+                  .value 25%
+                  .desc Purchase
+                .counter.counter-big
+                  .value 5%
+                  .desc Plans
+                .counter.counter-big
+                  .value 5%
+                  .desc Services
+              #main-chart(style="height: 260px")
       .row
         .col-12.col-lg-6
           .card.card-table.table-stats
@@ -181,4 +235,107 @@ block main
                     td(class="actions")
                       a(class="icon" href="#")
                         i(class="zmdi zmdi-github-alt")
-  
+      .row
+        .col-12.col-lg-4
+          .card
+            .card-header.card-header-divider Current Progress
+            .card-body
+              .row.user-progress.user-progress--small
+                .col-lg-5
+                  span.title Bootstrap Admin
+                .col-lg-7
+                  .progress
+                    .progress-bar.bg-success(style="width:40%")
+              .row.user-progress.user-progress--small
+                .col-lg-5
+                  span.title Custom Work
+                .col-lg-7
+                  .progress
+                    .progress-bar.bg-success(style="width:65%")
+              .row.user-progress.user-progress--small
+                .col-lg-5
+                  span.title Clients Module
+                .col-lg-7
+                  .progress
+                    .progress-bar.bg-success(style="width:30%")
+              .row.user-progress.user-progress--small
+                .col-lg-5
+                  span.title Email Templates
+                .col-lg-7
+                  .progress
+                    .progress-bar.bg-success(style="width:80%")
+              .row.user-progress.user-progress--small
+                .col-lg-5
+                  span.title Plans Module
+                .col-lg-7
+                  .progress
+                    .progress-bar.bg-success(style="width:45%")
+        .col-12.col-lg-4
+          .chartjs.loading
+            .chartjs-head
+              .title Top Sales
+              .list-icon
+                i.icon.zmdi.zmdi-chevron-down
+                i.icon.zmdi.zmdi-refresh-sync.toggle-loading
+                i.icon.zmdi.zmdi-close
+            .chartjs-body
+              #top-sale(style="height: 178px;")
+              .chartjs-counter 36
+            .chartjs-legend
+              .chartjs-item
+                .chartjs-title
+                  span.chartjs-type.success
+                  span.chartjs-txt Premium Purchases
+                .chartjs-value 125
+              .chartjs-item
+                .chartjs-title
+                  span.chartjs-type.warning
+                  span.chartjs-txt Standard Plans
+                .chartjs-value 1569
+              .chartjs-item
+                .chartjs-title
+                  span.chartjs-type.primary
+                  span.chartjs-txt Services
+                .chartjs-value 824
+        .col-12.col-lg-4
+          .widget.widget-calendar
+              #calendar
+      .row
+        .col-12.col-lg-6
+          .card
+            .card-header Latest Activity
+            .card-body
+              ul.user-timeline
+                li.latest
+                  .user-timeline-date Just Now
+                  .user-timeline-title Create New Page
+                  .user-timeline-description Vestibulum lectus nulla, maximus in eros non, tristique.
+                li
+                  .user-timeline-date Today - 15:35
+                  .user-timeline-title Back Up Theme
+                  .user-timeline-description Vestibulum lectus nulla, maximus in eros non, tristique.
+                li
+                  .user-timeline-date Yesterday - 10:41
+                  .user-timeline-title Changes In The Structure
+                  .user-timeline-description Vestibulum lectus nulla, maximus in eros non, tristique.
+                li
+                  .user-timeline-date Yesterday - 3:02
+                  .user-timeline-title Fix the Sidebar
+                  .user-timeline-description Vestibulum lectus nulla, maximus in eros non, tristique.
+        .col-12.col-lg-6
+          .chartjs.loading
+            .chartjs-head
+              .title Conversions
+              .list-icon
+                i.icon.zmdi.zmdi-chevron-down
+                i.icon.zmdi.zmdi-refresh-sync.toggle-loading
+                i.icon.zmdi.zmdi-close
+            .chartjs-body
+              .widget-map
+                .indicator.indicator-positive.float-right
+                  i.icon.zmdi.zmdi-chevron-up
+                  span(data-toggle="counter" data-end="15" data-suffix="%")
+                .counter
+                  .value 156k
+                  .des Impressions
+                #map(style="height: 265px")

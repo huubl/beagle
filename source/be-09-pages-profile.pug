@@ -1,0 +1,206 @@
+extends modules/layout/_page-default
+  
+block head
+  +head('Beagle')
+
+block main
+  +header("Profile")
+  +sidebarLeft("pages", "be-09-pages-profile.html")
+  +sidebarRight()
+  section.page-user.page-content
+    .main-content.container-fluid
+      .row
+        .col-lg-5
+          .user-display
+            .user-display__bg
+              img(src="images/user-profile-display.png", alt="")
+            .user-display__body
+              .user-display__avatar
+                img(src="images/avatar-150.png", alt="")
+              .user-display__info
+                .name Kristopher Donny
+                .nick 
+                  i.zmdi.zmdi-account
+                  | KDonny
+              .user-display__details.row
+                .col-4
+                  .title Issues
+                  .counter 26
+                .col-4
+                  .title Commits
+                  .counter 26
+                .col-4
+                  .title Followers
+                  .counter 26
+          .user-info-list.card
+            .card-header.card-header-divider
+              span.card-title  About Me
+              span.card-subtitle I am a web developer and designer based in Montreal - Canada, I like read books, good music and nature.
+            .card-body
+              table.user-table
+                tbody
+                  tr
+                    td.icon 
+                      i.zmdi.zmdi-case
+                    td.item Ocupation
+                    td Developer and designer
+                  tr
+                    td.icon 
+                      i.zmdi.zmdi-cake
+                    td.item Birthday
+                    td 16 September 1989
+                  tr
+                    td.icon 
+                      i.zmdi.zmdi-smartphone-android
+                    td.item Mobile
+                    td (999) 999-9999
+                  tr
+                    td.icon
+                      i.zmdi.zmdi-globe-alt
+                    td.item Location
+                    td Montreal, Canada
+                  tr
+                    td.icon
+                      i.zmdi.zmdi-pin
+                    td.item Website
+                    td www.website.com
+        .col-lg-7
+          .widget.widget-chart
+            .widget-head.widget-chart-head
+              .title Development Activity
+              .list-icon
+                i.icon.zmdi.zmdi-chevron-down
+                i.icon.zmdi.zmdi-refresh-sync.toggle-loading
+                i.icon.zmdi.zmdi-close
+            .widget-body
+              #bar-chart1(style="height: 180px")
+              table(class="table table-striped table-hover table-index")
+                thead
+                  tr
+                    th(style="width:37%") User
+                    th(style="width:36%") Commit
+                    th Date
+                    th(class="actions")
+                tbody
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar6.png", alt="")
+                      | Penelope Thornton
+                    td Initial commit
+                    td Aug 16, 2018
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-delete")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar4.png", alt="")
+                      | Benji Harper
+                    td Main structure markup
+                    td Jul 28, 2015
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-delete")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar5.png", alt="")
+                      | Justine Myranda
+                    td Left sidebar adjusments
+                    td Jul 15, 2015
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-delete")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar3.png", alt="")
+                      | Sherwood Clifford
+                    td Topbar dropdown style
+                    td 	Jun 30, 2015
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-delete")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar.png", alt="")
+                      | Kristopher Donny
+                    td Left sidebar adjusments
+                    td 	Jul 15, 2015
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-delete")
+                  tr
+                    td(class="user-avatar")
+                      img(src="images/avatar2.png", alt="")
+                      | Adeline Shepherd
+                    td Topbar dropdown style
+                    td Jun 30, 2015
+                    td(class="actions")
+                      a(class="icon" href="#")
+                        i(class="zmdi zmdi-delete")
+      .row
+        .col-lg-5
+          .card
+            .card-header.card-header-divider
+              span.card-title Current Progress
+              span.card-subtitle This is the user current progress widget
+            .card-body
+              .row.user-progress
+                .col-10
+                  .title Bootstrap Admin
+                  .progress
+                    .progress-bar.bg-primary(style="width: 78%")
+                .col-2.pl-0.pl-sm-3
+                  .value 78%
+              .row.user-progress
+                .col-10
+                  .title Custom Work
+                  .progress
+                    .progress-bar.bg-primary(style="width: 57%")
+                .col-2.pl-0.pl-sm-3
+                  .value 57%
+              .row.user-progress
+                .col-10
+                  .title Clients Module
+                  .progress
+                    .progress-bar.bg-primary(style="width: 45%")
+                .col-2.pl-0.pl-sm-3
+                  .value 45%
+              .row.user-progress
+                .col-10
+                  .title Email Templates
+                  .progress
+                    .progress-bar.bg-danger(style="width: 36%")
+                .col-2.pl-0.pl-sm-3
+                  .value 36%
+              .row.user-progress
+                .col-10
+                  .title Plans Module
+                  .progress
+                    .progress-bar.bg-danger(style="width: 30%")
+                .col-2.pl-0.pl-sm-3
+                  .value 30%
+              .row.user-progress
+                .col-10
+                  .title User Managemenet System
+                  .progress
+                    .progress-bar.bg-danger(style="width: 21%")
+                .col-2.pl-0.pl-sm-3
+                  .value 21%
+        .col-lg-7
+          .card
+            .card-header.card-header-divider
+              span.card-title Latest Activity
+              span.card-subtitle This is a custom timeline widget
+            .card-body
+              ul.user-timeline.page-user
+                li.latest
+                  .user-timeline-date Just Now
+                  .user-timeline-title Create New Page
+                  .user-timeline-description Quisque sed est felis. Vestibulum lectus nulla, maximus in eros non, tristique consectetur lorem. Nulla molestie sem quis imperdiet facilisis
+                li
+                  .user-timeline-date Today - 15:35
+                  .user-timeline-title Back Up Theme
+                  .user-timeline-description Quisque sed est felis. Vestibulum lectus nulla, maximus in eros non, tristique consectetur lorem. Nulla molestie sem quis imperdiet facilisis
+                li
+                  .user-timeline-date Yesterday - 10:41
+                  .user-timeline-title Changes In The Structure
+                  .user-timeline-description Quisque sed est felis. Vestibulum lectus nulla, maximus in eros non, tristique consectetur lorem. Nulla molestie sem quis imperdiet facilisis

@@ -1,0 +1,132 @@
+// ======================================================
+// Pages :: Datepicker
+// ======================================================
+
+$table: 'table';
+$td: 'td';
+$a: 'a';
+
+.ui-datepicker #{$table}.ui-datepicker-calendar {
+  width: 100%;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td:first-child,
+.ui-datepicker #{$table}.ui-datepicker-calendar tr th:first-child {
+  padding-left: 0;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td:last-child,
+.ui-datepicker #{$table}.ui-datepicker-calendar tr th:last-child {
+  padding-right: 0;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar th {
+  border: 0;
+  padding: 3px;
+  text-align: center;
+  font-weight: $font-weight-base;
+  color: $cl-dark-light;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar th span {
+  font-size: 1.077rem;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td {
+  border: 0;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td a {
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  color: $cl-dark-light-8;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td a:hover {
+  color: $cl-dark-light;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td a.ui-state-active,
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td a.ui-state-highlight {
+  background-color: $cl-gray-light-4;
+  border-radius: 50%;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr td a.ui-state-highlight {
+  background-color: $cl-blue;
+  color: $cl-white;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr #{$td}.has-events a {
+  position: relative;
+  background-color: $cl-gray-light-10;
+  border-radius: 50%;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr #{$td}.ui-datepicker-other-month a {
+  color: $cl-gray-dark-3;
+}
+
+.ui-datepicker #{$table}.ui-datepicker-calendar tr #{$td}.ui-datepicker-other-month a.ui-state-highlight {
+  color: $cl-white;
+}
+
+.ui-datepicker.ui-datepicker-6rows {
+  margin-bottom: 28px;
+}
+
+.ui-datepicker.ui-datepicker-6rows #{$table}.ui-datepicker-calendar tr td {
+  padding: 3px 0;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  visibility: hidden;
+  font-size: 1.923rem;
+  position: relative;
+
+  &:before,
+  &:after {
+    cursor: pointer;
+    font-family: $font-icon;
+    vertical-align: top;
+    text-indent: 0;
+    visibility: visible;
+    position: absolute;
+    top: -5px;
+  }
+}
+
+.ui-datepicker-prev:before {
+  content: '\f2fa';
+  left: 2px;
+}
+
+.ui-datepicker-next:after {
+  content: '\f2fb';
+  right: 2px;
+}
+
+.ui-datepicker-prev {
+  float: left;
+}
+
+.ui-datepicker-next {
+  float: right;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+  cursor: default;
+  line-height: 24px;
+  margin: .5em 2.3em 2.3rem;
+  font-weight: $font-weight-light;
+  font-size: 1.385rem;
+}

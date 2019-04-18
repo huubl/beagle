@@ -4,9 +4,11 @@
 
 $td : 'td';
 $th : 'th';
+$li : 'li';
+$span: 'span';
 
 .widget {
-  background-color: #fff;
+  background-color: $cl-white;
   border-radius: 3px;
   padding: 24px 20px;
   margin-bottom: 25px;
@@ -14,7 +16,7 @@ $th : 'th';
   .chart {
     width: 85px;
     min-height: 45px;
-    padding: 5px 0;
+    padding: 7px 0;
     vertical-align: middle;
   }
 }
@@ -32,7 +34,7 @@ $th : 'th';
 
   .value {
     font-size: 1.693rem;
-    font-weight: 300;
+    font-weight: $font-weight-light;
   }
 
   .indicator {
@@ -42,23 +44,38 @@ $th : 'th';
     vertical-align: middle;
 
     &--equal {
-      color: #4285f4;
+      color: $cl-blue;
     }
 
     &--positive {
-      color: #34a853;
+      color: $cl-green-light;
     }
 
     &--negative {
-      color: #ea4335;
+      color: $cl-red-light;
     }
   }
 }
 
 .index {
+
+  .btn {
+    font-weight: $font-weight-bold;
+    font-size: 1rem;
+    line-height: 28px;
+    border-radius: 2px;
+    padding: 0 10px;
+  }
+
+  .btn-group {
+    &.today {
+      margin-left: 10px;
+    }
+  }
+
   .card-header {
     font-size: 18px;
-    font-weight: 300;
+    font-weight: $font-weight-light;
     padding-left: 0;
     padding-right: 0;
     padding-top: 1.5384rem;
@@ -87,12 +104,12 @@ $th : 'th';
       line-height: 25px;
       vertical-align: middle;
       cursor: pointer;
-      color: #bababa;
+      color: $cl-gray-dark;
       min-width: 1.538rem;
       text-align: center;
 
       &:hover {
-        color: #a6a6a6;
+        color: $cl-gray-dark-10;
       }
     }
   }
@@ -123,7 +140,7 @@ $th : 'th';
 }
 
 .table > tbody > tr > td {
-  font-weight: 400;
+  font-weight: $font-weight-base;
   vertical-align: middle;
 }
 
@@ -162,20 +179,374 @@ $th : 'th';
 
   #{$td}.actions .icon,
   #{$th}.actions .icon {
-    color: #a1a1a1;
+    color: $cl-gray-dark-1;
     font-size: 1.3846rem;
     line-height: 18px;
   }
 
   #{$td}.actions .icon:hover,
   #{$th}.actions .icon:hover {
-    color: #808080;
+    color: $cl-dark-light-5;
   }
 }
 
+.table-hover tbody tr:hover {
+  background-color: $cl-white-dark-1;
+}
+
 .dropdown-menu > .dropdown-item {
-  font-weight: 400;
-  color: #504e4e;
+  font-weight: $font-weight-base;
+  color: $cl-dark-light-6;
   padding: 8px 20px;
   cursor: pointer;
+}
+
+.card-header {
+  &.card-header-divider {
+    border-bottom: 1px solid $cl-gray-light-14;
+    margin: 0 1.538rem 8px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.user-progress {
+  &--small {
+    margin-bottom: 20px;
+
+    .title {
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .progress {
+      margin-top: 5px;
+      height: 5px;
+      border-radius: 5px;
+      margin-bottom: 0;
+    }
+
+    .progress-bar {
+      border-radius: 5px;
+    }
+  }
+}
+
+.chartjs {
+  background-color: $cl-white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 3px;
+
+  &-head {
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 3px 3px 0 0;
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .title {
+      display: inline-block;
+      font-size: 1.385rem;
+      font-weight: $font-weight-light;
+    }
+
+    .list-icon {
+      float: right;
+    }
+
+    .icon {
+      display: inline-block;
+      font-size: 1.538rem;
+      line-height: 25px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: $cl-gray-dark;
+      min-width: 1.538rem;
+      text-align: center;
+    }
+  }
+
+  &-body {
+    position: relative;
+  }
+
+  &-counter {
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    line-height: 3.846rem;
+    margin-top: -1.923rem;
+    font-size: 3.846rem;
+    font-weight: $font-weight-light;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+
+  &-type {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+
+    &.primary {
+      background-color: $cl-blue;
+    }
+
+    &.success {
+      background-color: $cl-green-light;
+    }
+
+    &.warning {
+      background-color: $cl-yellow-light;
+    }
+  }
+}
+
+.card-body {
+  padding: 8px 20px 20px;
+  border-radius: 0 0 3px 3px;
+}
+
+.user-timeline {
+  padding: 0;
+  margin: 5px 0 15px;
+  list-style: none;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    height: 100%;
+    width: 2px;
+    background-color: $cl-yellow-light-2;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    bottom: -2px;
+    height: 8px;
+    width: 8px;
+    background-color: $cl-yellow-light-2;
+    border-radius: 50%;
+  }
+
+  #{$li} {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 35px;
+
+    &:last-child {
+      padding-bottom: 25px;
+    }
+
+    &.latest:before {
+      background-color: $cl-yellow-light-2;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      height: 16px;
+      width: 16px;
+      background-color: $cl-white;
+      border-radius: 50%;
+      border: 1px solid $cl-yellow-light-2;
+    }
+  }
+
+  &-date {
+    float: right;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    line-height: 22px;
+    color: $cl-dark-light-8;
+  }
+
+  &-title {
+    font-size: 1.385rem;
+    font-weight: $font-weight-light;
+  }
+
+  &-description {
+    color: $cl-dark-light-8;
+    margin-top: 4px;
+  }
+}
+
+.widget-map {
+  position: relative;
+
+  .value {
+    font-size: 1.846rem;
+  }
+
+  .des {
+    text-transform: uppercase;
+    font-size: .8462rem;
+    color: $cl-dark-light-14;
+  }
+
+  .icon {
+    font-size: 1.923rem;
+    margin-right: 7px;
+    line-height: 24px;
+    vertical-align: middle;
+    color: $cl-green-light;
+  }
+
+  [data-toggle='counter'] {
+    font-size: 1.538rem;
+    vertical-align: middle;
+  }
+}
+
+.jqvmap-zoomin,
+.jqvmap-zoomout {
+  width: 30px;
+  height: 30px;
+  background-color: $cl-gray-light-14;
+  color: $cl-dark-light-15;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 0;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $cl-gray-medium-1;
+  }
+}
+
+.jqvmap-zoomin {
+  left: 43px;
+}
+
+.widget-chart {
+  padding: 0;
+
+  .widget-head {
+    padding: 20px 20px 10px;
+    margin-bottom: 0;
+  }
+}
+
+.widget-head {
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    display: block;
+    font-size: 1.385rem;
+    font-weight: $font-weight-light;
+  }
+
+  .btn {
+    box-shadow: 0 1px 0 rgba($cl-dark, .05);
+  }
+
+  .list-icon {
+    margin-left: 10px;
+
+    .icon {
+      display: inline-block;
+      font-size: 1.538rem;
+      line-height: 25px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: $cl-gray-dark;
+      min-width: 1.538rem;
+      text-align: center;
+      margin-left: 2px;
+    }
+  }
+}
+
+.widget-chart-info {
+  padding: 9px 20px 0;
+
+  .chart-legend {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 14px;
+
+    li {
+      display: inline-block;
+
+      & + li {
+        margin-left: 14px;
+      }
+    }
+
+    li #{$span} {
+      position: relative;
+      display: inline-block;
+      margin-right: 4px;
+      border-radius: 50%;
+      height: 10px;
+      width: 10px;
+      background-color: $cl-gray-light-12;
+
+      &.p1 {
+        background-color: $cl-blue-dark-4;
+      }
+
+      &.p2 {
+        background-color: $cl-blue-light-5;
+      }
+
+      &.p3 {
+        background-color: $cl-blue-light-6;
+      }
+    }
+  }
+}
+
+.widget-group-right {
+  text-align: right;
+  padding: 0 20px 10px;
+
+  .counter {
+    + .counter {
+      margin-left: 20px;
+    }
+
+    display: inline-block;
+
+    .value {
+      display: block;
+      font-size: 2.077rem;
+      line-height: 2.077rem;
+      font-weight: $font-weight-light;
+      margin-bottom: 5px;
+    }
+
+    .desc {
+      text-transform: uppercase;
+      font-size: .8462rem;
+      color: $cl-dark-light-14;
+    }
+  }
 }
