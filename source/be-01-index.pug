@@ -1,5 +1,5 @@
 extends modules/layout/_page-default
-             
+
 block head
   +head('Beagle')
 
@@ -12,7 +12,7 @@ block main
       .row 
         .col-12.col-lg-6.col-xl-3
           .widget 
-            .row
+            .row.nowrap
               .col-auto
                 .chart.sparkline#chart1
               .col
@@ -23,7 +23,7 @@ block main
                     span.number(data-toggle= "counter" data-end= "113") 0
         .col-12.col-lg-6.col-xl-3
           .widget
-            .row
+            .row.nowrap
               .col-auto
                 .chart.sparkline#chart2
               .col
@@ -34,7 +34,7 @@ block main
                     span.number(data-toggle="counter" data-end="80" data-suffix="%") 0
         .col-12.col-lg-6.col-xl-3
           .widget
-            .row
+            .row.nowrap
               .col-auto
                 .chart.sparkline#chart3
               .col
@@ -45,7 +45,7 @@ block main
                     span.number(data-toggle="counter" data-end="532") 0
         .col-12.col-lg-6.col-xl-3
           .widget
-            .row
+            .row.nowrap
               .col-auto
                 .chart.sparkline#chart4
               .col

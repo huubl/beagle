@@ -83,6 +83,16 @@ ol {
   padding: 25px;
 }
 
+.nowrap {
+  flex-wrap: nowrap;
+  margin: 0;
+  
+  .col,
+  .col-auto {
+    padding: 0;
+  }
+}
+
 .card {
   background-color: $cl-white;
   margin-bottom: 25px;
