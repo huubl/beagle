@@ -465,6 +465,16 @@
 
 .widget-chart {
   padding: 0;
+  &-head .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+
+  &-head .btn-group {
+    @include breakpoint-down(phone) {
+      display: none;
+    }
+  }
 
   .widget-head {
     padding: 20px 20px 10px;
