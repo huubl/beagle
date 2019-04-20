@@ -60,13 +60,16 @@
     font-weight: 500;
 
     &--facebook {
-      background-color: $cl-blue-dark-3;
-      border-color: $cl-blue-dark-3;
+      background-color: $cl-blue-dark-7;
+      border-color: $cl-blue-dark-7;
     }
 
     &--google {
       background-color: $cl-red-dark-4;
       border-color: $cl-red-dark-4;
+      &:hover {
+        box-shadow: inset 0 -1px 0 $cl-red-dark-4;
+      }
     }
 
     i {

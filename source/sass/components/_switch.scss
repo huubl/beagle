@@ -3,9 +3,8 @@
 // ======================================================
 
 .switch-button {
-  /* stylelint-disable */
   $block: &;
-  /* stylelint-enable */
+
   display: inline-block;
   border-radius: 50px;
   background-color: $cl-gray-light-3;

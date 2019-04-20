@@ -28,8 +28,8 @@ $block: '.pricing__table';
   }
 
   #{$block}-success {
-    background-color: $cl-green-light-4;
-    border-color: $cl-green-light-4;
+    background-color: $cl-green-dark-2;
+    border-color: $cl-green-dark-2;
 
     #{$block}-title {
       border-bottom-color: $cl-green-light-5;

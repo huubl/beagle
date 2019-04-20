@@ -1,6 +1,7 @@
 // ======================================================
 // Abstracts :: Mixins
 // ======================================================
+
 $breakpoints: (
   'desktop'   : (max-width: 1199.98px),
   'tablet'    : (max-width: 991.98px),
@@ -10,6 +11,31 @@ $breakpoints: (
 
 @mixin breakpoint-down($breakpoint) {
   $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == 'string',
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+$breakpointsup: (
+  'desktop'   : (min-width: 1200px),
+  'tablet'    : (min-width: 992px),
+  'phone'     : (min-width: 768px),
+  'smallphone': (min-width: 576px),
+);
+
+@mixin breakpoint-up($breakpoint) {
+  $raw-query: map-get($breakpointsup, $breakpoint);
 
   @if $raw-query {
     $query: if(
@@ -97,5 +123,48 @@ $breakpoints: (
     height: 1em;
     margin-top: .2em;
     background: $bg-color;
+  }
+}
+
+@mixin sidebar-tabs($container, $inner, $inputwrap, $input) {
+  .#{$container} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .#{$inner} {
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .#{$inputwrap} {
+      position: relative;
+      border-top: 1px solid $cl-gray-light-12;
+
+      i {
+        position: absolute;
+        color: $cl-gray-dark-11;
+        right: 15px;
+        top: 50%;
+        font-size: 1.538rem;
+        margin-top: -10px;
+        cursor: pointer;
+      }
+
+      i:hover {
+        color: $cl-gray-dark-12;
+      }
+    }
+
+    .#{$input} {
+      border: 0;
+      background-color: $cl-gray-light-9;
+      color: $cl-dark-light;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 15px 20px;
+      outline: 0;
+    }
   }
 }

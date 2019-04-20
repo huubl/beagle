@@ -12,6 +12,8 @@ mixin header(title)
       .navbar-right
         ul.nav.navbar-nav.float-right.user-nav
           li.nav-item.dropdown
+            a.toggle-sidebar.js-toggle-sidebar(href="javascript:void(0)")
+              i.zmdi.zmdi-menu
             a.nav-link.dropdown-toggle.nav-link--user(data-toggle="dropdown" role="button" aria-expanded="false")
               img.user-img(src="images/avatar.png")
               span.user-name Túpac Amaru

@@ -8,6 +8,10 @@
   max-width: 840px;
   position: relative;
 
+  @include breakpoint-down(phone) {
+    padding: 0;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -17,6 +21,12 @@
     background: $cl-gray-light;
     left: 170px;
     margin-left: -1px;
+
+    @include breakpoint-down(phone) {
+      left: 50%;
+      margin-left: -1px;
+      top: -35px;
+    }
   }
 
   &__item {
@@ -24,6 +34,12 @@
     padding-left: 210px;
     list-style: none;
     margin-bottom: 30px;
+
+    @include breakpoint-down(phone) {
+      padding-left: 0;
+      margin-top: 60px;
+      margin-bottom: 0;
+    }
 
     &:nth-child(n+1):before {
       border-color: $cl-blue;
@@ -51,6 +67,10 @@
       height: 16px;
       background-color: $cl-gray-dark-4;
       border-radius: 50px;
+
+      @include breakpoint-down(phone) {
+        display: none;
+      }
     }
   }
 
@@ -64,6 +84,22 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    @include breakpoint-down(phone) {
+      width: 100%;
+      left: 0;
+      top: -40px;
+      text-align: center;
+    }
+
+    span {
+      @include breakpoint-down(phone) {
+        background-color: $cl-gray-light-5;
+        padding: 5px 8px;
+        border-radius: 4px;
+        line-height: 25px;
+      }
+    }
   }
 
   &__content {
@@ -83,6 +119,10 @@
       transform: rotate(45deg);
       top: 37.5px;
       left: -5px;
+
+      @include breakpoint-down(phone) {
+        display: none;
+      }
     }
 
     &:after {
@@ -94,6 +134,10 @@
       transform: rotate(45deg);
       top: 37.5px;
       left: -5px;
+
+      @include breakpoint-down(phone) {
+        display: none;
+      }
     }
   }
 
@@ -115,6 +159,10 @@
   &__header {
     display: block;
     padding: 7px 0 0 46px;
+
+    @include breakpoint-down(phone) {
+      padding-top: 0;
+    }
   }
 
   &__time {
@@ -174,6 +222,13 @@
   }
 
   &--loadmore {
+    @include breakpoint-down(phone) {
+      text-align: center;
+      padding: 0;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+
     &:before {
       display: none;
     }
@@ -190,5 +245,10 @@
     font-weight: $font-weight-medium;
     position: absolute;
     left: 131px;
+
+    @include breakpoint-down(phone) {
+      position: relative;
+      left: 0;
+    }
   }
 }

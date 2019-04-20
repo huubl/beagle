@@ -11,7 +11,7 @@ $(function () {
   }
 
   // perfect scrollbar sidebar nav
-  var listScroll = document.querySelectorAll(".sidebar-nav, .chat-content");
+  var listScroll = document.querySelectorAll(".sidebar-nav, .chat-content, .tab-settings-inner");
   for (var i = 0; i < listScroll.length; i++) {
     new PerfectScrollbar(listScroll[i], {
       wheelPropagation: false
@@ -25,9 +25,9 @@ $(function () {
     });
   }
 
-  toggleCollapse('.js-collapse01')
-  toggleCollapse('.js-collapse02')
-  toggleCollapse('.js-collapse03')
+  [".js-collapse01", ".js-collapse02", ".js-collapse03"].forEach(function (entry) {
+    toggleCollapse(entry)
+  });
 
   // input multifile file choose
   $(".js-multi-file").each(function () {
@@ -84,7 +84,7 @@ $(function () {
     });
   });
 
-  $('.js-chat').click(function (e) {
+  $('.js-chat').on('click', function (e) {
     e.preventDefault();
     $('.tab-chat-inner').animate({
       'left': '0'
@@ -95,7 +95,7 @@ $(function () {
   });
 
   // back to top
-  $(window).scroll(function () {
+  $(window).on('scroll', function () {
     if ($(this).scrollTop() > 200) {
       $('.js-to-top').fadeIn('fast');
     }
@@ -104,7 +104,7 @@ $(function () {
     }
   });
 
-  $('.js-to-top').click(function (e) {
+  $('.js-to-top').on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({
       scrollTop: 0
@@ -195,216 +195,9 @@ $(function () {
     }).start()
   })
 
-  // main chart
-  if ($("#main-chart").length) {
-    $.plot($("#main-chart"), [{
-      data: [
-        [1, 35],
-        [2, 60],
-        [3, 40],
-        [4, 65],
-        [5, 45],
-        [6, 75],
-        [7, 35],
-        [8, 40],
-        [9, 60]
-      ],
-      showLabels: true,
-      label: "Purchases",
-      labelPlacement: "below",
-      canvasRender: true,
-      cColor: "#fff"
-    }, {
-      data: [
-        [1, 20],
-        [2, 40],
-        [3, 25],
-        [4, 45],
-        [5, 25],
-        [6, 50],
-        [7, 35],
-        [8, 60],
-        [9, 30]
-      ],
-      showLabels: true,
-      label: "Plans",
-      labelPlacement: "below",
-      canvasRender: true,
-      cColor: "#fff"
-    }, {
-      data: [
-        [1, 35],
-        [2, 15],
-        [3, 20],
-        [4, 30],
-        [5, 15],
-        [6, 18],
-        [7, 28],
-        [8, 10],
-        [9, 30]
-      ],
-      showLabels: true,
-      label: "Services",
-      labelPlacement: "below",
-      canvasRender: true,
-      cColor: "#fff"
-    }], {
-        series: {
-          lines: {
-            show: true,
-            lineWidth: 0,
-            fill: true,
-            fillColor: {
-              colors: [{
-                opacity: 1
-              }, {
-                opacity: 1
-              }]
-            }
-          },
-          fillColor: "rgba(0, 0, 0, 1)",
-          shadowSize: 0,
-          curvedLines: {
-            apply: true,
-            active: true,
-            monotonicFit: true
-          }
-        },
-        legend: {
-          show: false
-        },
-        grid: {
-          show: true,
-          margin: {
-            top: 20,
-            bottom: 0,
-            left: 0,
-            right: 0
-          },
-          labelMargin: 0,
-          minBorderMargin: 0,
-          axisMargin: 0,
-          tickColor: "rgba(0,0,0,0.05)",
-          borderWidth: 0,
-          hoverable: true,
-          clickable: true
-        },
-        tooltip: {
-          show: true,
-          cssClass: "tooltip-chart",
-          content: "<div class='content-chart'> <span> %s </span> <div class='label'> <div class='label-x'> %x.0 </div> - <div class='label-y'> %y.0 </div> </div></div>",
-          defaultTheme: false
-        },
-        colors: ["#4386f4", "#81adf8", "#a2c3fa"],
-        xaxis: {
-          tickFormatter: function () {
-            return ""
-          },
-          autoscaleMargin: 0,
-          ticks: 11,
-          tickDecimals: 0,
-          tickLength: 0
-        },
-        yaxis: {
-          tickFormatter: function () {
-            return ""
-          },
-          ticks: 4,
-          tickDecimals: 0
-        }
-      })
-  }
-
-  // chart page user
-  if ($("#bar-chart1").length) {
-    $.plot("#bar-chart1", [{
-      label: "Page Views",
-      data: [
-        [0, 15],
-        [1, 15],
-        [2, 19],
-        [3, 28],
-        [4, 30],
-        [5, 37],
-        [6, 35],
-        [7, 38],
-        [8, 48],
-        [9, 43],
-        [10, 38],
-        [11, 32],
-        [12, 38]
-      ]
-    }, {
-      label: "Unique Visitor",
-      data: [
-        [0, 7],
-        [1, 10],
-        [2, 15],
-        [3, 23],
-        [4, 24],
-        [5, 29],
-        [6, 25],
-        [7, 33],
-        [8, 35],
-        [9, 38],
-        [10, 32],
-        [11, 27],
-        [12, 32]
-      ]
-    
-    }], {
-      series: {
-        bars: {
-          show: true,
-          barWidth: 0.4,
-          align: "center",
-          lineWidth: 1.5,
-          order: 1,
-          fill: !0,
-          fillColor: {
-            colors: [{
-              opacity: 1
-            }, {
-              opacity: 1
-            }]
-          }
-        },
-        shadowSize: 2
-      },
-      legend: {
-        show: !1
-      },
-      grid: {
-        margin: 0,
-        show: !1,
-        labelMargin: 10,
-        axisMargin: 500,
-        hoverable: !0,
-        clickable: !0,
-        tickColor: "rgba(0,0,0,0.15)",
-        borderWidth: 0
-      },
-      tooltip: {
-        show: !0,
-        cssClass: "tooltip-chart",
-        content: "<div class='content-chart'> <span> %s </span> <div class='label'> <div class='label-x'> %x.0 </div> - <div class='label-y'> %y.0 </div> </div></div>",
-        defaultTheme: !1
-      },
-      colors: ["#4386f4", "#81adf8"],
-      xaxis: {
-        ticks: 11,
-        tickDecimals: 0
-      },
-      yaxis: {
-        autoscaleMargin: .5,
-        ticks: 4,
-        tickDecimals: 0
-      }
-    });
-  }
-
-  $("#main-chart, #bar-chart1").each(function (index, element) {
-    $(this).bind("plothover", function (event, pos, item) {
+  // tooltip flot chart
+  function showTooltip(element) {
+    $(element).bind("plothover", function (event, pos, item) {
       var _width = $(".tooltip-chart").width();
       if (item) {
         $(".tooltip-chart").css({
@@ -415,41 +208,253 @@ $(function () {
         $(".tooltip-chart").hide()
       }
     })
-  });
+  };
+
+  // main chart
+  function drawChart(element) {
+    if ($(element).length) {
+      $.plot($(element), [{
+        data: [
+          [1, 35],
+          [2, 60],
+          [3, 40],
+          [4, 65],
+          [5, 45],
+          [6, 75],
+          [7, 35],
+          [8, 40],
+          [9, 60]
+        ],
+        showLabels: true,
+        label: "Purchases",
+        labelPlacement: "below",
+        canvasRender: true,
+        cColor: "#fff"
+      }, {
+        data: [
+          [1, 20],
+          [2, 40],
+          [3, 25],
+          [4, 45],
+          [5, 25],
+          [6, 50],
+          [7, 35],
+          [8, 60],
+          [9, 30]
+        ],
+        showLabels: true,
+        label: "Plans",
+        labelPlacement: "below",
+        canvasRender: true,
+        cColor: "#fff"
+      }, {
+        data: [
+          [1, 35],
+          [2, 15],
+          [3, 20],
+          [4, 30],
+          [5, 15],
+          [6, 18],
+          [7, 28],
+          [8, 10],
+          [9, 30]
+        ],
+        showLabels: true,
+        label: "Services",
+        labelPlacement: "below",
+        canvasRender: true,
+        cColor: "#fff"
+      }], {
+          series: {
+            lines: {
+              show: true,
+              lineWidth: 0,
+              fill: true,
+              fillColor: {
+                colors: [{
+                  opacity: 1
+                }, {
+                  opacity: 1
+                }]
+              }
+            },
+            fillColor: "rgba(0, 0, 0, 1)",
+            shadowSize: 0,
+            curvedLines: {
+              apply: true,
+              active: true,
+              monotonicFit: true
+            }
+          },
+          legend: {
+            show: false
+          },
+          grid: {
+            show: true,
+            margin: {
+              top: 20,
+              bottom: 0,
+              left: 0,
+              right: 0
+            },
+            labelMargin: 0,
+            minBorderMargin: 0,
+            axisMargin: 0,
+            tickColor: "rgba(0,0,0,0.05)",
+            borderWidth: 0,
+            hoverable: true,
+            clickable: true
+          },
+          tooltip: {
+            show: true,
+            cssClass: "tooltip-chart",
+            content: "<div class='content-chart'> <span> %s </span> <div class='label'> <div class='label-x'> %x.0 </div> - <div class='label-y'> %y.0 </div> </div></div>",
+            defaultTheme: false
+          },
+          colors: ["#4386f4", "#81adf8", "#a2c3fa"],
+          xaxis: {
+            tickFormatter: function () {
+              return ""
+            },
+            autoscaleMargin: 0,
+            ticks: 11,
+            tickDecimals: 0,
+            tickLength: 0
+          },
+          yaxis: {
+            tickFormatter: function () {
+              return ""
+            },
+            ticks: 4,
+            tickDecimals: 0
+          }
+        })
+      showTooltip(element);
+    }
+  }
+
+  // chart page profile
+  function drawChartUser(element) {
+    if ($(element).length) {
+      $.plot(element, [{
+        label: "Page Views",
+        data: [
+          [0, 7],
+          [1, 13],
+          [2, 17],
+          [3, 20],
+          [4, 26],
+          [5, 37],
+          [6, 35],
+          [7, 28],
+          [8, 38],
+          [9, 38],
+          [10, 32],
+          [11, 25]
+        ]
+      }, {
+        label: "Unique Visitor",
+        data: [
+          [0, 15],
+          [1, 10],
+          [2, 15],
+          [3, 25],
+          [4, 30],
+          [5, 29],
+          [6, 25],
+          [7, 33],
+          [8, 45],
+          [9, 43],
+          [10, 38],
+          [11, 36]
+        ]
+      }], {
+          series: {
+            bars: {
+              order: 2,
+              align: "center",
+              show: !0,
+              barWidth: .3,
+              lineWidth: .7,
+              fill: !0,
+              fillColor: {
+                colors: [{
+                  opacity: 1
+                }, {
+                  opacity: 1
+                }]
+              }
+            },
+            shadowSize: 2
+          },
+          legend: {
+            show: !1
+          },
+          grid: {
+            margin: 0,
+            show: !1,
+            labelMargin: 10,
+            axisMargin: 500,
+            hoverable: !0,
+            clickable: !0,
+            tickColor: "rgba(0,0,0,0.15)",
+            borderWidth: 0
+          },
+          tooltip: {
+            show: !0,
+            cssClass: "tooltip-chart",
+            content: "<div class='content-chart'> <span> %s </span> <div class='label'> <div class='label-x'> %x.0 </div> - <div class='label-y'> %y.0 </div> </div></div>",
+            defaultTheme: !1
+          },
+          colors: ["#4386f4", "#acc9fa"],
+          xaxis: {
+            ticks: 11,
+            tickDecimals: 0
+          },
+          yaxis: {
+            ticks: 4,
+            tickDecimals: 0
+          }
+        })
+      showTooltip(element);
+    }
+  }
 
   // jquery flot chart sale
-  if ($("#top-sale").length) {
-    $.plot("#top-sale", [{
-      label: "Services",
-      data: 33
-    }, {
-      label: "Standard Plans",
-      data: 33
-    }, {
-      label: "Services",
-      data: 33
-    }], {
-        series: {
-          pie: {
-            radius: .75,
-            innerRadius: .58,
-            show: true,
-            highlight: {
-              opacity: .1
-            },
-            label: {
-              show: false
+  function drawTopsale(element) {
+    if ($(element).length) {
+      return $.plot(element, [{
+        label: "Services",
+        data: 33
+      }, {
+        label: "Standard Plans",
+        data: 33
+      }, {
+        label: "Services",
+        data: 33
+      }], {
+          series: {
+            pie: {
+              radius: .75,
+              innerRadius: .58,
+              show: true,
+              highlight: {
+                opacity: .1
+              },
+              label: {
+                show: false
+              }
             }
-          }
-        },
-        grid: {
-          hoverable: true
-        },
-        legend: {
-          show: false
-        },
-        colors: ["#4285f4", "#fbbc05", "#34a853"]
-      })
+          },
+          grid: {
+            hoverable: true
+          },
+          legend: {
+            show: false
+          },
+          colors: ["#4285f4", "#fbbc05", "#34a853"]
+        })
+    }
   }
 
   // jquery ui datepicker
@@ -490,4 +495,47 @@ $(function () {
       normalizeFunction: "polynomial"
     })
   }
+
+  // loading spinner
+  $(".toggle-loading").on("click", function () {
+    var $this = $(this);
+    $this.parents('.loading').addClass('active');
+    setTimeout(function () {
+      $this.parents('.loading').removeClass('active');
+    }, 2000)
+  });
+
+  // bind event to draw chart and responsive
+  $(window).on('resize load', function (e) {
+    e.preventDefault();
+    drawChart("#main-chart");
+    drawTopsale("#top-sale");
+    drawChartUser("#bar-chart1");
+    var _pageTitle = $(".page-title").text();
+    var _href = location.href.split("/").pop();
+    if ($(this).outerWidth() < 768) {
+      if (!$(".page-title-mobile")[0]) {
+        $(".page-content").prepend(`<div class="page-title-mobile"><a href='${_href}'>${_pageTitle}</a></div>`);
+      }
+    }
+    else {
+      $(".page-title-mobile").remove();
+      $(".overlay").removeClass('show');
+    }
+  });
+
+  // toggle sidebar mobile
+  $(".js-toggle-sidebar").on("click", function () {
+    $(".left-sidebar, .overlay").toggleClass("show");
+  });
+
+  $(document).on('mouseup', function (e) {
+    e.preventDefault();
+    var _container = $('.left-sidebar');
+    if (!_container.is(e.target) && _container.has(e.target).length === 0) {
+      _container.removeClass('show');
+      $(".overlay").removeClass('show');
+    }
+  });
+
 });

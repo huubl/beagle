@@ -9,10 +9,10 @@
     { key: '$cl-dark-medium', color: '#272727' },
     { key: '$cl-dark-light', color: '#404040' },
     { key: '$cl-dark-light-1', color: '#646464' },
-    { key: '$cl-dark-light-2', color: '#999' },
     { key: '$cl-dark-light-3', color: '#666' },
-    { key: '$cl-dark-light-4', color: '#878787' },
     { key: '$cl-dark-light-5', color: '#808080' },
+    { key: '$cl-dark-light-4', color: '#878787' },
+    { key: '$cl-dark-light-2', color: '#999' },
     { key: '$cl-blue-light-2', color: '#5E97F6' },
     { key: '$cl-blue-light', color: '#4c8bf5' },
     { key: '$cl-blue', color: '#4285f4' },
@@ -27,6 +27,9 @@
     { key: '$cl-red-dark', color: '#e72919' },
     { key: '$cl-red-dark-1', color: '#d62516' },
     { key: '$cl-red-dark-2', color: '#b51f13' },
+    { key: '$cl-red-dark-3', color: '#e82e1e' },
+    { key: '$cl-red-dark-4', color: '#eb5e4c' },
+    { key: '$cl-yellow-light-2', color: '#e3aa04' },
     { key: '$cl-yellow-light-1', color: '#fbbf0f' },
     { key: '$cl-yellow-light', color: '#fbbc05' },
     { key: '$cl-yellow', color: '#d6a003' },
@@ -35,26 +38,58 @@
     { key: '$cl-yellow-dark-1', color: '#dea604' },
     { key: '$cl-yellow-dark-2', color: '#a77d03' },
     { key: '$cl-green-light', color: '#34a853' },
-    { key: '$cl-green-light-1', color: '#2d9147' },
-    { key: '$cl-green-light-2', color: '#36b057' },
+    { key: '$cl-green-light-4', color: '#6cd187' },
     { key: '$cl-green-light-3', color: '#52b56d' },
+    { key: '$cl-green-light-2', color: '#36b057' },
+    { key: '$cl-green-light-1', color: '#2d9147' },
     { key: '$cl-green', color: '#2b8b45' },
     { key: '$cl-green-dark', color: '#288140' },
     { key: '$cl-green-dark-1', color: '#206632' },
+    { key: '$cl-gray-light-15', color: '#e7e7e7' },
+    { key: '$cl-gray-light-14', color: '#d9d9d9' },
+    { key: '$cl-gray-light-13', color: '#c2c2c2' },
+    { key: '$cl-gray-light-12', color: '#f2f2f2' },
+    { key: '$cl-gray-light-9', color: '#fafafa' },
+    { key: '$cl-gray-light-8', color: '#f5f5f5' },
+    { key: '$cl-gray-light-7', color: '#e4e4e4' },
+    { key: '$cl-gray-light-6', color: '#ebebeb' },
+    { key: '$cl-gray-light-5', color: '#e0e0e0' },
+    { key: '$cl-gray-light-4', color: '#e6e6e6' },
+    { key: '$cl-gray-light-3', color: '#b3b3b3' },
     { key: '$cl-gray-light-2', color: '#bdc0c7' },
     { key: '$cl-gray-light-1', color: '#d5d8de' },
     { key: '$cl-gray-light', color: '#dbdbdb' },
     { key: '$cl-gray', color: '#eee' },
     { key: '$cl-gray-medium', color: '#e3e3e3' },
+    { key: '$cl-gray-medium-1', color: '#c9c9c9' },
     { key: '$cl-gray-dark', color: '#bababa' },
     { key: '$cl-gray-dark-1', color: '#a1a1a1' },
+    { key: '$cl-gray-dark-2', color: '#8a8a8a' },
+    { key: '$cl-gray-dark-3', color: '#ccc' },
+    { key: '$cl-gray-dark-4', color: '#ededed' },
+    { key: '$cl-gray-dark-5', color: '#ababab' },
+    { key: '$cl-gray-dark-6', color: '#c4c4c4' },
+    { key: '$cl-gray-dark-7', color: '#5e5e5e' },
+    { key: '$cl-gray-dark-8', color: '#a1a1a1' },
+    { key: '$cl-gray-dark-9', color: '#a3a3a3' },
+    { key: '$cl-gray-dark-10', color: '#a6a6a6' },
+    { key: '$cl-gray-dark-11', color: '#aaa' },
+    { key: '$cl-gray-dark-12', color: '#d1d1d1' },
+    { key: '$cl-gray-dark-13', color: '#595858' },
   ];
 
 .row
-  each val in colors
-    .col-6.col-sm-6.col-md-4.col-lg-4.col-xl-4
-      .code-example
-        .demo(style=`background-color: ${val.color}; width: 100%; height: 150px`)
-        pre
-          code
-            | #{val.key}: #{val.color}
+  .col-12
+    .table-responsive
+      table.table.table-hover
+        tr
+          th(style="width:5%") No
+          th(style="width:25%") Variables
+          th(style="width:25%") Value
+          th Preview
+        each val, index in colors
+          tr
+            td=index
+            td=val.key
+            td=val.color
+            td(style=`background:${val.color}`)

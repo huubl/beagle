@@ -3,9 +3,8 @@
 // ======================================================
 
 .timeline2 {
-  /* stylelint-disable */
   $this: &;
-  /* stylelint-enable */
+
   margin: 0 auto 40px;
   padding: 0;
   position: relative;
@@ -32,8 +31,17 @@
     background: $cl-gray;
     font-weight: $font-weight-light;
 
+    @include breakpoint-down(phone) {
+      padding-top: 11px;
+    }
+
     &:first-child {
       margin-top: 0;
+
+      @include breakpoint-down(phone) {
+        margin-top: 10px;
+        padding-bottom: 3px;
+      }
     }
   }
 
@@ -43,18 +51,25 @@
     list-style: none;
     margin-top: 30px;
 
+    @include breakpoint-down(phone) {
+      margin-top: 60px;
+    }
+
     &.right {
       right: 0;
       padding-left: calc(50% + 45px);
+
+      @include breakpoint-down(phone) {
+        padding: 0;
+      }
     }
 
     &.left {
       left: 0;
       padding-right: calc(50% + 45px);
 
-      .timeline2-icon {
-        left: initial;
-        right: -67px;
+      @include breakpoint-down(phone) {
+        padding: 0;
       }
 
       #{$this}-content:after,
@@ -73,6 +88,10 @@
     box-shadow: 0 0 5px rgba($cl-dark, .07);
     min-height: 85px;
 
+    @include breakpoint-down(smallphone) {
+      padding: 15px 18px;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -82,6 +101,10 @@
       transform: rotate(45deg);
       top: 37.5px;
       left: -5px;
+
+      @include breakpoint-down(phone) {
+        display: none;
+      }
     }
 
     &:after {
@@ -93,6 +116,10 @@
       transform: rotate(45deg);
       top: 37.5px;
       left: -5px;
+
+      @include breakpoint-down(phone) {
+        display: none;
+      }
     }
   }
 
@@ -109,9 +136,22 @@
     background-color: $cl-gray-dark-4;
     border-radius: 50%;
 
+    @include breakpoint-down(phone) {
+      left: 50%;
+      margin-left: -18px;
+      top: -48px;
+      width: 38px;
+      height: 38px;
+      font-size: 1.385rem;
+    }
+
     i {
       line-height: 40px;
       vertical-align: middle;
+
+      @include breakpoint-down(phone) {
+        line-height: 34px;
+      }
     }
   }
 
@@ -221,5 +261,16 @@
 
   .quote .timeline2-icon {
     background-color: $cl-red-light;
+  }
+}
+
+.timeline2-item.left .timeline2-icon {
+  left: initial;
+  right: -67px;
+
+  @include breakpoint-down(phone) {
+    left: 50%;
+    margin-left: -18px;
+    top: -48px;
   }
 }

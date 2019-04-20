@@ -19,6 +19,10 @@
   width: 230px;
   flex: 0 0 230px;
 
+  @include breakpoint-down(phone) {
+    display: none;
+  }
+
   .navbar-brand {
     display: block;
     line-height: 60px;
@@ -39,6 +43,10 @@
   flex: 1 1;
   padding: 0 20px;
   color: $cl-dark-light;
+
+  @include breakpoint-down(phone) {
+    display: none;
+  }
 
   span {
     display: block;
@@ -111,6 +119,11 @@
       left: auto;
       right: 13px;
       border-bottom-color: $cl-blue;
+
+      @include breakpoint-down(phone) {
+        right: auto;
+        left: 13px;
+      }
     }
 
     .dropdown-item {
@@ -128,17 +141,42 @@
       }
     }
   }
+
+  @include breakpoint-down(phone) {
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $cl-blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $cl-blue;
+    z-index: 1030;
+  }
 }
 
 .icons-nav {
   margin-right: 20px;
 
+  @include breakpoint-down(phone) {
+    margin: 0 5px 0 0;
+  }
+
   .dropdown {
     position: static;
+
+    @include breakpoint-down(phone) {
+      margin-left: 3px;
+    }
 
     &.show > a,
     &.show > a > .icon {
       color: $cl-blue;
+
+      @include breakpoint-down(phone) {
+        color: $cl-white;
+      }
     }
 
     .nav-link {
@@ -152,22 +190,9 @@
         display: none;
       }
 
-      .indicator {
-        background-color: $cl-blue;
-        border-radius: 50%;
-        display: block;
-        height: 6px;
-        width: 6px;
-        position: absolute;
-        top: 18px;
-        right: 6px;
+      @include breakpoint-down(phone) {
+        padding: 0 7px;
       }
-    }
-
-    .nav-link .icon {
-      font-size: 1.846rem;
-      vertical-align: middle;
-      color: $cl-dark-light-8;
     }
 
     &.show > .nav-link:before {
@@ -180,7 +205,27 @@
       left: 50%;
       margin-left: -8px;
       position: absolute;
+      z-index: 1002;
+    }
+
+    &.show > .nav-link:after {
+      content: '';
+      margin: 0;
+      border: 0;
+      border-bottom: 8px solid $cl-white;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      display: inline-block;
+      left: 50%;
+      position: absolute;
       z-index: 1001;
+      font-size: 1.231rem;
+      border-bottom-width: 9px;
+      border-left-width: 9px;
+      border-right-width: 9px;
+      border-bottom-color: $cl-gray-medium;
+      margin-left: -9px;
+      bottom: -12px;
     }
   }
 
@@ -276,7 +321,7 @@
 
       > a .text {
         margin: 0;
-        font-weight: 500;
+        font-weight: $font-weight-medium;
         color: $cl-gray-dark-2;
         font-size: .9231rem;
         line-height: 16px;
@@ -330,8 +375,8 @@
         background-color: $cl-white;
       }
 
-      background-color: $cl-gray-light-10;
-      border-bottom: 1px solid $cl-gray-light-11;
+      background-color: $cl-blue-light-8;
+      border-bottom: 1px solid $cl-blue-light-7;
 
       > a:after {
         content: '';
@@ -406,11 +451,56 @@
   }
 }
 
+.icons-nav .dropdown .nav-link .indicator {
+  background-color: $cl-blue;
+  border-radius: 50%;
+  display: block;
+  height: 6px;
+  width: 6px;
+  position: absolute;
+  top: 18px;
+  right: 6px;
+
+  @include breakpoint-down(phone) {
+    background: $cl-white;
+    right: 2px;
+  }
+}
+
+.icons-nav .dropdown .nav-link .icon {
+  font-size: 1.846rem;
+  vertical-align: middle;
+  color: $cl-dark-light-8;
+
+  @include breakpoint-down(phone) {
+    color: $cl-white;
+    &:hover {
+      color: $cl-white;
+    }
+  }
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  &.drop-connect {
+    @include breakpoint-down(phone) {
+      right: 5px;
+    }
+  }
+}
+
 .navbar-expand .navbar-nav .nav-link {
   line-height: 60px;
   color: $cl-dark-light-9;
   font-size: 14px;
   outline: 0;
+
+  @include breakpoint-down(phone) {
+    color: $cl-white;
+
+    &:hover {
+      color: $cl-white;
+    }
+  }
 
   &--user {
     cursor: pointer;
@@ -427,10 +517,72 @@
       display: none;
       font-size: 1.077rem;
       line-height: 20px;
+
+      @include breakpoint-down(phone) {
+        display: block;
+        flex: 1 1 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
 
     &.dropdown-toggle:after {
       display: none;
+
+      @include breakpoint-down(phone) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.user-nav {
+  @include breakpoint-down(phone) {
+    margin: 0;
+    display: inline-block;
+    flex: 0 1 auto;
+    overflow: hidden;
+  }
+}
+
+.user-nav > #{$li}.dropdown {
+  @include breakpoint-down(phone) {
+    display: flex;
+    align-items: center;
+  }
+
+  > #{$a} {
+    @include breakpoint-down(phone) {
+      align-items: center;
+      display: flex;
+      height: 60px;
+      white-space: nowrap;
+    }
+
+    &.toggle-sidebar {
+      @include breakpoint-down(phone) {
+        display: inline-block;
+        color: $cl-white;
+        line-height: 60px;
+        padding-left: 10px;
+        padding-top: 2px;
+        font-size: 20px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    @include breakpoint-down(phone) {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+      background-color: $cl-white;
+      position: fixed;
+      top: 60px;
+      left: 25px;
+      margin-left: 10px;
+      margin-right: 10px;
+      max-width: 220px;
+      z-index: 1020;
     }
   }
 }

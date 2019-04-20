@@ -2,51 +2,6 @@
 // Layout :: Sidebar
 // ======================================================
 
-$li: 'li';
-
-@mixin sidebar-tabs($container, $inner, $inputwrap, $input) {
-  .#{$container} {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    .#{$inner} {
-      flex-grow: 1;
-      overflow-y: auto;
-    }
-
-    .#{$inputwrap} {
-      position: relative;
-      border-top: 1px solid $cl-gray-light-12;
-
-      i {
-        position: absolute;
-        color: $cl-gray-dark-11;
-        right: 15px;
-        top: 50%;
-        font-size: 1.538rem;
-        margin-top: -10px;
-        cursor: pointer;
-      }
-
-      i:hover {
-        color: $cl-gray-dark-12;
-      }
-    }
-
-    .#{$input} {
-      border: 0;
-      background-color: $cl-gray-light-9;
-      color: $cl-dark-light;
-      width: 100%;
-      font-size: 1rem;
-      font-weight: 400;
-      padding: 15px 20px;
-      outline: 0;
-    }
-  }
-}
-
 @include sidebar-tabs('tab-todo-inner', 'todo-content', 'todo-input', 'input-todo');
 
 @include sidebar-tabs('tab-chat-inner', 'chat-content', 'chat-input', 'input-chat');
@@ -58,6 +13,23 @@ $li: 'li';
 }
 
 .right-sidebar {
+  position: fixed;
+  background-color: $cl-gray-light-9;
+  margin-top: 61px;
+  padding-bottom: 61px;
+  width: 290px;
+  height: 100%;
+  right: -290px;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid $cl-dark-light-16;
+  z-index: 1031;
+  transition: all .35s ease;
+
+  @include breakpoint-down(phone) {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 
   &-inner {
     height: 100%;
@@ -95,18 +67,11 @@ $li: 'li';
     padding: 10px 20px 0;
   }
 
-  position: fixed;
-  background-color: $cl-gray-light-9;
-  margin-top: 61px;
-  padding-bottom: 61px;
-  width: 290px;
-  height: 100%;
-  right: -290px;
-  top: 0;
-  bottom: 0;
-  border-left: 1px solid $cl-dark-light-16;
-  z-index: 1031;
-  transition: all .35s ease;
+  .tab-settings {
+    &-inner {
+      height: 100%;
+    }
+  }
 
   .nav-item {
     flex: 1;
@@ -457,6 +422,18 @@ $li: 'li';
   z-index: 1030;
   border-right: 1px solid $cl-gray-medium;
 
+  @include breakpoint-down(phone) {
+    margin-top: 0;
+    padding-bottom: 0;
+    left: -230px;
+    z-index: 1096;
+    transition: left .3s linear;
+
+    &.show {
+      left: 0;
+    }
+  }
+
   &-inner {
     display: flex;
     height: 100%;
@@ -474,9 +451,8 @@ $li: 'li';
 }
 
 .nav {
-  /* stylelint-disable */
   $nav: &;
-  /* stylelint-enable */
+
   flex-direction: column;
 
   .divider {
@@ -636,5 +612,25 @@ $li: 'li';
     box-shadow: none;
     line-height: 22px;
     background-color: $cl-blue;
+  }
+}
+
+.toggle-sidebar {
+  @include breakpoint-up(phone) {
+    display: none;
+  }
+}
+
+.page-title-mobile {
+  @include breakpoint-down(phone) {
+    background-color: $cl-white;
+    padding: 16px 10px;
+    color: $cl-dark-light;
+    font-weight: 300;
+    font-size: 1.077rem;
+
+    a {
+      color: $cl-dark-light;
+    }
   }
 }

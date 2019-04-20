@@ -3,14 +3,14 @@
 //=require popper.js/dist/umd/popper.min.js
 //=require bootstrap/dist/js/bootstrap.min.js
 //=require bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js
-//=require jquery-sparkline/jquery.sparkline.min.js
 //=require flot/jquery.flot.js
-//=require flot-orderbars/js/jquery.flot.orderBars.js
 //=require flot/jquery.flot.pie.js
 //=require flot.curvedlines/curvedLines.js
+//=require _jquery.flot.orderBars.min.js
 //=require jquery.flot.tooltip/js/jquery.flot.tooltip.min.js
-//=require jquery-ui-dist/jquery-ui.min.js
+//=require jquery-sparkline/jquery.sparkline.min.js
 //=require countup/dist/countUp.min.js
+//=require jquery-ui-dist/jquery-ui.min.js
 //=require jqvmap/dist/jquery.vmap.min.js
 //=require jqvmap/dist/maps/jquery.vmap.world.js
 //=require _custom.js

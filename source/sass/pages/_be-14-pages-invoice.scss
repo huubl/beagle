@@ -2,9 +2,6 @@
 // Pages :: Invoices
 // ======================================================
 
-$span : 'span';
-$td: 'td';
-
 .page-invoice .page-head {
   padding-bottom: 0;
 }
@@ -14,8 +11,23 @@ $td: 'td';
   padding: 100px 100px 70px;
   color: $cl-dark-light-11;
 
+  @include breakpoint-down(tablet) {
+    padding: 50px 50px 35px;
+  }
+
   &__header {
     margin-bottom: 100px;
+
+    @include breakpoint-down(tablet) {
+      margin-bottom: 50px;
+    }
+
+    > div {
+      @include breakpoint-down(smallphone) {
+        float: none;
+        width: 100%;
+      }
+    }
   }
 
   &__logo {
@@ -24,6 +36,18 @@ $td: 'td';
     background-image: url('#{$path-image}/logo-xx.png');
     background-repeat: no-repeat;
     background-position: 0;
+
+    @include breakpoint-down(tablet) {
+      height: 27px;
+      width: 102px;
+      background-image: url('#{$path-image}/logo.png');
+    }
+
+    @include breakpoint-down(smallphone) {
+      margin: 0 auto 20px;
+      float: none;
+      min-width: auto;
+    }
   }
 
   &__id {
@@ -31,21 +55,51 @@ $td: 'td';
     text-align: right;
     font-size: 2.308rem;
     line-height: 2.308rem;
+
+    @include breakpoint-down(tablet) {
+      font-size: 1.154rem;
+      line-height: 1.3849rem;
+    }
+
+    @include breakpoint-down(smallphone) {
+      text-align: center;
+    }
   }
 
   &__date {
     display: block;
     font-size: 1.385rem;
     text-align: right;
+
+    @include breakpoint-down(tablet) {
+      font-size: 1rem;
+    }
+
+    @include breakpoint-down(smallphone) {
+      text-align: center;
+    }
   }
 
   &__data {
     margin-bottom: 110px;
 
+    @include breakpoint-down(tablet) {
+      margin-bottom: 55px;
+    }
+
+    @include breakpoint-down(smallphone) {
+      text-align: center;
+    }
+
     #{$span} {
       font-size: 1.385rem;
       line-height: 2rem;
       display: block;
+
+      @include breakpoint-down(tablet) {
+        font-size: 1.0004rem;
+        line-height: 1.5385rem;
+      }
 
       &.name {
         font-weight: $font-weight-medium;
@@ -55,6 +109,10 @@ $td: 'td';
 
   &__person {
     text-align: right;
+
+    @include breakpoint-down(smallphone) {
+      text-align: center;
+    }
   }
 
   &__payment-direction {
@@ -62,7 +120,12 @@ $td: 'td';
     position: relative;
     padding-top: 20px;
 
+    @include breakpoint-down(smallphone) {
+      padding: 20px 0;
+    }
+
     i {
+      cursor: pointer;
       width: 80px;
       height: 80px;
       border-radius: 50%;
@@ -70,12 +133,27 @@ $td: 'td';
       font-size: 3.846rem;
       color: $cl-gray-light-13;
       line-height: 80px;
+
+      @include breakpoint-down(tablet) {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.923rem;
+      }
+
+      @include breakpoint-down(smallphone) {
+        transform: rotate(90deg);
+      }
     }
   }
 
   &-details {
     width: 100%;
     font-size: 1.231rem;
+
+    @include breakpoint-down(tablet) {
+      font-size: .8464rem;
+    }
 
     th:first-child {
       text-align: left;
@@ -89,6 +167,10 @@ $td: 'td';
 
     tr > td {
       padding: 20px 0;
+
+      @include breakpoint-down(tablet) {
+        padding: 15px 0;
+      }
     }
 
     #{$td}.amount,
@@ -118,16 +200,29 @@ $td: 'td';
     #{$td}.total-value {
       font-size: 1.692rem;
       color: $cl-blue;
+
+      @include breakpoint-down(tablet) {
+        font-size: .8464rem;
+      }
     }
   }
 
   &__payment-method {
     margin-bottom: 75px;
 
+    @include breakpoint-down(tablet) {
+      margin-bottom: 37px;
+    }
+
     #{$span} {
       display: block;
       font-size: 1.385rem;
       line-height: 2rem;
+
+      @include breakpoint-down(tablet) {
+        font-size: 1.0004rem;
+        line-height: 1.5385rem;
+      }
 
       &.title {
         font-weight: $font-weight-medium;
@@ -139,6 +234,10 @@ $td: 'td';
     font-size: 1.231rem;
     margin-bottom: 62px;
 
+    @include breakpoint-down(tablet) {
+      font-size: 1rem;
+    }
+
     .title {
       font-weight: $font-weight-medium;
       text-transform: uppercase;
@@ -149,44 +248,61 @@ $td: 'td';
     p {
       line-height: 2rem;
       margin: 0 0 15px;
+
+      @include breakpoint-down(tablet) {
+        line-height: 1.5385rem;
+      }
     }
   }
 
   &__company-info {
     margin-bottom: 70px;
 
-    > div {
-      padding: 8px 40px;
-      border-left: 1px solid $cl-white-dark-1;
+    @include breakpoint-down(tablet) {
+      margin-bottom: 35px;
+    }
+  }
 
-      &:first-child {
-        border-left: 0;
-      }
+  &__company-info > div {
+    padding: 8px 40px;
+    border-left: 1px solid $cl-white-dark-1;
 
-      &:nth-of-type(2) {
-        padding: 0 40px;
-        line-height: 16px;
-      }
+    @include breakpoint-down(tablet) {
+      border: 0;
+      padding: 8px 15px;
+    }
 
-      &:nth-of-type(2) .title {
-        color: $cl-dark-light-11;
-        font-size: 1.077rem;
-        line-height: 21px;
-        font-weight: $font-weight-medium;
-      }
+    &:first-child {
+      border-left: 0;
+    }
 
-      &:nth-of-type(2) p {
-        line-height: 16px;
-        margin: 0 0 15px;
-      }
+    &:nth-of-type(2) {
+      padding: 0 40px;
+      line-height: 16px;
 
-      &:nth-of-type(n+3) {
-        line-height: 20px;
+      @include breakpoint-down(tablet) {
+        padding: 0;
       }
+    }
 
-      &:nth-of-type(n+3) span {
-        display: block;
-      }
+    &:nth-of-type(2) .title {
+      color: $cl-dark-light-11;
+      font-size: 1.077rem;
+      line-height: 21px;
+      font-weight: $font-weight-medium;
+    }
+
+    &:nth-of-type(2) p {
+      line-height: 16px;
+      margin: 0 0 15px;
+    }
+
+    &:nth-of-type(n+3) {
+      line-height: 20px;
+    }
+
+    &:nth-of-type(n+3) span {
+      display: block;
     }
   }
 

@@ -77,19 +77,54 @@ ol {
   left: 0;
   margin-left: 230px;
   min-height: 100%;
+
+  @include breakpoint-down(phone) {
+    margin-left: 0;
+  }
+}
+
+[class*='col'] {
+  @include breakpoint-down(smallphone) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .main-content {
   padding: 25px;
+
+  .row {
+    @include breakpoint-down(smallphone) {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+  }
+
+  @include breakpoint-down(phone) {
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+  }
+
+  @include breakpoint-down(smallphone) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .nowrap {
   flex-wrap: nowrap;
   margin: 0;
-  
+
   .col,
   .col-auto {
     padding: 0;
+
+    @include breakpoint-down(smallphone) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
 
@@ -124,5 +159,104 @@ ol {
     font-size: 2.538rem;
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+.loading {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($cl-white, .7);
+    transition: all .2s ease;
+    z-index: 2;
+  }
+
+  .spinner {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -20px;
+    margin-right: -20px;
+    z-index: 3;
+
+    svg {
+      animation: spinner-rotation 1.4s linear infinite;
+      stroke: $cl-blue;
+    }
+
+    svg .circle {
+      stroke-dasharray: 187;
+      stroke-dashoffset: 0;
+      transform-origin: center;
+      animation: spinner-turn 1.4s ease-in-out infinite;
+    }
+  }
+}
+
+.spinner {
+  display: none;
+}
+
+.loading.active {
+  &:after {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .spinner {
+    display: block;
+  }
+}
+
+@keyframes spinner-rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes spinner-turn {
+  0% {
+    stroke-dashoffset: 187;
+  }
+
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($cl-dark, .5);
+  z-index: 1090;
+  cursor: pointer;
+
+  &.show {
+    display: block;
   }
 }

@@ -2,22 +2,23 @@ mixin page-list(data)
   .container
     .page-list
       h1.page-list__title Page List
-      table.table.table-striped
-        thead
-          tr.style(style="background-color: #316681")
-            th #
-            th Link
-            th Categories
-            th Name Of Screen
-        each ent, num in data
-          tr(style="background-color: " + ent.bg + "")
-            th= (num)
-            td
-              - if(ent.url == '')
-                  a('#').page-list__link= ent.title
-              - else
-                  a(href=`${ent.url}.html` target='blank').page-list__link= ent.title
-            td= ent.categories
-            td
-              - if(ent.url != '')
-                  a(href=`${ent.url}.html` target='blank').page-list__link= `${ent.url}.html`
+      .table-responsive
+        table.table.table-striped
+          thead
+            tr.style(style="background-color: #316681")
+              th #
+              th Link
+              th Categories
+              th Name Of Screen
+          each ent, num in data
+            tr(style="background-color: " + ent.bg + "")
+              th= (num)
+              td
+                - if(ent.url == '')
+                    a('#').page-list__link= ent.title
+                - else
+                    a(href=`${ent.url}.html` target='_blank').page-list__link= ent.title
+              td= ent.categories
+              td
+                - if(ent.url != '')
+                    a(href=`${ent.url}.html` target='_blank').page-list__link= `${ent.url}.html`

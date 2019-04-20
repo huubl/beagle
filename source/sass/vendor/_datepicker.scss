@@ -2,10 +2,6 @@
 // Pages :: Datepicker
 // ======================================================
 
-$table: 'table';
-$td: 'td';
-$a: 'a';
-
 .ui-datepicker #{$table}.ui-datepicker-calendar {
   width: 100%;
 }
@@ -66,7 +62,7 @@ $a: 'a';
 
 .ui-datepicker #{$table}.ui-datepicker-calendar tr #{$td}.has-events a {
   position: relative;
-  background-color: $cl-gray-light-10;
+  background-color: $cl-blue-light-8;
   border-radius: 50%;
 }
 

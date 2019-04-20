@@ -2,11 +2,6 @@
 // Pages :: Home
 // ======================================================
 
-$td : 'td';
-$th : 'th';
-$li : 'li';
-$span: 'span';
-
 .widget {
   background-color: $cl-white;
   border-radius: 3px;
@@ -152,6 +147,18 @@ $span: 'span';
 .table-index {
   border: 0;
 
+  &.table {
+
+    th,
+    td {
+      white-space: normal;
+
+      @include breakpoint-down(phone) {
+        white-space: nowrap;
+      }
+    }
+  }
+
   th,
   thead th {
     border: 0;
@@ -167,6 +174,10 @@ $span: 'span';
     width: 30px;
     border-radius: 50%;
     margin-right: 10px;
+
+    @include breakpoint-down(phone) {
+      display: none;
+    }
   }
 }
 
@@ -192,6 +203,15 @@ $span: 'span';
 
 .table-hover tbody tr:hover {
   background-color: $cl-white-dark-1;
+}
+
+.table #{$th},
+.table #{$td} {
+  white-space: nowrap;
+
+  &.number {
+    text-align: right;
+  }
 }
 
 .dropdown-menu > .dropdown-item {
@@ -454,6 +474,7 @@ $span: 'span';
 
 .widget-head {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   .title {
@@ -468,6 +489,28 @@ $span: 'span';
 
   .list-icon {
     margin-left: 10px;
+
+    @include breakpoint-down(phone) {
+      margin-left: 0;
+    }
+
+    .icon {
+      display: inline-block;
+      font-size: 1.538rem;
+      line-height: 25px;
+      vertical-align: middle;
+      cursor: pointer;
+      color: $cl-gray-dark;
+      min-width: 1.538rem;
+      text-align: center;
+      margin-left: 2px;
+    }
+  }
+
+  .dropdown-btn {
+    @media (min-width: 768px) {
+      display: none;
+    }
 
     .icon {
       display: inline-block;
@@ -527,6 +570,10 @@ $span: 'span';
 .widget-group-right {
   text-align: right;
   padding: 0 20px 10px;
+
+  @include breakpoint-down(phone) {
+    margin-top: 15px;
+  }
 
   .counter {
     + .counter {
