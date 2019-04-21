@@ -15,6 +15,10 @@
     padding: 50px 50px 35px;
   }
 
+  @include breakpoint-down(smallphone) {
+    padding: 35px 25px 15px;
+  }
+
   &__header {
     margin-bottom: 100px;
 
