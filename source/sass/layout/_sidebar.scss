@@ -26,11 +26,6 @@
   z-index: 1099;
   transition: all .35s ease;
 
-  @include breakpoint-down(phone) {
-    margin-top: 0;
-    padding-bottom: 0;
-  }
-
   &-inner {
     height: 100%;
     display: flex;
@@ -423,8 +418,6 @@
   border-right: 1px solid $cl-gray-medium;
 
   @include breakpoint-down(phone) {
-    margin-top: 0;
-    padding-bottom: 0;
     left: -230px;
     z-index: 1096;
     transition: left .3s linear;

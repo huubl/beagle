@@ -4594,22 +4594,6 @@ $('.js-file').change(function (e) {
   }
 });
 
-// toggle right sidebar
-if ($(".js-toggle-right-sidebar")[0]) {
-  $(document).on('mouseup', function (e) {
-    e.preventDefault();
-    var container = $('.right-sidebar');
-    if (document.getElementsByClassName('js-toggle-right-sidebar')[0].contains(e.target)) {
-      $('body').toggleClass('open-right-sidebar');
-    }
-    else {
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-        $('body').removeClass('open-right-sidebar');
-      }
-    }
-  });
-}
-
 // toggle chat windows
 $('.js-contact-link').each(function (index, element) {
   $(this).click(function (e) {
@@ -5058,22 +5042,53 @@ $(window).on('load resize', function (e) {
   }
   else {
     $(".page-title-mobile").remove();
-    $(".overlay").removeClass('show');
+    $(".left-sidebar, .overlay").removeClass('show');
+    $('body').removeClass('open-right-sidebar');
   }
 });
 
-// toggle sidebar mobile
-$(".js-toggle-sidebar").on("click", function () {
-  $(".left-sidebar, .overlay").toggleClass("show");
-});
+// toggle left right sidebar
+if ($(".js-toggle-right-sidebar")[0]) {
+  $(document).on('mouseup', function (e) {
+    e.preventDefault();
+    var container = $('.right-sidebar'),
+      _container = $('.left-sidebar'),
+        _rightbtn = {
+      isBtn: document.getElementsByClassName('js-toggle-right-sidebar')[0].contains(e.target),
+      isTarget: container.is(e.target),
+      hasTarget: container.has(e.target).length === 0
+    }, _leftbtn = {
+      isBtn: document.getElementsByClassName('js-toggle-sidebar')[0].contains(e.target),
+      isTarget: _container.is(e.target),
+      hasTarget: _container.has(e.target).length === 0
+    };
 
-$(document).on('mouseup', function (e) {
-  e.preventDefault();
-  var _container = $('.left-sidebar');
-  if (!_container.is(e.target) && _container.has(e.target).length === 0) {
-    _container.removeClass('show');
-    $(".overlay").removeClass('show');
-  }
-});
+    if (!_rightbtn.isBtn && !_rightbtn.isTarget && _rightbtn.hasTarget) {
+      if (_leftbtn.isBtn) {
+        $(".left-sidebar").toggleClass("show");
+        $('body').removeClass('open-right-sidebar');
+        $(".overlay").toggleClass('show');
+      }
+      else {
+        if (!_leftbtn.isTarget && _leftbtn.hasTarget) {
+          $(".overlay, .left-sidebar").removeClass('show');
+        }
+      }
+    }
+
+    if (!_leftbtn.isBtn && !_leftbtn.isTarget && _leftbtn.hasTarget) {
+      if (_rightbtn.isBtn) {
+        $('body').toggleClass('open-right-sidebar');
+        $(".left-sidebar").removeClass('show');
+        $(".overlay").toggleClass('show');
+      } else {
+        if (!_rightbtn.isContainer && _rightbtn.hasTarget) {
+          $('body').removeClass('open-right-sidebar');
+        }
+      }
+    }
+  });
+}
+
 
 
