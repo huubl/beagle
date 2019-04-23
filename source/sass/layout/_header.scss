@@ -37,22 +37,24 @@
 }
 
 .page-title {
-  font-size: 1.462rem;
-  line-height: 60px;
   float: left;
   flex: 1 1;
+  line-height: 60px;
   padding: 0 20px;
-  color: $cl-dark-light;
 
-  @include breakpoint-down(phone) {
-    display: none;
-  }
-
-  span {
-    display: block;
+  h1 {
+    line-height: inherit;
+    font-size: 1.462rem;
+    color: $cl-dark-light;
+    font-weight: $font-weight-base;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  @include breakpoint-down(phone) {
+    display: none;
   }
 }
 

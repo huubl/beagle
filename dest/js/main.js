@@ -5090,5 +5090,3 @@ if ($(".js-toggle-right-sidebar")[0]) {
   });
 }
 
-
-

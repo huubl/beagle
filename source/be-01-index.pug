@@ -1,5 +1,5 @@
 extends modules/layout/_page-default
-   
+
 block head
   +head('Beagle')
 
@@ -9,9 +9,9 @@ block main
   +sidebarRight()
   section.page-content.index
     .main-content.container-fluid
-      .row 
+      .row
         .col-12.col-lg-6.col-xl-3
-          .widget 
+          .widget
             .row.nowrap
               .col-auto
                 .chart.sparkline#chart1
@@ -58,7 +58,7 @@ block main
         .col-12
           .widget.widget-chart.loading
             .widget-head.widget-chart-head
-              .title Recent Movement
+              h2.title Recent Movement
               .dropdown.d-flex
                 .btn-group
                   +buttons({
@@ -124,7 +124,7 @@ block main
         .col-12.col-lg-6
           .card.card-table.table-stats
             .card-header
-              .title Purchases
+              h2.title Purchases
               .dropdown
                 .dropdown__btn
                   i.zmdi.zmdi-download
@@ -189,7 +189,7 @@ block main
         .col-12.col-lg-6
           .card.card-table.table-stats
             .card-header
-              .title Latest Commits
+              h2.title Latest Commits
               .dropdown
                 .dropdown__btn
                   i.zmdi.zmdi-download
@@ -249,7 +249,8 @@ block main
       .row
         .col-12.col-lg-4
           .card
-            .card-header.card-header-divider Current Progress
+            .card-header.card-header-divider
+              h2.title Current Progress
             .card-body
               .row.user-progress.user-progress--small
                 .col-lg-5
@@ -284,7 +285,7 @@ block main
         .col-12.col-lg-4
           .chartjs.loading
             .chartjs-head
-              .title Top Sales
+              h2.title Top Sales
               .list-icon
                 i.icon.zmdi.zmdi-chevron-down
                 i.icon.zmdi.zmdi-refresh-sync.toggle-loading
@@ -317,7 +318,8 @@ block main
       .row
         .col-12.col-lg-6
           .card
-            .card-header Latest Activity
+            .card-header
+              h2.title Latest Activity
             .card-body
               ul.user-timeline
                 li.latest
@@ -339,7 +341,7 @@ block main
         .col-12.col-lg-6
           .chartjs.loading
             .chartjs-head
-              .title Conversions
+              h2.title Conversions
               .list-icon
                 i.icon.zmdi.zmdi-chevron-down
                 i.icon.zmdi.zmdi-refresh-sync.toggle-loading

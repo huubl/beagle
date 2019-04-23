@@ -78,6 +78,15 @@
     border-bottom-width: 0;
     border-radius: 3px 3px 0 0;
     background-color: transparent;
+
+    .title {
+      margin: 0;
+      line-height: normal;
+      color: inherit;
+      display: block;
+      font-size: 1.385rem;
+      font-weight: $font-weight-light;
+    }
   }
 
   .table-responsive {
@@ -108,6 +117,15 @@
       }
     }
   }
+
+  .title {
+    margin: 0;
+    line-height: normal;
+    color: inherit;
+    display: block;
+    font-size: 1.385rem;
+    font-weight: $font-weight-light;
+  }
 }
 
 .card-table {
@@ -121,6 +139,11 @@
   }
 
   tr {
+
+    &:first-child th,
+    &:first-child td {
+      border-top: 0;
+    }
 
     td:last-child,
     th:last-child {
@@ -224,9 +247,10 @@
 .card-header {
   &.card-header-divider {
     border-bottom: 1px solid $cl-gray-light-14;
-    margin: 0 1.538rem 8px;
+    margin: 0 1.538rem 20px;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 15px;
   }
 }
 
@@ -270,6 +294,9 @@
     }
 
     .title {
+      margin: 0;
+      line-height: normal;
+      color: inherit;
       display: inline-block;
       font-size: 1.385rem;
       font-weight: $font-weight-light;
@@ -310,7 +337,7 @@
   &-item {
     display: flex;
     justify-content: space-between;
-    margin: 5px 0;
+    margin: 0 0 9px;
   }
 
   &-type {
@@ -352,7 +379,7 @@
     top: 2px;
     height: 100%;
     width: 2px;
-    background-color: $cl-yellow-light-2;
+    background-color: $cl-yellow-light-9;
   }
 
   &:after {
@@ -362,7 +389,7 @@
     bottom: -2px;
     height: 8px;
     width: 8px;
-    background-color: $cl-yellow-light-2;
+    background-color: $cl-yellow-light-9;
     border-radius: 50%;
   }
 
@@ -377,7 +404,7 @@
     }
 
     &.latest:before {
-      background-color: $cl-yellow-light-2;
+      background-color: $cl-yellow-light-9;
     }
 
     &:before {
@@ -389,7 +416,7 @@
       width: 16px;
       background-color: $cl-white;
       border-radius: 50%;
-      border: 1px solid $cl-yellow-light-2;
+      border: 1px solid $cl-yellow-light-9;
     }
   }
 
@@ -437,6 +464,21 @@
     font-size: 1.538rem;
     vertical-align: middle;
   }
+}
+
+.jqvmap-region {
+  cursor: pointer;
+}
+
+.jqvmap-label {
+  position: absolute;
+  display: none;
+  border-radius: 3px;
+  background: $cl-dark-medium-1;
+  color: $cl-white;
+  font-family: $font-family-map;
+  font-size: smaller;
+  padding: 3px;
 }
 
 .jqvmap-zoomin,
@@ -488,6 +530,9 @@
   justify-content: space-between;
 
   .title {
+    margin: 0;
+    line-height: normal;
+    color: inherit;
     display: block;
     font-size: 1.385rem;
     font-weight: $font-weight-light;
